@@ -74,9 +74,21 @@ Intentional gaps:
 
 - **Not yet wired into the nightly run.** `discover.mjs` is tested but no
   caller exists; `check.mjs` still publishes v1 link health only.
-- **Heuristic recall is unmeasured.** The tests prove the candidate rules
-  behave as specified; they do not prove those rules find endpoints for a good
-  share of the real 849 no-auth entries. That needs a measured sample run.
+- **Heuristic recall measured at 2% — the approach does not work.** A 50-entry
+  sample of real no-auth entries confirmed 1 endpoint. The tests prove the
+  candidate rules behave as specified; the specification itself was wrong.
+  Real endpoints live at documented paths with required parameters
+  (`/avatars/<uuid>`, `/json.gp?ip=`), which no URL-shape heuristic can reach.
+  `discover.mjs` is therefore NOT wired into the nightly run, and should not be
+  until a different discovery strategy measures better — most likely extracting
+  example URLs from `<code>`/`<pre>` blocks on the docs page, where the real
+  endpoint is actually written down.
+- **A JSON-shaped 4xx should count as evidence, not disqualification.**
+  `api.geoplugin.com/` returns 400 with a JSON body: a live API rejecting a
+  malformed request. The `res.ok && json` rule in `verifyEndpoint` discards it.
+  No test covers this case, because the tests were written against the same
+  wrong assumption as the implementation. TDD constrains code to the spec; it
+  does not make the spec true.
 - **v1 modules predate this workflow.** `test_history.mjs` and `test_page.mjs`
   are assert scripts written after their implementations, and are not counted
   in the coverage figure above.
