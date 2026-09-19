@@ -41,6 +41,29 @@ describe('specCandidateUrls (Extractor A)', () => {
     assert.ok(c.length <= 6);
   });
 
+  // Bug found in the Phase 0 measurement: httpbin.org serves a Swagger UI whose
+  // spec is /spec.json. Requiring 'openapi' or 'swagger' in the filename missed
+  // that whole class of page.
+  test('probes /spec.json as well', () => {
+    assert.ok(specCandidateUrls('https://httpbin.org/').includes('https://httpbin.org/spec.json'));
+  });
+
+  test('accepts a spec-url whose filename says neither openapi nor swagger', () => {
+    const html = '<redoc spec-url="/my-api.json"></redoc>';
+    assert.ok(specCandidateUrls('https://example.com/docs/', html).includes('https://example.com/my-api.json'));
+  });
+
+  test('accepts a Swagger UI url: config pointing at any .json', () => {
+    const html = '<script>SwaggerUIBundle({url: "/spec.json", dom_id: "#ui"})</script>';
+    assert.ok(specCandidateUrls('https://example.com/docs/', html).includes('https://example.com/spec.json'));
+  });
+
+  test('does not treat every url: in page JavaScript as a spec', () => {
+    const html = '<script>analytics({url: "/track"}); fetch({url: "/logo.png"})</script>';
+    const c = specCandidateUrls('https://example.com/docs/', html);
+    assert.ok(!c.some((u) => u.endsWith('/track') || u.endsWith('/logo.png')));
+  });
+
   test('yields nothing for an unparseable URL', () => {
     assert.deepEqual(specCandidateUrls('not a url'), []);
   });
@@ -151,6 +174,39 @@ describe('urlsFromCodeBlocks (Extractor B)', () => {
     const u = urlsFromCodeBlocks(html, DOCS);
     assert.equal(new Set(u).size, u.length);
     assert.ok(u.length <= 6);
+  });
+
+  // Bug found in the Phase 0 measurement: when the listed URL is a repo page,
+  // the API lives on a different host by definition. Requiring the same
+  // registrable domain threw away every curl example in the README.
+  test('keeps cross-host URLs when the docs URL is a repo page', () => {
+    const html = '<pre><code>curl https://api.someproject.dev/v1/status</code></pre>';
+    const u = urlsFromCodeBlocks(html, 'https://github.com/owner/repo');
+    assert.ok(u.includes('https://api.someproject.dev/v1/status'));
+  });
+
+  test('works the same for GitLab and Bitbucket repo pages', () => {
+    const html = '<code>https://api.someproject.dev/v1</code>';
+    for (const host of ['https://gitlab.com/o/r', 'https://bitbucket.org/o/r']) {
+      assert.ok(urlsFromCodeBlocks(html, host).includes('https://api.someproject.dev/v1'), host);
+    }
+  });
+
+  test('still drops badge, CI and social links from a repo README', () => {
+    const html = `<code>
+      https://img.shields.io/badge/build-passing
+      https://travis-ci.org/owner/repo
+      https://twitter.com/owner
+      https://github.com/owner/repo/issues
+      https://api.someproject.dev/v1
+    </code>`;
+    assert.deepEqual(urlsFromCodeBlocks(html, 'https://github.com/owner/repo'), ['https://api.someproject.dev/v1']);
+  });
+
+  test('a non-repo docs page still restricts to its own domain', () => {
+    // Unchanged behaviour: on a real docs site, a foreign host is not the API.
+    const html = '<code>https://unrelated.example.net/v1</code>';
+    assert.deepEqual(urlsFromCodeBlocks(html, 'https://example.com/docs/'), []);
   });
 
   test('survives a page with no code blocks at all', () => {
