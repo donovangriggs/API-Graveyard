@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 // entries.json -> docs/results.json, with strike state carried in history.json
 import { readFile, writeFile } from 'node:fs/promises';
+import { publishFields } from './enrich.mjs';
 
 const CONCURRENCY = 20;
 const TIMEOUT_MS = 10_000;
@@ -105,6 +106,8 @@ async function pool(items, worker, limit) {
 async function main() {
   const entries = JSON.parse(await readFile('entries.json', 'utf8'));
   const history = await readFile('history.json', 'utf8').then(JSON.parse).catch(() => ({}));
+  // Written by the weekly enrich pass; absent until it has run at least once.
+  const endpoints = await readFile('endpoints.json', 'utf8').then(JSON.parse).catch(() => ({}));
   const today = new Date().toISOString().slice(0, 10);
 
   let done = 0;
@@ -128,6 +131,7 @@ async function main() {
       errorCode: p.errorCode ?? null,
       latencyMs: p.latencyMs ?? null,
       redirectedTo: status === 'moved' ? p.finalUrl : null,
+      ...publishFields(entry, endpoints[entry.url]),
     };
   });
 
