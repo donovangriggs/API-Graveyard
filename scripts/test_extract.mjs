@@ -168,4 +168,11 @@ describe('hasUrlInCodeBlock (the free prefilter before any model call)', () => {
   test('false when there are no code blocks', () => {
     assert.equal(hasUrlInCodeBlock('<p>https://api.example.com/v1</p>'), false);
   });
+
+  // A /g regex carries lastIndex between calls. This runs once per entry
+  // across hundreds of entries, so a stateful match would skip pages at random.
+  test('gives the same answer when called repeatedly', () => {
+    const html = '<pre>curl https://api.example.com/v1</pre>';
+    for (let i = 0; i < 5; i++) assert.equal(hasUrlInCodeBlock(html), true, `call ${i + 1} disagreed`);
+  });
 });

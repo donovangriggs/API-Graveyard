@@ -15,6 +15,9 @@ const API_PATHS = ['/api', '/api/v1', '/v1'];
 // Path already looks like someone's endpoint rather than a docs page.
 const ENDPOINT_PATH = /\/(api|v\d+|rest|graphql)(\/|$)/i;
 
+// 4xx codes that mean "you called me wrong", not "I do not exist".
+const REJECTS_BUT_ALIVE = new Set([400, 401, 402, 403, 405, 415, 422, 429]);
+
 export function candidateEndpoints(url) {
   let base;
   try { base = new URL(url); } catch { return []; }
@@ -61,8 +64,14 @@ export async function verifyEndpoint(url) {
     const body = await res.text();
     const latencyMs = Date.now() - started;
     const json = looksLikeJson(res.headers.get('content-type'), body);
+    // A live API rejecting a malformed call proves the endpoint exists —
+    // api.geoplugin.com answers 400 with a JSON body. 404/410 are excluded
+    // because they say the opposite: this path is not there. Without that
+    // exclusion an API gateway's JSON 404 would confirm any guess.
+    const rejection = json && REJECTS_BUT_ALIVE.has(res.status);
     return {
-      ok: res.ok && json,
+      ok: (res.ok && json) || rejection,
+      confirmedBy: res.ok && json ? 'success' : rejection ? 'rejection' : null,
       json,
       cors: corsFrom(res.headers),
       httpStatus: res.status,
