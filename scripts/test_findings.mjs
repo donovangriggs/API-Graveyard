@@ -97,6 +97,12 @@ try {
   // The small-sample rule must actually bite: Weather has 2 entries.
   assert.doesNotMatch(dom, /data-cat="Weather"/, 'categories under 15 entries must be excluded from the chart');
 
+  // The split bar encodes three values in colour alone; a screen reader needs
+  // the same information as text.
+  const split = dom.match(/<div class="split" id="cors-split"[^>]*>/)?.[0] ?? '';
+  assert.match(split, /role="img"/, 'split bar should expose itself as an image');
+  assert.match(split, /aria-label="[^"]*2[^"]*1[^"]*"/, 'aria-label should carry the actual counts');
+
   // Every bar is labelled, so colour never carries the meaning alone.
   // Scoped per row: the status rows are labelled too but carry no data-cat,
   // so counting all .bar-label elements globally would prove nothing.

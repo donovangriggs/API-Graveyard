@@ -31,7 +31,7 @@ const base = {
 
 const FIXTURE = {
   generatedAt: '2026-09-19T00:00:00.000Z',
-  counts: { alive: 5, moved: 1, dead: 1 },
+  counts: { alive: 6, moved: 1, dead: 1 },
   entries: [
     // The one entry that satisfies all three directory filters.
     { ...base, name: 'Usable One', description: 'works from a browser', category: 'Animals',
@@ -57,6 +57,11 @@ const FIXTURE = {
       auth: 'No', status: 'alive', url: 'https://x.example/"onmouseover="alert(1)' },
     { ...base, name: 'Scheme Abuse', description: 'hostile scheme', category: 'Test Data',
       auth: 'No', status: 'alive', url: 'javascript:alert(1)' },
+    // Endpoints are scraped from third-party docs pages — less trustworthy
+    // than the README, not more.
+    { ...base, name: 'Hostile Endpoint', description: 'scraped endpoint', category: 'Test Data',
+      auth: 'No', status: 'alive', url: 'https://he.example/',
+      endpoint: 'https://he.example/<img src=x onerror=alert(1)>', verifiedCors: 'yes', claimedCors: 'Yes' },
   ],
 };
 
@@ -104,10 +109,21 @@ try {
   assert.match(dom, /HTTP 200 · 42ms/, 'alive detail line missing');
   assert.match(dom, /now redirects to https:\/\/elsewhere\.example\//, 'moved destination missing');
   assert.match(dom, /ENOTFOUND · last alive 2026-08-01/, 'dead detail line missing');
-  assert.match(dom, /class="chip s-alive"[\s\S]*?>5</, 'status counts missing');
+  assert.match(dom, /class="chip s-alive"[\s\S]*?>6</, 'status counts missing');
 
   // The honesty rule, asserted on the rendered page and not just in the data:
   // an untested entry must never render as a measured failure.
+  // A verified endpoint is the thing a visitor actually needs to copy; showing
+  // only the docs link leaves them with no way to call it.
+  const rowOf = (name) => tbody.split('<tr>').find((r) => r.includes(name));
+  assert.match(rowOf('Usable One'), /https:\/\/api\.usable\.example\/v1/, 'confirmed endpoint should be shown');
+  assert.match(rowOf('Usable One'), /class="endpoint"/, 'endpoint needs its own selectable element');
+  assert.doesNotMatch(rowOf('Untested One'), /class="endpoint"/, 'no endpoint to show when none was confirmed');
+
+  // Same escaping rule as entry URLs — scraped input is untrusted input.
+  assert.doesNotMatch(dom, /<img src=x onerror=/i, 'scraped endpoint injected live markup');
+  assert.match(dom, /&lt;img src=x onerror=alert\(1\)&gt;/, 'scraped endpoint should render escaped');
+
   // Asserted on the CORS cell specifically — an earlier version of this test
   // passed only because the fixture URL contained the word "unverified".
   const cellOf = (name) => tbody.split('<tr>').find((r) => r.includes(name))
