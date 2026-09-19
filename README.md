@@ -29,6 +29,7 @@ single success resets the count. One flaky night must never publish a graveyard.
 
 ```bash
 node scripts/test_history.mjs   # strike logic + parser
+node scripts/test_page.mjs      # renders docs/index.html in headless Chrome
 node scripts/parse.mjs          # upstream README -> entries.json
 node scripts/check.mjs          # -> docs/results.json, history.json
 ```
