@@ -181,7 +181,7 @@ function render() {
     const tr = document.createElement('tr');
     tr.innerHTML = `
       <td>
-        <a href="${e.url}" rel="noopener nofollow">${esc(e.name)}</a>
+        ${link(e)}
         <div class="desc">${esc(e.description)}</div>
         ${e.redirectedTo ? `<div class="meta">now redirects to ${esc(e.redirectedTo)}</div>` : ''}
       </td>
@@ -192,7 +192,7 @@ function render() {
         ${e.corsDisagrees ? `<div class="meta">README says ${esc(e.claimedCors)}</div>` : ''}
       </td>
       <td>
-        <div class="status s-${e.status}"><span class="dot"></span>${e.status}</div>
+        <div class="status s-${esc(e.status)}"><span class="dot"></span>${esc(e.status)}</div>
         <div class="meta">${detail(e)}</div>
       </td>`;
     return tr;
@@ -210,14 +210,29 @@ function corsLabel(e) {
 function detail(e) {
   const bits = [];
   if (e.httpStatus) bits.push(`HTTP ${e.httpStatus}`);
-  if (e.errorCode) bits.push(e.errorCode);
+  if (e.errorCode) bits.push(esc(e.errorCode));
   if (e.status === 'unknown' && e.strikes) bits.push(`${e.strikes}/3 strikes`);
-  if (e.status === 'dead' && e.lastSeenAlive) bits.push(`last alive ${e.lastSeenAlive}`);
+  if (e.status === 'dead' && e.lastSeenAlive) bits.push(`last alive ${esc(e.lastSeenAlive)}`);
   // Prefer the API's own latency once we have it: the rows are sorted by that
   // number, so showing the docs page's instead makes the list look mis-sorted.
   if (e.apiLatencyMs != null) bits.push(`${e.apiLatencyMs}ms API`);
   else if (e.latencyMs != null && e.status === 'alive') bits.push(`${e.latencyMs}ms`);
   return bits.join(' · ');
+}
+
+// Every field in results.json originates in a community-edited README, so an
+// entry URL is third-party input. Unescaped it breaks out of the href
+// attribute; a javascript: URL executes on click. Allow only http(s), and
+// escape what is left. Anything else renders as inert text.
+function link(e) {
+  let href = null;
+  try {
+    const u = new URL(e.url);
+    if (u.protocol === 'http:' || u.protocol === 'https:') href = u.href;
+  } catch { /* unparseable — render the name without a link */ }
+  return href
+    ? `<a href="${esc(href)}" rel="noopener nofollow">${esc(e.name)}</a>`
+    : `<span title="unusable URL">${esc(e.name)}</span>`;
 }
 
 // Declared as a function, not a const: render() runs at module top level,

@@ -31,7 +31,7 @@ const base = {
 
 const FIXTURE = {
   generatedAt: '2026-09-19T00:00:00.000Z',
-  counts: { alive: 3, moved: 1, dead: 1 },
+  counts: { alive: 5, moved: 1, dead: 1 },
   entries: [
     // The one entry that satisfies all three directory filters.
     { ...base, name: 'Usable One', description: 'works from a browser', category: 'Animals',
@@ -51,6 +51,12 @@ const FIXTURE = {
     { ...base, name: '<script>alert(1)</script>', description: 'hostile name', category: 'Test Data',
       auth: 'No', status: 'dead', strikes: 3, httpStatus: null, latencyMs: null,
       errorCode: 'ENOTFOUND', lastSeenAlive: '2026-08-01', url: 'https://gone.example/' },
+    // The upstream README is community-edited: anyone can open a PR adding an
+    // entry, so every field here is third-party input, URLs included.
+    { ...base, name: 'Attr Breakout', description: 'hostile url', category: 'Test Data',
+      auth: 'No', status: 'alive', url: 'https://x.example/"onmouseover="alert(1)' },
+    { ...base, name: 'Scheme Abuse', description: 'hostile scheme', category: 'Test Data',
+      auth: 'No', status: 'alive', url: 'javascript:alert(1)' },
   ],
 };
 
@@ -85,11 +91,20 @@ try {
   const rows = tbody.match(/<tr>/g)?.length ?? 0;
   assert.equal(rows, FIXTURE.entries.length, `expected ${FIXTURE.entries.length} rows, rendered ${rows}`);
 
+  // A hostile entry URL must not break out of the href attribute. Matched with
+  // a leading space so this tests for a real attribute: the same text appears
+  // harmlessly percent-encoded *inside* the href value, which is the fix
+  // working, not the bug.
+  assert.doesNotMatch(dom, /\sonmouseover=/i, 'entry URL escaped the href attribute');
+  assert.match(dom, /href="https:\/\/x\.example\/%22onmouseover/, 'the quote should be percent-encoded, not dropped');
+  // ...nor survive as an executable scheme.
+  assert.doesNotMatch(dom, /href="javascript:/i, 'javascript: URL rendered as a link');
+
   assert.match(dom, /Usable One/, 'entry name missing');
   assert.match(dom, /HTTP 200 · 42ms/, 'alive detail line missing');
   assert.match(dom, /now redirects to https:\/\/elsewhere\.example\//, 'moved destination missing');
   assert.match(dom, /ENOTFOUND · last alive 2026-08-01/, 'dead detail line missing');
-  assert.match(dom, /class="chip s-alive"[\s\S]*?>3</, 'status counts missing');
+  assert.match(dom, /class="chip s-alive"[\s\S]*?>5</, 'status counts missing');
 
   // The honesty rule, asserted on the rendered page and not just in the data:
   // an untested entry must never render as a measured failure.
