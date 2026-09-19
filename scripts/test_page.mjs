@@ -23,19 +23,34 @@ const CHROMES = [
   '/usr/bin/chromium',
 ].filter(Boolean);
 
+const base = {
+  strikes: 0, httpStatus: 200, latencyMs: 42, errorCode: null, lastSeenAlive: '2026-09-19',
+  redirectedTo: null, endpoint: null, apiLatencyMs: null, verifiedCors: 'unverified',
+  claimedCors: 'Unknown', corsDisagrees: false,
+};
+
 const FIXTURE = {
   generatedAt: '2026-09-19T00:00:00.000Z',
-  counts: { alive: 1, moved: 1, dead: 1 },
+  counts: { alive: 3, moved: 1, dead: 1 },
   entries: [
-    { name: 'Alive One', description: 'works', category: 'Animals', auth: 'No',
-      status: 'alive', strikes: 0, httpStatus: 200, latencyMs: 42, errorCode: null,
-      lastSeenAlive: '2026-09-19', redirectedTo: null, url: 'https://alive.example/' },
-    { name: 'Moved One', description: 'relocated', category: 'Weather', auth: 'apiKey',
-      status: 'moved', strikes: 0, httpStatus: 200, latencyMs: 90, errorCode: null,
-      lastSeenAlive: '2026-09-19', redirectedTo: 'https://elsewhere.example/', url: 'https://moved.example/' },
-    { name: '<script>alert(1)</script>', description: 'hostile name', category: 'Test Data', auth: 'No',
-      status: 'dead', strikes: 3, httpStatus: null, latencyMs: null, errorCode: 'ENOTFOUND',
-      lastSeenAlive: '2026-08-01', redirectedTo: null, url: 'https://gone.example/' },
+    // The one entry that satisfies all three directory filters.
+    { ...base, name: 'Usable One', description: 'works from a browser', category: 'Animals',
+      auth: 'No', status: 'alive', url: 'https://usable.example/',
+      endpoint: 'https://api.usable.example/v1', apiLatencyMs: 55, verifiedCors: 'yes', claimedCors: 'Yes' },
+    // Alive and no-auth, but CORS was measured and is genuinely absent.
+    { ...base, name: 'No Cors', description: 'server only', category: 'Animals',
+      auth: 'No', status: 'alive', url: 'https://nocors.example/',
+      endpoint: 'https://api.nocors.example/v1', verifiedCors: 'no', claimedCors: 'Yes', corsDisagrees: true },
+    // Alive and no-auth, but never testable — must not read as a failure.
+    { ...base, name: 'Untested One', description: 'never testable', category: 'Animals',
+      auth: 'No', status: 'alive', url: 'https://untested.example/' },
+    // Verified CORS but needs a key, so it fails the no-auth filter.
+    { ...base, name: 'Moved One', description: 'relocated', category: 'Weather', auth: 'apiKey',
+      status: 'moved', latencyMs: 90, redirectedTo: 'https://elsewhere.example/',
+      url: 'https://moved.example/', endpoint: 'https://api.moved.example/v1', verifiedCors: 'yes' },
+    { ...base, name: '<script>alert(1)</script>', description: 'hostile name', category: 'Test Data',
+      auth: 'No', status: 'dead', strikes: 3, httpStatus: null, latencyMs: null,
+      errorCode: 'ENOTFOUND', lastSeenAlive: '2026-08-01', url: 'https://gone.example/' },
   ],
 };
 
@@ -70,18 +85,44 @@ try {
   const rows = tbody.match(/<tr>/g)?.length ?? 0;
   assert.equal(rows, FIXTURE.entries.length, `expected ${FIXTURE.entries.length} rows, rendered ${rows}`);
 
-  assert.match(dom, /Alive One/, 'entry name missing');
+  assert.match(dom, /Usable One/, 'entry name missing');
   assert.match(dom, /HTTP 200 · 42ms/, 'alive detail line missing');
   assert.match(dom, /now redirects to https:\/\/elsewhere\.example\//, 'moved destination missing');
   assert.match(dom, /ENOTFOUND · last alive 2026-08-01/, 'dead detail line missing');
-  assert.match(dom, /class="chip s-alive"[\s\S]*?>1</, 'status counts missing');
+  assert.match(dom, /class="chip s-alive"[\s\S]*?>3</, 'status counts missing');
+
+  // The honesty rule, asserted on the rendered page and not just in the data:
+  // an untested entry must never render as a measured failure.
+  // Asserted on the CORS cell specifically — an earlier version of this test
+  // passed only because the fixture URL contained the word "unverified".
+  const cellOf = (name) => tbody.split('<tr>').find((r) => r.includes(name))
+    ?.match(/data-cors="([^"]*)"/)?.[1];
+  assert.equal(cellOf('Untested One'), 'unverified', 'untestable entry should be marked unverified');
+  assert.equal(cellOf('No Cors'), 'no', 'a measured absence should be marked no');
+  assert.equal(cellOf('Usable One'), 'yes', 'a measured success should be marked yes');
   assert.match(dom, /All categories[\s\S]*?Animals[\s\S]*?Test Data[\s\S]*?Weather/, 'category options missing or unsorted');
 
   // A hostile entry name from upstream must not become markup.
   assert.match(dom, /&lt;script&gt;alert\(1\)&lt;\/script&gt;/, 'entry name was not escaped');
   assert.doesNotMatch(dom, /<script>alert\(1\)<\/script>/, 'entry name injected live markup');
 
-  console.log(`page test: ${rows} rows rendered, all assertions passed`);
+  // The directory filter is URL-driven, which makes a filtered view shareable
+  // and lets --dump-dom exercise it without clicking.
+  const { stdout: filtered } = await promisify(execFile)(chrome, [
+    '--headless=new', '--disable-gpu', '--no-sandbox',
+    '--virtual-time-budget=8000', '--dump-dom', `${url}?usable=1`,
+  ], { maxBuffer: 32 * 1024 * 1024 });
+
+  const fbody = filtered.split('<tbody id="rows">')[1]?.split('</tbody>')[0] ?? '';
+  const frows = fbody.match(/<tr>/g)?.length ?? 0;
+  assert.equal(frows, 1, `usable filter should leave exactly 1 row, left ${frows}`);
+  assert.match(fbody, /Usable One/, 'the usable entry should survive the filter');
+  assert.doesNotMatch(fbody, /No Cors/, 'measured no-CORS should be filtered out');
+  assert.doesNotMatch(fbody, /Untested One/, 'unverified should not count as usable');
+  assert.doesNotMatch(fbody, /Moved One/, 'an entry needing a key is not usable');
+  assert.doesNotMatch(fbody, /alert\(1\)/, 'a dead entry is not usable');
+
+  console.log(`page test: ${rows} rows rendered, filter leaves ${frows}, all assertions passed`);
 } finally {
   server.close();
 }
