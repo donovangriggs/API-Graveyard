@@ -2,6 +2,7 @@
 // entries.json -> docs/results.json, with strike state carried in history.json
 import { readFile, writeFile } from 'node:fs/promises';
 import { publishFields } from './enrich.mjs';
+import { writeBadges } from './badges.mjs';
 
 const CONCURRENCY = 20;
 const TIMEOUT_MS = 10_000;
@@ -141,6 +142,11 @@ async function main() {
   }
 
   const counts = results.reduce((acc, r) => ({ ...acc, [r.status]: (acc[r.status] ?? 0) + 1 }), {});
+  // One shields.io endpoint per entry, so any project can show its own live
+  // status. Written before results.json so every entry can carry its slug.
+  const slugs = await writeBadges(results, 'docs/badge');
+  for (const r of results) r.badgeSlug = slugs[r.url] ?? null;
+
   await writeFile('history.json', JSON.stringify(history));
   await writeFile('docs/results.json', JSON.stringify({ generatedAt: new Date().toISOString(), counts, entries: results }));
   console.log('check:', counts);

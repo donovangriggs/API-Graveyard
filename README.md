@@ -47,6 +47,35 @@ request per URL per day.
 | `docs/index.html` | The page (GitHub Pages: serve from `main` `/docs`) |
 | `history.json` | Rolling 30-day state — committed, it *is* the memory |
 
+## Use the data
+
+Everything is static JSON on GitHub Pages, served with
+`access-control-allow-origin: *`, so you can fetch it straight from a browser.
+
+**Full dataset** — every entry, status, verified CORS and latency:
+
+```
+https://donovangriggs.github.io/API-Graveyard/results.json
+```
+
+```js
+const { entries } = await (await fetch('https://donovangriggs.github.io/API-Graveyard/results.json')).json();
+const usable = entries.filter((e) => e.auth === 'No' && e.verifiedCors === 'yes' && e.status === 'alive');
+```
+
+**Status badge** — a [shields.io endpoint](https://shields.io/badges/endpoint-badge)
+per entry, named by the `badgeSlug` field:
+
+```markdown
+![API status](https://img.shields.io/endpoint?url=https://donovangriggs.github.io/API-Graveyard/badge/cat-facts.json)
+```
+
+Slugs are stable across runs — where two entries share a name, the first keeps
+the clean slug and the other gets a suffix derived from its own URL, so a badge
+URL in your README will not silently start pointing at a different API.
+
+The badge reflects the most recent nightly run; it is a measurement, not an SLA.
+
 ## Roadmap
 
 - **v2** — real endpoint discovery for the 849 no-auth entries: call them,
