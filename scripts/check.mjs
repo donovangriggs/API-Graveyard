@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // entries.json -> docs/results.json, with strike state carried in history.json
 import { readFile, writeFile } from 'node:fs/promises';
-import { publishFields } from './enrich.mjs';
+import { publishFields, pruneToEntries } from './enrich.mjs';
 import { writeBadges } from './badges.mjs';
 
 const CONCURRENCY = 20;
@@ -55,8 +55,18 @@ async function probeOnce(url, method) {
   }
 }
 
+// Parsing is not enough: ftp:// and mailto: parse fine but cannot be probed,
+// and fetch's rejection would otherwise be classified as death rather than as
+// "we cannot check this". discover.mjs already screens schemes; this matches it.
+function probeable(url) {
+  try {
+    const u = new URL(url);
+    return (u.protocol === 'http:' || u.protocol === 'https:') && Boolean(u.host);
+  } catch { return false; }
+}
+
 export async function probe(url) {
-  if (!hostOf(url)) return { url, errorCode: 'BAD_URL' };
+  if (!probeable(url)) return { url, errorCode: 'BAD_URL' };
   let result = await probeOnce(url, 'HEAD');
   if (result.errorCode === 'TIMEOUT') return { url, ...result };
   if (result.errorCode || RETRY_WITH_GET.has(result.httpStatus)) {
@@ -90,7 +100,7 @@ export function applyProbe(prev, status, today) {
   return state;
 }
 
-async function pool(items, worker, limit) {
+export async function pool(items, worker, limit) {
   const results = new Array(items.length);
   let next = 0;
   await Promise.all(
@@ -136,10 +146,7 @@ async function main() {
     };
   });
 
-  // Drop history for entries upstream has already removed.
-  for (const url of Object.keys(history)) {
-    if (!entries.some((e) => e.url === url)) delete history[url];
-  }
+  pruneToEntries(history, entries);
 
   const counts = results.reduce((acc, r) => ({ ...acc, [r.status]: (acc[r.status] ?? 0) + 1 }), {});
   // One shields.io endpoint per entry, so any project can show its own live

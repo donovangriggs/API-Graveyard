@@ -25,7 +25,7 @@ jobs:
         with:
           node-version: '22'
 
-      - run: node --test scripts/test_enrich.mjs scripts/test_extract.mjs scripts/test_discover.mjs
+      - run: node --test scripts/test_enrich.mjs scripts/test_extract.mjs scripts/test_discover.mjs scripts/test_parse.mjs scripts/test_check.mjs
       - run: node scripts/parse.mjs
       - run: node scripts/enrich.mjs
 

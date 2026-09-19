@@ -34,6 +34,16 @@ assert.equal(classify({ httpStatus: 200, url: 'https://a.com/x', finalUrl: 'http
 assert.equal(classify({ httpStatus: 200, url: 'https://a.com/x', finalUrl: 'https://www.a.com/x' }), 'alive');
 assert.equal(classify({ httpStatus: 200, url: 'https://a.com/x', finalUrl: 'https://sold.example/x' }), 'moved');
 
+// A server erroring for three nights running is as dead as one that vanished.
+assert.equal(classify({ httpStatus: 500 }), 'dead');
+assert.equal(classify({ httpStatus: 503 }), 'dead');
+assert.equal(classify({ httpStatus: 410 }), 'dead');
+// Anything else is unreadable rather than dead — 304 is not a verdict.
+assert.equal(classify({ httpStatus: 304 }), 'unknown');
+assert.equal(classify({ httpStatus: 100 }), 'unknown');
+// 401 is a wall, same as 403: the API is there, it just will not talk to us.
+assert.equal(classify({ httpStatus: 401 }), 'blocked');
+
 // History stays bounded so the nightly commit cannot grow without limit.
 const long = Array.from({ length: 40 }, () => 'alive');
 assert.equal(run(long).recent.length, 30);

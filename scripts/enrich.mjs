@@ -39,6 +39,16 @@ export function publishFields(entry, cached) {
   };
 }
 
+// Both jobs keep a url-keyed cache and both must forget entries upstream has
+// removed. One copy, used by check.mjs (history) and enrich.mjs (endpoints).
+export function pruneToEntries(cache, entries) {
+  const live = new Set(entries.map((e) => e.url));
+  for (const url of Object.keys(cache)) {
+    if (!live.has(url)) delete cache[url];
+  }
+  return cache;
+}
+
 async function getText(url) {
   try {
     const res = await fetch(url, { headers: { 'user-agent': UA }, signal: AbortSignal.timeout(TIMEOUT_MS) });
@@ -91,10 +101,7 @@ async function main() {
   const noAuth = entries.filter((e) => e.auth === 'No');
   const processed = await enrich(noAuth, cache, today);
 
-  // Forget entries upstream has removed.
-  for (const url of Object.keys(cache)) {
-    if (!entries.some((e) => e.url === url)) delete cache[url];
-  }
+  pruneToEntries(cache, entries);
 
   const confirmed = Object.values(cache).filter((c) => c.status === 'confirmed');
   await writeFile('endpoints.json', JSON.stringify(cache, null, 2));

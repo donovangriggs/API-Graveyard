@@ -23,6 +23,7 @@ jobs:
           node-version: '22'
 
       - run: node scripts/test_history.mjs
+      - run: node --test scripts/test_parse.mjs scripts/test_check.mjs scripts/test_badges.mjs
       - run: node scripts/test_page.mjs
         env:
           # ubuntu-latest ships Chrome; fail rather than skip if that changes.

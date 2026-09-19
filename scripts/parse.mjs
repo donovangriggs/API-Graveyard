@@ -44,6 +44,18 @@ export function parseReadme(md) {
   return entries;
 }
 
+// Upstream reformatting the README must fail the build loudly. Kept separate
+// from main() so the guard itself can be exercised without a network fetch.
+export function validateParse(entries) {
+  const categories = new Set(entries.map((e) => e.category));
+  if (entries.length >= MIN_ENTRIES && categories.size >= MIN_CATEGORIES) return { ok: true };
+  return {
+    ok: false,
+    message: `parse: got ${entries.length} entries / ${categories.size} categories, ` +
+      `expected >=${MIN_ENTRIES} / >=${MIN_CATEGORIES}. Upstream format likely changed.`,
+  };
+}
+
 async function main() {
   const local = process.argv[2];
   const md = local
@@ -54,18 +66,14 @@ async function main() {
       });
 
   const entries = parseReadme(md);
-  const categories = new Set(entries.map((e) => e.category));
-
-  if (entries.length < MIN_ENTRIES || categories.size < MIN_CATEGORIES) {
-    console.error(
-      `parse: got ${entries.length} entries / ${categories.size} categories, ` +
-      `expected >=${MIN_ENTRIES} / >=${MIN_CATEGORIES}. Upstream format likely changed.`
-    );
+  const check = validateParse(entries);
+  if (!check.ok) {
+    console.error(check.message);
     process.exit(1);
   }
 
   await writeFile('entries.json', JSON.stringify(entries, null, 2));
-  console.log(`parse: ${entries.length} entries, ${categories.size} categories`);
+  console.log(`parse: ${entries.length} entries, ${new Set(entries.map((e) => e.category)).size} categories`);
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) await main();
