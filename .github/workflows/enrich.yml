@@ -1,0 +1,38 @@
+name: weekly enrich
+
+# Endpoint discovery is far heavier than the nightly link check, and a
+# confirmed endpoint stays confirmed — so this runs weekly and leans on the
+# endpoints.json cache. After the first pass it does almost nothing.
+on:
+  schedule:
+    - cron: '41 3 * * 0'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: weekly-enrich
+  cancel-in-progress: false
+
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - run: node --test scripts/test_enrich.mjs scripts/test_extract.mjs scripts/test_discover.mjs
+      - run: node scripts/parse.mjs
+      - run: node scripts/enrich.mjs
+
+      - name: Commit endpoints
+        run: |
+          git config user.name  'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add endpoints.json
+          git diff --staged --quiet || git commit -m "weekly enrich: $(date -u +%Y-%m-%d)"
+          git push
