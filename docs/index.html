@@ -59,6 +59,11 @@
   .c-yes { color: var(--alive); }
   .c-no { color: var(--dead); }
   .c-unverified { color: var(--unknown); }
+  .endpoint {
+    font: 12px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace;
+    color: var(--alive); margin-top: 3px; word-break: break-all;
+    user-select: all; /* one click selects the whole endpoint to copy */
+  }
   @media (max-width: 640px) { .hide-sm { display: none; } }
 </style>
 </head>
@@ -183,6 +188,7 @@ function render() {
       <td>
         ${link(e)}
         <div class="desc">${esc(e.description)}</div>
+        ${e.endpoint ? `<div class="endpoint" title="Verified endpoint — we called this and it answered">${esc(e.endpoint)}</div>` : ''}
         ${e.redirectedTo ? `<div class="meta">now redirects to ${esc(e.redirectedTo)}</div>` : ''}
       </td>
       <td class="hide-sm desc">${esc(e.category)}</td>
@@ -213,10 +219,11 @@ function detail(e) {
   if (e.errorCode) bits.push(esc(e.errorCode));
   if (e.status === 'unknown' && e.strikes) bits.push(`${e.strikes}/3 strikes`);
   if (e.status === 'dead' && e.lastSeenAlive) bits.push(`last alive ${esc(e.lastSeenAlive)}`);
-  // Prefer the API's own latency once we have it: the rows are sorted by that
-  // number, so showing the docs page's instead makes the list look mis-sorted.
+  // The list sorts on the API's own latency, so a row that has an endpoint must
+  // never display the docs page's number instead — that reads as mis-sorted.
+  // Showing nothing is better than showing the wrong measurement.
   if (e.apiLatencyMs != null) bits.push(`${e.apiLatencyMs}ms API`);
-  else if (e.latencyMs != null && e.status === 'alive') bits.push(`${e.latencyMs}ms`);
+  else if (!e.endpoint && e.latencyMs != null && e.status === 'alive') bits.push(`${e.latencyMs}ms`);
   return bits.join(' · ');
 }
 

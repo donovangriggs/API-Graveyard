@@ -146,12 +146,17 @@ try {
 
   const fbody = filtered.split('<tbody id="rows">')[1]?.split('</tbody>')[0] ?? '';
   const frows = fbody.match(/<tr>/g)?.length ?? 0;
-  assert.equal(frows, 1, `usable filter should leave exactly 1 row, left ${frows}`);
+  // Two fixtures qualify: 'Usable One' and the hostile-endpoint entry, which is
+  // also alive, keyless and CORS-verified.
+  assert.equal(frows, 2, `usable filter should leave exactly 2 rows, left ${frows}`);
   assert.match(fbody, /Usable One/, 'the usable entry should survive the filter');
+  assert.match(fbody, /Hostile Endpoint/, 'a hostile endpoint is still a usable API');
   assert.doesNotMatch(fbody, /No Cors/, 'measured no-CORS should be filtered out');
   assert.doesNotMatch(fbody, /Untested One/, 'unverified should not count as usable');
   assert.doesNotMatch(fbody, /Moved One/, 'an entry needing a key is not usable');
-  assert.doesNotMatch(fbody, /alert\(1\)/, 'a dead entry is not usable');
+  // Identified by URL: 'alert(1)' now also appears, safely escaped, inside the
+  // hostile-endpoint row, so it no longer identifies the dead entry.
+  assert.doesNotMatch(fbody, /gone\.example/, 'a dead entry is not usable');
 
   // The row is sorted by the API's latency, so it must show that number and
   // not the docs page's — otherwise the list looks mis-sorted to the reader.

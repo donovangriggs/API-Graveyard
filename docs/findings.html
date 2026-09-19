@@ -175,10 +175,17 @@ if (!res?.ok) {
   const agreed = comparable.length - over - under;
   const seg = (n, color, label) => n === 0 ? '' :
     `<div style="flex:${n};background:${color}" title="${label}: ${n}">${n / comparable.length > 0.08 ? n : ''}</div>`;
-  el('cors-split').innerHTML =
+  const split = el('cors-split');
+  split.innerHTML =
     seg(over, 'var(--pole-over)', 'README says Yes, measured no') +
     seg(agreed, 'var(--pole-neutral)', 'agreed') +
     seg(under, 'var(--pole-under)', 'README says No, measured yes');
+  // The bar encodes three values in colour and width alone. Expose the same
+  // information as text so it is not sight-only.
+  split.setAttribute('role', 'img');
+  split.setAttribute('aria-label',
+    `Of ${comparable.length} entries we could compare: ${agreed} agreed with the README, ` +
+    `${over} claimed CORS but had none, ${under} claimed none but had CORS.`);
 
   // Status: separate labelled rows, not a stacked bar. The palette validator
   // put alive-green and moved-yellow at CVD ΔE 5.1 — adjacent in a stack they
