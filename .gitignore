@@ -1,0 +1,4 @@
+entries.json
+node_modules/
+.claude/
+codedb.snapshot

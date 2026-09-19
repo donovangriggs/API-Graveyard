@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>API Graveyard</title>
+<meta name="description" content="Nightly link-health for every entry in the public-apis list.">
+<style>
+  :root {
+    --bg: #0d1017; --panel: #151a23; --line: #232a36;
+    --text: #e6e9ef; --dim: #8b94a5;
+    --alive: #3fb950; --moved: #d29922; --blocked: #58a6ff; --dead: #f85149; --unknown: #6e7681;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 15px/1.5 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size: 28px; margin: 0 0 4px; letter-spacing: -0.02em; }
+  .sub { color: var(--dim); margin: 0 0 28px; }
+  .sub a { color: var(--blocked); }
+
+  .counts { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+  .chip {
+    border: 1px solid var(--line); background: var(--panel); color: var(--text);
+    border-radius: 999px; padding: 7px 14px; cursor: pointer; font: inherit;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .chip[aria-pressed="true"] { border-color: currentColor; }
+  .chip .n { color: var(--dim); font-variant-numeric: tabular-nums; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+  .s-alive { color: var(--alive); } .s-moved { color: var(--moved); }
+  .s-blocked { color: var(--blocked); } .s-dead { color: var(--dead); }
+  .s-unknown { color: var(--unknown); }
+
+  .controls { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+  input, select {
+    background: var(--panel); border: 1px solid var(--line); color: var(--text);
+    border-radius: 8px; padding: 9px 12px; font: inherit;
+  }
+  input { flex: 1; min-width: 200px; }
+  input:focus, select:focus, .chip:focus-visible { outline: 2px solid var(--blocked); outline-offset: 1px; }
+
+  table { width: 100%; border-collapse: collapse; }
+  th { text-align: left; color: var(--dim); font-weight: 500; font-size: 13px; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+  td { padding: 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  td a { color: var(--text); text-decoration: none; }
+  td a:hover { text-decoration: underline; }
+  .desc { color: var(--dim); font-size: 13px; }
+  .meta { color: var(--unknown); font-size: 12px; font-variant-numeric: tabular-nums; }
+  .status { white-space: nowrap; font-size: 13px; display: flex; align-items: center; gap: 7px; }
+  .empty { color: var(--dim); padding: 40px 0; text-align: center; }
+  @media (max-width: 640px) { .hide-sm { display: none; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>API Graveyard</h1>
+  <p class="sub">
+    Nightly link health for every entry in
+    <a href="https://github.com/public-apis/public-apis">public-apis</a>.
+    An entry is only called dead after 3 consecutive failed nights &mdash;
+    <span class="s-blocked">blocked</span> means a bot wall, not a death.
+    <span id="stamp"></span>
+  </p>
+
+  <div class="counts" id="counts"></div>
+
+  <div class="controls">
+    <input id="q" type="search" placeholder="Search name, description or URL…" autocomplete="off">
+    <select id="category"><option value="">All categories</option></select>
+    <select id="auth">
+      <option value="">Any auth</option>
+      <option value="No">No auth</option>
+      <option value="apiKey">apiKey</option>
+      <option value="OAuth">OAuth</option>
+    </select>
+  </div>
+
+  <table>
+    <thead><tr>
+      <th>API</th><th class="hide-sm">Category</th><th class="hide-sm">Auth</th><th>Status</th>
+    </tr></thead>
+    <tbody id="rows"></tbody>
+  </table>
+  <p class="empty" id="empty" hidden>Nothing matches those filters.</p>
+</div>
+
+<script type="module">
+const ORDER = ['alive', 'moved', 'blocked', 'unknown', 'dead'];
+const el = (id) => document.getElementById(id);
+const active = new Set();
+let data = { entries: [], counts: {} };
+
+const res = await fetch('results.json').catch(() => null);
+if (!res?.ok) {
+  el('empty').hidden = false;
+  el('empty').textContent = 'No results.json yet — run scripts/check.mjs.';
+} else {
+  data = await res.json();
+  el('stamp').textContent = `Last run ${new Date(data.generatedAt).toLocaleString()}.`;
+
+  el('counts').append(...ORDER.map((s) => {
+    const b = document.createElement('button');
+    b.className = `chip s-${s}`;
+    b.setAttribute('aria-pressed', 'false');
+    b.innerHTML = `<span class="dot"></span>${s}<span class="n">${data.counts[s] ?? 0}</span>`;
+    b.onclick = () => {
+      active.has(s) ? active.delete(s) : active.add(s);
+      b.setAttribute('aria-pressed', String(active.has(s)));
+      render();
+    };
+    return b;
+  }));
+
+  for (const c of [...new Set(data.entries.map((e) => e.category))].sort()) {
+    el('category').append(new Option(c, c));
+  }
+  for (const id of ['q', 'category', 'auth']) el(id).oninput = render;
+  render();
+}
+
+function render() {
+  const q = el('q').value.trim().toLowerCase();
+  const cat = el('category').value;
+  const auth = el('auth').value;
+
+  const rows = data.entries.filter((e) =>
+    (!active.size || active.has(e.status)) &&
+    (!cat || e.category === cat) &&
+    (!auth || e.auth === auth) &&
+    (!q || `${e.name} ${e.description} ${e.url}`.toLowerCase().includes(q))
+  );
+
+  el('empty').hidden = rows.length > 0;
+  el('rows').replaceChildren(...rows.map((e) => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>
+        <a href="${e.url}" rel="noopener nofollow">${esc(e.name)}</a>
+        <div class="desc">${esc(e.description)}</div>
+        ${e.redirectedTo ? `<div class="meta">now redirects to ${esc(e.redirectedTo)}</div>` : ''}
+      </td>
+      <td class="hide-sm desc">${esc(e.category)}</td>
+      <td class="hide-sm desc">${esc(e.auth)}</td>
+      <td>
+        <div class="status s-${e.status}"><span class="dot"></span>${e.status}</div>
+        <div class="meta">${detail(e)}</div>
+      </td>`;
+    return tr;
+  }));
+}
+
+function detail(e) {
+  const bits = [];
+  if (e.httpStatus) bits.push(`HTTP ${e.httpStatus}`);
+  if (e.errorCode) bits.push(e.errorCode);
+  if (e.status === 'unknown' && e.strikes) bits.push(`${e.strikes}/3 strikes`);
+  if (e.status === 'dead' && e.lastSeenAlive) bits.push(`last alive ${e.lastSeenAlive}`);
+  if (e.latencyMs != null && e.status === 'alive') bits.push(`${e.latencyMs}ms`);
+  return bits.join(' · ');
+}
+
+const esc = (s) => String(s ?? '').replace(/[<>&"]/g, (c) => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;', '"': '&quot;' }[c]));
+</script>
+</body>
+</html>
