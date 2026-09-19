@@ -102,6 +102,9 @@ describe('verifyEndpoint (integration)', () => {
     if (req.url === '/json-nocors') return send(200, 'application/json', '{"ok":true}');
     if (req.url === '/html') return send(200, 'text/html', '<!doctype html><html></html>');
     if (req.url === '/boom') return send(500, 'application/json', '{"err":1}');
+    if (req.url === '/rejects') return send(400, 'application/json', '{"error":"missing param"}');
+    if (req.url === '/needs-key') return send(401, 'application/json', '{"error":"unauthorized"}');
+    if (req.url === '/gone-json') return send(404, 'application/json', '{"error":"not found"}');
     return send(404, 'text/plain', 'nope');
   });
 
@@ -132,6 +135,32 @@ describe('verifyEndpoint (integration)', () => {
 
   test('a 5xx is not an endpoint even when it returns JSON', async () => {
     assert.equal((await verifyEndpoint(`${base}/boom`)).ok, false);
+  });
+
+  // A live API rejecting a malformed call proves the endpoint exists. This is
+  // the geoPlugin case: api.geoplugin.com/ answers 400 with a JSON body.
+  test('a JSON-shaped 4xx rejection confirms the endpoint', async () => {
+    const r = await verifyEndpoint(`${base}/rejects`);
+    assert.equal(r.ok, true);
+    assert.equal(r.confirmedBy, 'rejection');
+  });
+
+  test('a 401 asking for a key also confirms the endpoint exists', async () => {
+    assert.equal((await verifyEndpoint(`${base}/needs-key`)).ok, true);
+  });
+
+  // 404 is the one 4xx that means the opposite: this path is not there. Taking
+  // every JSON 4xx would let an API gateway's JSON 404 confirm any guess.
+  test('a JSON 404 does not confirm — it says the path is wrong', async () => {
+    assert.equal((await verifyEndpoint(`${base}/gone-json`)).ok, false);
+  });
+
+  test('a 4xx with an HTML body confirms nothing', async () => {
+    assert.equal((await verifyEndpoint(`${base}/missing`)).ok, false);
+  });
+
+  test('a 2xx success is labelled as such', async () => {
+    assert.equal((await verifyEndpoint(`${base}/json`)).confirmedBy, 'success');
   });
 
   test('a connection failure is reported, not thrown', async () => {
