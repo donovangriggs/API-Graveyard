@@ -75,11 +75,32 @@ scripts/extract.mjs  | 100.00 line | 82.98 branch | 100.00 funcs
 scripts/discover.mjs | 100.00 line | 97.67 branch | 100.00 funcs
 ```
 
-- **The Phase 0 gate has not been run.** These tests prove the extractors
-  behave as specified against fixtures. They say nothing about recall on real
-  docs pages — which is exactly the mistake that produced the 2% result last
-  time. The 50-entry measurement is the next step and decides whether Phases
-  1-3 happen at all.
+- **The Phase 0 gate was run, and FAILED. Measured recall: 24%, against a
+  40% gate.** Two runs on the same 50-entry sample as the 2% URL-shape
+  heuristic:
+
+  | Run | Recall | A (spec) | B (code blocks) | 2xx | JSON-4xx |
+  |:---|---:|---:|---:|---:|---:|
+  | Initial | 9/50 = 18% | 6 | 3 | 6 | 3 |
+  | After two bug fixes | **12/50 = 24%** | 7 | 5 | 9 | 3 |
+
+  The fixes worked as predicted — Httpbin confirmed via `/spec.json`, EmojiHub
+  and EU VAT via repo READMEs — but did not reach the gate.
+
+  **The gate is now near-unreachable, not merely unmet.** Of the 38 remaining
+  misses only 8 contain a URL in a code block, so a flawless Extractor C caps
+  this sample at 20/50 = 40% exactly; a realistic one lands near 32%. 10 of the
+  50 have no reachable docs page at all, which is a hard ceiling no extractor
+  can move.
+
+  What 24% does buy, if the gate is knowingly overridden: roughly 200 of the
+  849 no-auth entries with a verified endpoint, real measured CORS, and real
+  latency — and **CORS disagreed with upstream's self-reported column in 3 of
+  12 confirmations (25%)**, which is the statistic that makes v2 worth
+  publishing at all.
+
+  Per the plan, this is a decision for the user, not a judgement call to be
+  rationalised here.
 - **No network test of Extractor A end to end.** Spec fetching is not yet
   wired to `discover()`; only the pure parsing is covered.
 - **YAML specs are not parsed.** `/openapi.yaml` is common and would need a
