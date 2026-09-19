@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What 1757 Public APIs Look Like</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext y='14' font-size='14'%3E%F0%9F%AA%A6%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Measured findings from nightly checks of every entry in the public-apis list.">
+<style>
+  :root {
+    --bg: #0d1017; --panel: #151a23; --line: #232a36;
+    --text: #e6e9ef; --dim: #8b94a5; --muted: #6e7681;
+    /* Validated against the #0d1017 dark surface with the dataviz validator.
+       Sequential bars use one hue; the diverging pair is blue<->red with a
+       neutral gray midpoint. The site's lighter #58a6ff sits outside the dark
+       lightness band, so the darker step is used for marks. */
+    --seq: #3987e5;
+    --pole-over: #f85149; --pole-under: #3987e5; --pole-neutral: #383835;
+    --alive: #3fb950; --moved: #d29922; --blocked: #58a6ff; --dead: #f85149;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+    font: 15px/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 40px 16px 80px; }
+  a { color: var(--blocked); }
+  h1 { font-size: 32px; margin: 0 0 8px; letter-spacing: -0.02em; line-height: 1.2; }
+  h2 { font-size: 20px; margin: 48px 0 4px; letter-spacing: -0.01em; }
+  .lede, .sub { color: var(--dim); }
+  .lede { font-size: 17px; margin: 0 0 8px; }
+  .sub { font-size: 14px; margin: 0 0 24px; }
+  .note { color: var(--muted); font-size: 13px; margin-top: 10px; }
+
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 28px 0 8px; }
+  .kpi { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+  .kpi .v { font-size: 28px; font-weight: 600; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
+  .kpi .k { color: var(--dim); font-size: 13px; }
+
+  .rows { display: flex; flex-direction: column; gap: 7px; margin-top: 16px; }
+  .row { display: grid; grid-template-columns: minmax(120px, 190px) 1fr auto; gap: 12px; align-items: center; }
+  .bar-label { color: var(--dim); font-size: 13px; text-align: right; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .track { background: #10141c; border-radius: 4px; height: 20px; overflow: hidden; }
+  .fill { height: 100%; border-radius: 0 4px 4px 0; }
+  .val { color: var(--text); font-size: 13px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .val small { color: var(--muted); }
+
+  .split { display: flex; height: 26px; border-radius: 6px; overflow: hidden; margin-top: 14px; gap: 2px; background: var(--line); }
+  .split div { display: grid; place-items: center; font-size: 12px; color: #0d1017; font-weight: 600; }
+  .legend { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 10px; color: var(--dim); font-size: 13px; }
+  .legend span { display: flex; align-items: center; gap: 6px; }
+  .sw { width: 10px; height: 10px; border-radius: 2px; }
+  table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 14px; }
+  th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--line); }
+  th { color: var(--dim); font-weight: 500; font-size: 13px; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  details { margin-top: 14px; }
+  summary { color: var(--dim); font-size: 13px; cursor: pointer; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>What <span data-stat="total">…</span> public APIs actually look like</h1>
+  <p class="lede">
+    Every entry in <a href="https://github.com/public-apis/public-apis">public-apis</a>,
+    checked nightly. These are measurements, not estimates — each number below is
+    computed from the same data the <a href="./">directory</a> is built from.
+  </p>
+  <p class="sub" id="stamp"></p>
+
+  <div class="kpis" id="kpis"></div>
+
+  <h2>Where the rot is</h2>
+  <p class="sub">Share of each category that is dead, unresolved or failing. Categories with fewer than 15 entries are excluded — a 2-of-3 category is noise, not a finding.</p>
+  <div class="rows" id="rot"></div>
+  <p class="note" id="rot-caveat"></p>
+
+  <h2>The CORS column is wrong about 1 in 8</h2>
+  <p class="sub">Upstream's CORS column is self-reported. Where we confirmed a real endpoint, we sent an <code>Origin</code> and read the answer back.</p>
+  <div class="split" id="cors-split"></div>
+  <div class="legend">
+    <span><i class="sw" style="background:var(--pole-over)"></i> README says Yes, measured no (<b data-stat="cors-overclaim">…</b>)</span>
+    <span><i class="sw" style="background:var(--pole-under)"></i> README says No, measured yes (<b data-stat="cors-underclaim">…</b>)</span>
+    <span><i class="sw" style="background:var(--pole-neutral)"></i> agreed</span>
+  </div>
+  <p class="note">
+    <b data-stat="cors-disagree">…</b> of <b data-stat="cors-comparable">…</b> comparable entries disagree.
+    A further <b data-stat="cors-newly-known">…</b> are listed as “Unknown” upstream and now have a measured answer.
+  </p>
+
+  <h2>Status of every entry</h2>
+  <div class="rows" id="status"></div>
+  <p class="note">An entry is only called dead after 3 consecutive failed nights. <b data-stat="moved">…</b> entries still resolve but redirect to a different host than the README claims, and <b data-stat="unresolved">…</b> domains no longer resolve at all.</p>
+
+  <details>
+    <summary>Show the rot numbers as a table</summary>
+    <table><thead><tr><th>Category</th><th class="num">Broken</th><th class="num">Entries</th><th class="num">Share</th></tr></thead>
+    <tbody id="rot-table"></tbody></table>
+  </details>
+</div>
+
+<script type="module">
+const el = (id) => document.getElementById(id);
+const setStat = (k, v) => document.querySelectorAll(`[data-stat="${k}"]`).forEach((n) => { n.textContent = v; });
+const esc = (s) => String(s ?? '').replace(/[<>&"]/g, (c) => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;', '"': '&quot;' }[c]));
+
+const MIN_SAMPLE = 15;
+const BROKEN = new Set(['dead', 'unknown']);
+
+const res = await fetch('results.json').catch(() => null);
+if (!res?.ok) {
+  el('kpis').textContent = 'No results.json yet — run scripts/check.mjs.';
+} else {
+  const data = await res.json();
+  const E = data.entries;
+  el('stamp').textContent = `Measured ${new Date(data.generatedAt).toLocaleDateString()} · ${E.length} entries.`;
+
+  const moved = E.filter((e) => e.status === 'moved').length;
+  const unresolved = E.filter((e) => e.errorCode === 'ENOTFOUND').length;
+  const measured = E.filter((e) => e.verifiedCors === 'yes' || e.verifiedCors === 'no');
+  const comparable = measured.filter((e) => e.claimedCors === 'Yes' || e.claimedCors === 'No');
+  const over = comparable.filter((e) => e.claimedCors === 'Yes' && e.verifiedCors === 'no').length;
+  const under = comparable.filter((e) => e.claimedCors === 'No' && e.verifiedCors === 'yes').length;
+  const newlyKnown = measured.filter((e) => e.claimedCors !== 'Yes' && e.claimedCors !== 'No').length;
+  const usable = E.filter((e) => ['alive', 'moved', 'blocked'].includes(e.status) && e.auth === 'No' && e.verifiedCors === 'yes').length;
+
+  setStat('total', E.length);
+  setStat('moved', moved);
+  setStat('unresolved', unresolved);
+  setStat('cors-comparable', comparable.length);
+  setStat('cors-disagree', over + under);
+  setStat('cors-overclaim', over);
+  setStat('cors-underclaim', under);
+  setStat('cors-newly-known', newlyKnown);
+
+  el('kpis').innerHTML = [
+    [E.length, 'entries checked nightly'],
+    [usable, 'usable from a browser'],
+    [measured.length, 'endpoints verified'],
+    [unresolved, 'domains gone'],
+  ].map(([v, k]) => `<div class="kpi"><div class="v">${v}</div><div class="k">${k}</div></div>`).join('');
+
+  // Rot by category — one hue, magnitude by length. Single series, so no
+  // legend; every bar is directly labelled.
+  const byCat = {};
+  for (const e of E) {
+    byCat[e.category] ??= { n: 0, bad: 0 };
+    byCat[e.category].n++;
+    if (BROKEN.has(e.status)) byCat[e.category].bad++;
+  }
+  const rot = Object.entries(byCat)
+    .filter(([, v]) => v.n >= MIN_SAMPLE)
+    .map(([cat, v]) => ({ cat, ...v, pct: Math.round((v.bad / v.n) * 100) }))
+    .sort((a, b) => b.pct - a.pct);
+
+  const top = rot.slice(0, 12);
+  const max = Math.max(...top.map((r) => r.pct), 1);
+  el('rot').innerHTML = top.map((r) => `
+    <div class="row" data-cat="${esc(r.cat)}" data-pct="${r.pct}" data-n="${r.n}">
+      <div class="bar-label">${esc(r.cat)}</div>
+      <div class="track"><div class="fill" style="width:${(r.pct / max) * 100}%;background:var(--seq)"></div></div>
+      <div class="val">${r.pct}% <small>of ${r.n}</small></div>
+    </div>`).join('');
+
+  // Honesty caveat, computed rather than asserted: while the history is young,
+  // most "failing" entries are on their first strike and may simply recover.
+  const failing = E.filter((e) => e.status === 'unknown').length;
+  const dead = E.filter((e) => e.status === 'dead').length;
+  el('rot-caveat').textContent = dead === 0
+    ? `No entry has been confirmed dead yet — that needs 3 consecutive failed nights, and the history is younger than that. All ${failing} counted here are still on their first strikes, and some will recover. Treat this as an upper bound.`
+    : `${dead} entries are confirmed dead after 3+ consecutive failed nights; a further ${failing} are failing but not yet confirmed.`;
+
+  el('rot-table').innerHTML = rot.map((r) =>
+    `<tr><td>${esc(r.cat)}</td><td class="num">${r.bad}</td><td class="num">${r.n}</td><td class="num">${r.pct}%</td></tr>`).join('');
+
+  // Diverging: two poles of wrongness around a neutral "agreed" midpoint.
+  const agreed = comparable.length - over - under;
+  const seg = (n, color, label) => n === 0 ? '' :
+    `<div style="flex:${n};background:${color}" title="${label}: ${n}">${n / comparable.length > 0.08 ? n : ''}</div>`;
+  el('cors-split').innerHTML =
+    seg(over, 'var(--pole-over)', 'README says Yes, measured no') +
+    seg(agreed, 'var(--pole-neutral)', 'agreed') +
+    seg(under, 'var(--pole-under)', 'README says No, measured yes');
+
+  // Status: separate labelled rows, not a stacked bar. The palette validator
+  // put alive-green and moved-yellow at CVD ΔE 5.1 — adjacent in a stack they
+  // would be indistinguishable, so each gets its own row and its own label.
+  const STATUS = [['alive', 'var(--alive)'], ['moved', 'var(--moved)'], ['blocked', 'var(--blocked)'], ['unknown', 'var(--muted)'], ['dead', 'var(--dead)']];
+  const maxN = Math.max(...STATUS.map(([s]) => data.counts[s] ?? 0), 1);
+  el('status').innerHTML = STATUS.map(([s, color]) => {
+    const n = data.counts[s] ?? 0;
+    return `<div class="row">
+      <div class="bar-label">${s}</div>
+      <div class="track"><div class="fill" style="width:${(n / maxN) * 100}%;background:${color}"></div></div>
+      <div class="val">${n}</div>
+    </div>`;
+  }).join('');
+}
+</script>
+</body>
+</html>

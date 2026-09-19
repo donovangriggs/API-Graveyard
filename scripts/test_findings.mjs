@@ -21,13 +21,15 @@ const row = (over) => ({
   claimedCors: 'Unknown', corsDisagrees: false, url: 'https://x.example/', ...over,
 });
 
-// 10 entries: 4 dead/unknown in Crypto (50% rot of 8), 2 moved, 3 disagreements.
+// Crypto deliberately has 16 entries: the page excludes categories under 15,
+// because a 2-of-3 category is noise rather than a finding.
+// 23 entries: 8 of 16 Crypto broken (50%), 2 moved, 3 CORS disagreements.
 const FIXTURE = {
   generatedAt: '2026-09-19T00:00:00.000Z',
-  counts: { alive: 4, moved: 2, blocked: 1, unknown: 2, dead: 1 },
+  counts: { alive: 13, moved: 2, blocked: 0, unknown: 7, dead: 1 },
   entries: [
-    ...Array.from({ length: 4 }, (_, i) => row({ name: `crypto-ok-${i}`, category: 'Cryptocurrency' })),
-    ...Array.from({ length: 3 }, (_, i) => row({ name: `crypto-bad-${i}`, category: 'Cryptocurrency', status: 'unknown', errorCode: 'ENOTFOUND' })),
+    ...Array.from({ length: 8 }, (_, i) => row({ name: `crypto-ok-${i}`, category: 'Cryptocurrency' })),
+    ...Array.from({ length: 7 }, (_, i) => row({ name: `crypto-bad-${i}`, category: 'Cryptocurrency', status: 'unknown', errorCode: 'ENOTFOUND' })),
     row({ name: 'crypto-dead', category: 'Cryptocurrency', status: 'dead', errorCode: 'ENOTFOUND' }),
     row({ name: 'moved-a', category: 'Weather', status: 'moved', redirectedTo: 'https://elsewhere.example/' }),
     row({ name: 'moved-b', category: 'Weather', status: 'moved', redirectedTo: 'https://elsewhere.example/' }),
@@ -61,17 +63,22 @@ await new Promise((r) => server.listen(0, '127.0.0.1', r));
 const url = `http://127.0.0.1:${server.address().port}/findings.html`;
 
 try {
-  const { stdout: dom } = await promisify(execFile)(chrome, [
+  const { stdout: rawDom } = await promisify(execFile)(chrome, [
     '--headless=new', '--disable-gpu', '--no-sandbox',
     '--virtual-time-budget=8000', '--dump-dom', url,
   ], { maxBuffer: 32 * 1024 * 1024 });
 
+  // --dump-dom includes the inline <script> source, where the template literal
+  // `data-cat="${esc(r.cat)}"` appears verbatim. Matching against the raw dump
+  // counts that as a rendered bar, so strip scripts before asserting anything.
+  const dom = rawDom.replace(/<script[\s\S]*?<\/script>/gi, '');
+
   const stat = (key) => dom.match(new RegExp(`data-stat="${key}"[^>]*>([^<]*)<`))?.[1]?.trim();
 
   // Headline counts, all derived from the fixture.
-  assert.equal(stat('total'), '15', 'total entries');
+  assert.equal(stat('total'), '23', 'total entries');
   assert.equal(stat('moved'), '2', 'moved count');
-  assert.equal(stat('unresolved'), '4', 'domains that no longer resolve (ENOTFOUND)');
+  assert.equal(stat('unresolved'), '8', 'domains that no longer resolve (ENOTFOUND)');
 
   // CORS: 3 of 4 comparable disagree; the Unknown one is not comparable.
   assert.equal(stat('cors-comparable'), '4', 'comparable = measured AND README said Yes/No');
@@ -85,12 +92,20 @@ try {
   assert.equal(crypto, '50', 'Cryptocurrency rot percentage');
 
   // A chart must not invent precision the sample cannot support.
-  assert.match(dom, /data-cat="Cryptocurrency"[^>]*data-n="8"/, 'sample size must be published beside the percentage');
+  assert.match(dom, /data-cat="Cryptocurrency"[^>]*data-n="16"/, 'sample size must be published beside the percentage');
+
+  // The small-sample rule must actually bite: Weather has 2 entries.
+  assert.doesNotMatch(dom, /data-cat="Weather"/, 'categories under 15 entries must be excluded from the chart');
 
   // Every bar is labelled, so colour never carries the meaning alone.
-  const bars = [...dom.matchAll(/data-cat="([^"]+)"/g)].length;
-  const labels = [...dom.matchAll(/class="bar-label"/g)].length;
-  assert.equal(bars, labels, 'every bar needs a visible label');
+  // Scoped per row: the status rows are labelled too but carry no data-cat,
+  // so counting all .bar-label elements globally would prove nothing.
+  const rotRows = [...dom.matchAll(/<div class="row" data-cat="[^"]*"[^>]*>([\s\S]*?)<\/div>\s*<\/div>/g)];
+  assert.equal(rotRows.length, 1, 'only Cryptocurrency clears the 15-entry minimum in this fixture');
+  for (const [, inner] of rotRows) {
+    assert.match(inner, /class="bar-label"/, 'each category bar needs its own visible label');
+  }
+  const bars = rotRows.length;
 
   assert.doesNotMatch(dom, /\b13%\b/, 'no hand-written statistic from the real dataset may appear');
 

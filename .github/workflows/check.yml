@@ -27,6 +27,9 @@ jobs:
         env:
           # ubuntu-latest ships Chrome; fail rather than skip if that changes.
           REQUIRE_BROWSER: '1'
+      - run: node scripts/test_findings.mjs
+        env:
+          REQUIRE_BROWSER: '1'
       - run: node scripts/parse.mjs
       - run: node scripts/check.mjs
 
