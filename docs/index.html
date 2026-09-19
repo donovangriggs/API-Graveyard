@@ -211,7 +211,10 @@ function detail(e) {
   if (e.errorCode) bits.push(e.errorCode);
   if (e.status === 'unknown' && e.strikes) bits.push(`${e.strikes}/3 strikes`);
   if (e.status === 'dead' && e.lastSeenAlive) bits.push(`last alive ${e.lastSeenAlive}`);
-  if (e.latencyMs != null && e.status === 'alive') bits.push(`${e.latencyMs}ms`);
+  // Prefer the API's own latency once we have it: the rows are sorted by that
+  // number, so showing the docs page's instead makes the list look mis-sorted.
+  if (e.apiLatencyMs != null) bits.push(`${e.apiLatencyMs}ms API`);
+  else if (e.latencyMs != null && e.status === 'alive') bits.push(`${e.latencyMs}ms`);
   return bits.join(' · ');
 }
 

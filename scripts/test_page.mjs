@@ -122,6 +122,11 @@ try {
   assert.doesNotMatch(fbody, /Moved One/, 'an entry needing a key is not usable');
   assert.doesNotMatch(fbody, /alert\(1\)/, 'a dead entry is not usable');
 
+  // The row is sorted by the API's latency, so it must show that number and
+  // not the docs page's — otherwise the list looks mis-sorted to the reader.
+  assert.match(fbody, /55ms/, 'usable row should show the API latency');
+  assert.doesNotMatch(fbody, /42ms/, 'usable row must not show the docs-page latency');
+
   console.log(`page test: ${rows} rows rendered, filter leaves ${frows}, all assertions passed`);
 } finally {
   server.close();
