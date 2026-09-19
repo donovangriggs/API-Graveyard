@@ -14,6 +14,7 @@ import { readFile } from 'node:fs/promises';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import { existsSync } from 'node:fs';
+import { basename, extname } from 'node:path';
 
 const CHROMES = [
   process.env.CHROME_PATH,
@@ -73,16 +74,23 @@ if (!chrome) {
   process.exit(0);
 }
 
-const page = await readFile('docs/index.html', 'utf8');
-const server = createServer((req, res) => {
-  if (req.url.startsWith('/results.json')) {
+// Serves the real docs/ tree rather than one in-memory string: the page
+// imports shared.mjs, and a module handed back as text/html is refused by the
+// browser. basename() keeps the fixture server off the rest of the disk.
+const TYPES = { '.html': 'text/html', '.mjs': 'text/javascript' };
+const server = createServer(async (req, res) => {
+  const path = req.url.split('?')[0];
+  if (path.startsWith('/results.json')) {
     res.writeHead(200, { 'content-type': 'application/json' });
     return res.end(JSON.stringify(FIXTURE));
   }
-  res.writeHead(200, { 'content-type': 'text/html' });
-  res.end(page);
+  const name = basename(path) || 'index.html';
+  const body = await readFile(`docs/${name}`, 'utf8').catch(() => null);
+  if (body === null) { res.writeHead(404); return res.end(); }
+  res.writeHead(200, { 'content-type': TYPES[extname(name)] ?? 'text/plain' });
+  res.end(body);
 });
-await new Promise((r) => server.listen(0, '127.0.0.1', r));
+await new Promise((r) => { server.listen(0, '127.0.0.1', r); });
 const url = `http://127.0.0.1:${server.address().port}/index.html`;
 
 try {

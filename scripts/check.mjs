@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 // entries.json -> docs/results.json, with strike state carried in history.json
 import { readFile, writeFile } from 'node:fs/promises';
-import { publishFields, pruneToEntries } from './enrich.mjs';
+import { pathToFileURL } from 'node:url';
+import { publishFields, pruneToEntries, pool } from './enrich.mjs';
 import { writeBadges } from './badges.mjs';
 
 const CONCURRENCY = 20;
@@ -45,6 +46,10 @@ async function probeOnce(url, method) {
       headers: { 'user-agent': UA, accept: '*/*' },
       signal: AbortSignal.timeout(TIMEOUT_MS),
     });
+    // Nothing here reads the body, and undici keeps the socket checked out of
+    // the pool until it is drained. At 1757 entries the GET fallback alone
+    // leaks enough connections to stall the run.
+    await res.body?.cancel().catch(() => {});
     return { httpStatus: res.status, finalUrl: res.url || url, latencyMs: Date.now() - started };
   } catch (err) {
     const timedOut = err.name === 'TimeoutError' || err.name === 'AbortError';
@@ -57,7 +62,7 @@ async function probeOnce(url, method) {
 
 // Parsing is not enough: ftp:// and mailto: parse fine but cannot be probed,
 // and fetch's rejection would otherwise be classified as death rather than as
-// "we cannot check this". discover.mjs already screens schemes; this matches it.
+// "we cannot check this".
 function probeable(url) {
   try {
     const u = new URL(url);
@@ -100,20 +105,6 @@ export function applyProbe(prev, status, today) {
   return state;
 }
 
-export async function pool(items, worker, limit) {
-  const results = new Array(items.length);
-  let next = 0;
-  await Promise.all(
-    Array.from({ length: Math.min(limit, items.length) }, async () => {
-      while (next < items.length) {
-        const i = next++;
-        results[i] = await worker(items[i]);
-      }
-    })
-  );
-  return results;
-}
-
 async function main() {
   const entries = JSON.parse(await readFile('entries.json', 'utf8'));
   const history = await readFile('history.json', 'utf8').then(JSON.parse).catch(() => ({}));
@@ -148,7 +139,8 @@ async function main() {
 
   pruneToEntries(history, entries);
 
-  const counts = results.reduce((acc, r) => ({ ...acc, [r.status]: (acc[r.status] ?? 0) + 1 }), {});
+  const counts = {};
+  for (const r of results) counts[r.status] = (counts[r.status] ?? 0) + 1;
   // One shields.io endpoint per entry, so any project can show its own live
   // status. Written before results.json so every entry can carry its slug.
   const slugs = await writeBadges(results, 'docs/badge');
@@ -159,4 +151,6 @@ async function main() {
   console.log('check:', counts);
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) await main();
+// pathToFileURL, not string concatenation: a path holding a space or any
+// non-ASCII character encodes differently on the two sides of that comparison.
+if (import.meta.url === pathToFileURL(process.argv[1]).href) await main();

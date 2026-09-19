@@ -110,16 +110,16 @@
 </div>
 
 <script type="module">
+// The directory question — what can I actually call from a static page today?
+// — is also the findings page's headline, so isUsable and esc are shared.
+// Imports are initialized before this module body runs, which is what makes
+// them safe to call from the top-level render() below.
+import { isUsable, esc } from './shared.mjs';
+
 const ORDER = ['alive', 'moved', 'blocked', 'unknown', 'dead'];
 const el = (id) => document.getElementById(id);
 const active = new Set();
 let data = { entries: [], counts: {} };
-
-// The directory question: what can I actually call from a static page today?
-// A bot wall on the docs site says nothing about the API, so blocked counts
-// as working. 'unverified' is never usable — we did not test it.
-const WORKS = new Set(['alive', 'moved', 'blocked']);
-const isUsable = (e) => WORKS.has(e.status) && e.auth === 'No' && e.verifiedCors === 'yes';
 
 // Filter state lives in the URL so a filtered view can be shared — and so the
 // page test can exercise it without a click.
@@ -227,8 +227,7 @@ function detail(e) {
   return bits.join(' · ');
 }
 
-// Every field in results.json originates in a community-edited README, so an
-// entry URL is third-party input. Unescaped it breaks out of the href
+// An entry URL is third-party input. Unescaped it breaks out of the href
 // attribute; a javascript: URL executes on click. Allow only http(s), and
 // escape what is left. Anything else renders as inert text.
 function link(e) {
@@ -240,12 +239,6 @@ function link(e) {
   return href
     ? `<a href="${esc(href)}" rel="noopener nofollow">${esc(e.name)}</a>`
     : `<span title="unusable URL">${esc(e.name)}</span>`;
-}
-
-// Declared as a function, not a const: render() runs at module top level,
-// which is before a `const esc = ...` line further down would initialize.
-function esc(s) {
-  return String(s ?? '').replace(/[<>&"]/g, (c) => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;', '"': '&quot;' }[c]));
 }
 </script>
 </body>

@@ -3,7 +3,7 @@
 import { test, describe } from 'node:test';
 import assert from 'node:assert/strict';
 import { createServer } from 'node:http';
-import { needsDiscovery, publishFields, enrich } from './enrich.mjs';
+import { needsDiscovery, publishFields, enrich, pool } from './enrich.mjs';
 
 const TODAY = '2026-09-19';
 const entry = (over = {}) => ({ name: 'Thing', url: 'https://example.com/docs/', auth: 'No', cors: 'Yes', ...over });
@@ -76,6 +76,36 @@ describe('publishFields — the honesty rule the plan commits to', () => {
   });
 });
 
+// Shared by check.mjs (probing every entry) and enrich.mjs (discovering the
+// due ones), so it lives here with the other shared helpers.
+describe('pool', () => {
+  test('preserves input order regardless of completion order', async () => {
+    const out = await pool([30, 1, 20, 2], async (ms) => {
+      await new Promise((r) => { setTimeout(r, ms); });
+      return ms;
+    }, 4);
+    assert.deepEqual(out, [30, 1, 20, 2]);
+  });
+
+  test('never exceeds the concurrency limit', async () => {
+    let live = 0, peak = 0;
+    await pool(Array.from({ length: 20 }, (_, i) => i), async () => {
+      peak = Math.max(peak, ++live);
+      await new Promise((r) => { setTimeout(r, 5); });
+      live--;
+    }, 3);
+    assert.ok(peak <= 3, `peak concurrency ${peak} exceeded limit 3`);
+  });
+
+  test('handles an empty list without hanging', async () => {
+    assert.deepEqual(await pool([], async () => 1, 5), []);
+  });
+
+  test('a limit larger than the list is harmless', async () => {
+    assert.deepEqual(await pool([1, 2], async (x) => x * 2, 99), [2, 4]);
+  });
+});
+
 describe('enrich (integration)', () => {
   let base;
   const server = createServer((req, res) => {
@@ -92,7 +122,7 @@ describe('enrich (integration)', () => {
   });
 
   test('discovers an endpoint and records it in the cache', async (t) => {
-    await new Promise((r) => server.listen(0, '127.0.0.1', r));
+    await new Promise((r) => { server.listen(0, '127.0.0.1', r); });
     t.after(() => server.close());
     base = `http://127.0.0.1:${server.address().port}`;
 
@@ -129,5 +159,34 @@ describe('enrich (integration)', () => {
     const many = Array.from({ length: 50 }, (_, i) => entry({ url: `http://127.0.0.1:1/docs/${i}` }));
     await enrich(many, cache, TODAY, { maxEntries: 5 });
     assert.equal(Object.keys(cache).length, 5);
+  });
+
+  // This ran across hundreds of third-party hosts, so a confirmation has to end
+  // the search. Previously covered by discover(), which is gone.
+  test('stops probing candidates as soon as one is confirmed', async (t) => {
+    const hit = new Set();
+    const counted = createServer((req, res) => {
+      hit.add(req.url);
+      if (req.url === '/docs/') {
+        res.writeHead(200, { 'content-type': 'text/html' });
+        const p = counted.address().port;
+        return res.end(`<pre><code>curl http://127.0.0.1:${p}/api/one http://127.0.0.1:${p}/api/two</code></pre>`);
+      }
+      if (req.url.startsWith('/api/')) {
+        res.writeHead(200, { 'content-type': 'application/json', 'access-control-allow-origin': '*' });
+        return res.end('{"ok":true}');
+      }
+      res.writeHead(404, { 'content-type': 'text/plain' });
+      res.end('no');
+    });
+    await new Promise((r) => { counted.listen(0, '127.0.0.1', r); });
+    t.after(() => counted.close());
+
+    const url = `http://127.0.0.1:${counted.address().port}/docs/`;
+    const cache = {};
+    await enrich([entry({ url })], cache, TODAY);
+
+    assert.equal(cache[url].endpoint, `http://127.0.0.1:${counted.address().port}/api/one`);
+    assert.ok(!hit.has('/api/two'), 'second candidate should never be requested');
   });
 });

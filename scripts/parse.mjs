@@ -3,6 +3,7 @@
 // Source of truth is upstream's markdown tables. Entry rows are the 5-column
 // ones; the APILayer promo tables are 3-column and fall out for free.
 import { writeFile, readFile } from 'node:fs/promises';
+import { pathToFileURL } from 'node:url';
 
 const README_URL = 'https://raw.githubusercontent.com/public-apis/public-apis/master/README.md';
 
@@ -76,4 +77,4 @@ async function main() {
   console.log(`parse: ${entries.length} entries, ${new Set(entries.map((e) => e.category)).size} categories`);
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) await main();
+if (import.meta.url === pathToFileURL(process.argv[1]).href) await main();

@@ -1,10 +1,11 @@
 #!/usr/bin/env node
-// probe(), the concurrency pool, and cache pruning — the parts of the nightly
-// job that had no coverage.
+// probe() and cache pruning — the parts of the nightly job that had no
+// coverage. The concurrency pool it shares with enrich.mjs is tested there,
+// beside its definition.
 import { test, describe, before, after } from 'node:test';
 import assert from 'node:assert/strict';
 import { createServer } from 'node:http';
-import { probe, pool } from './check.mjs';
+import { probe } from './check.mjs';
 import { pruneToEntries } from './enrich.mjs';
 
 describe('probe (integration)', () => {
@@ -24,7 +25,7 @@ describe('probe (integration)', () => {
   });
 
   before(async () => {
-    await new Promise((r) => server.listen(0, '127.0.0.1', r));
+    await new Promise((r) => { server.listen(0, '127.0.0.1', r); });
     base = `http://127.0.0.1:${server.address().port}`;
   });
   after(() => server.close());
@@ -56,34 +57,6 @@ describe('probe (integration)', () => {
     const r = await probe('http://127.0.0.1:1/nope');
     assert.ok(r.errorCode);
     assert.equal(r.httpStatus, undefined);
-  });
-});
-
-describe('pool', () => {
-  test('preserves input order regardless of completion order', async () => {
-    const out = await pool([30, 1, 20, 2], async (ms) => {
-      await new Promise((r) => setTimeout(r, ms));
-      return ms;
-    }, 4);
-    assert.deepEqual(out, [30, 1, 20, 2]);
-  });
-
-  test('never exceeds the concurrency limit', async () => {
-    let live = 0, peak = 0;
-    await pool(Array.from({ length: 20 }, (_, i) => i), async () => {
-      peak = Math.max(peak, ++live);
-      await new Promise((r) => setTimeout(r, 5));
-      live--;
-    }, 3);
-    assert.ok(peak <= 3, `peak concurrency ${peak} exceeded limit 3`);
-  });
-
-  test('handles an empty list without hanging', async () => {
-    assert.deepEqual(await pool([], async () => 1, 5), []);
-  });
-
-  test('a limit larger than the list is harmless', async () => {
-    assert.deepEqual(await pool([1, 2], async (x) => x * 2, 99), [2, 4]);
   });
 });
 
