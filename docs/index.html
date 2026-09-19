@@ -52,6 +52,13 @@
   .meta { color: var(--unknown); font-size: 12px; font-variant-numeric: tabular-nums; }
   .status { white-space: nowrap; font-size: 13px; display: flex; align-items: center; gap: 7px; }
   .empty { color: var(--dim); padding: 40px 0; text-align: center; }
+  .note { color: var(--dim); font-size: 13px; margin: 8px 0 20px; }
+  .chip.usable { color: var(--alive); font-weight: 500; }
+  .chip.usable[aria-pressed="true"] { background: color-mix(in srgb, var(--alive) 14%, var(--panel)); }
+  .cors { font-size: 13px; }
+  .c-yes { color: var(--alive); }
+  .c-no { color: var(--dead); }
+  .c-unverified { color: var(--unknown); }
   @media (max-width: 640px) { .hide-sm { display: none; } }
 </style>
 </head>
@@ -69,6 +76,13 @@
   <div class="counts" id="counts"></div>
 
   <div class="controls">
+    <button id="usable" class="chip usable" aria-pressed="false">
+      <span class="dot"></span>Works from a browser<span class="n" id="usable-n"></span>
+    </button>
+  </div>
+  <p class="note">Alive · no auth · CORS verified by us, not copied from the README.</p>
+
+  <div class="controls">
     <input id="q" type="search" placeholder="Search name, description or URL…" autocomplete="off">
     <select id="category"><option value="">All categories</option></select>
     <select id="auth">
@@ -81,7 +95,7 @@
 
   <table>
     <thead><tr>
-      <th>API</th><th class="hide-sm">Category</th><th class="hide-sm">Auth</th><th>Status</th>
+      <th>API</th><th class="hide-sm">Category</th><th class="hide-sm">Auth</th><th class="hide-sm">CORS</th><th>Status</th>
     </tr></thead>
     <tbody id="rows"></tbody>
   </table>
@@ -93,6 +107,16 @@ const ORDER = ['alive', 'moved', 'blocked', 'unknown', 'dead'];
 const el = (id) => document.getElementById(id);
 const active = new Set();
 let data = { entries: [], counts: {} };
+
+// The directory question: what can I actually call from a static page today?
+// A bot wall on the docs site says nothing about the API, so blocked counts
+// as working. 'unverified' is never usable — we did not test it.
+const WORKS = new Set(['alive', 'moved', 'blocked']);
+const isUsable = (e) => WORKS.has(e.status) && e.auth === 'No' && e.verifiedCors === 'yes';
+
+// Filter state lives in the URL so a filtered view can be shared — and so the
+// page test can exercise it without a click.
+let usableOnly = new URLSearchParams(location.search).get('usable') === '1';
 
 const res = await fetch('results.json').catch(() => null);
 if (!res?.ok) {
@@ -118,6 +142,18 @@ if (!res?.ok) {
   for (const c of [...new Set(data.entries.map((e) => e.category))].sort()) {
     el('category').append(new Option(c, c));
   }
+  const usableBtn = el('usable');
+  el('usable-n').textContent = data.entries.filter(isUsable).length;
+  usableBtn.setAttribute('aria-pressed', String(usableOnly));
+  usableBtn.onclick = () => {
+    usableOnly = !usableOnly;
+    usableBtn.setAttribute('aria-pressed', String(usableOnly));
+    const u = new URL(location.href);
+    usableOnly ? u.searchParams.set('usable', '1') : u.searchParams.delete('usable');
+    history.replaceState(null, '', u);
+    render();
+  };
+
   for (const id of ['q', 'category', 'auth']) el(id).oninput = render;
   render();
 }
@@ -128,11 +164,15 @@ function render() {
   const auth = el('auth').value;
 
   const rows = data.entries.filter((e) =>
+    (!usableOnly || isUsable(e)) &&
     (!active.size || active.has(e.status)) &&
     (!cat || e.category === cat) &&
     (!auth || e.auth === auth) &&
     (!q || `${e.name} ${e.description} ${e.url}`.toLowerCase().includes(q))
   );
+  // Fastest first once the directory filter is on: at that point the question
+  // is which of these to use, not which of these work.
+  if (usableOnly) rows.sort((a, b) => (a.apiLatencyMs ?? Infinity) - (b.apiLatencyMs ?? Infinity));
 
   el('empty').hidden = rows.length > 0;
   el('rows').replaceChildren(...rows.map((e) => {
@@ -145,12 +185,24 @@ function render() {
       </td>
       <td class="hide-sm desc">${esc(e.category)}</td>
       <td class="hide-sm desc">${esc(e.auth)}</td>
+      <td class="hide-sm" data-cors="${esc(e.verifiedCors ?? 'unverified')}">
+        <div class="cors c-${esc(e.verifiedCors ?? 'unverified')}">${corsLabel(e)}</div>
+        ${e.corsDisagrees ? `<div class="meta">README says ${esc(e.claimedCors)}</div>` : ''}
+      </td>
       <td>
         <div class="status s-${e.status}"><span class="dot"></span>${e.status}</div>
         <div class="meta">${detail(e)}</div>
       </td>`;
     return tr;
   }));
+}
+
+// Three states, never two. "unverified" is the absence of a measurement, not
+// a failed one — most entries never exposed an endpoint we could call.
+function corsLabel(e) {
+  if (e.verifiedCors === 'yes') return 'CORS ✓';
+  if (e.verifiedCors === 'no') return 'no CORS';
+  return 'unverified';
 }
 
 function detail(e) {
