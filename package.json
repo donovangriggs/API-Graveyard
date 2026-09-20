@@ -1,0 +1,21 @@
+{
+  "name": "api-graveyard",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Nightly link health for every entry in the public-apis list.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "node --test scripts/test_parse.mjs scripts/test_check.mjs scripts/test_badges.mjs scripts/test_enrich.mjs scripts/test_extract.mjs scripts/test_discover.mjs && node scripts/test_history.mjs && node scripts/test_page.mjs && node scripts/test_findings.mjs",
+    "parse": "node scripts/parse.mjs",
+    "check": "node scripts/check.mjs",
+    "enrich": "node scripts/enrich.mjs"
+  },
+  "devDependencies": {
+    "eslint": "^9.37.0"
+  }
+}

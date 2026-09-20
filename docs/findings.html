@@ -3,7 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>What 1757 Public APIs Look Like</title>
+<!-- No count in the title: every other number here is computed from
+     results.json at render time, and a hand-written one goes stale the first
+     night the job runs. The <h1> fills its own count in from the data. -->
+<title>What the Public APIs List Actually Looks Like</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext y='14' font-size='14'%3E%F0%9F%AA%A6%3C/text%3E%3C/svg%3E">
 <meta name="description" content="Measured findings from nightly checks of every entry in the public-apis list.">
 <style>
@@ -98,9 +101,11 @@
 </div>
 
 <script type="module">
+// One definition of "usable", shared with the directory page it links to.
+import { isUsable, esc } from './shared.mjs';
+
 const el = (id) => document.getElementById(id);
 const setStat = (k, v) => document.querySelectorAll(`[data-stat="${k}"]`).forEach((n) => { n.textContent = v; });
-const esc = (s) => String(s ?? '').replace(/[<>&"]/g, (c) => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;', '"': '&quot;' }[c]));
 
 const MIN_SAMPLE = 15;
 const BROKEN = new Set(['dead', 'unknown']);
@@ -120,7 +125,7 @@ if (!res?.ok) {
   const over = comparable.filter((e) => e.claimedCors === 'Yes' && e.verifiedCors === 'no').length;
   const under = comparable.filter((e) => e.claimedCors === 'No' && e.verifiedCors === 'yes').length;
   const newlyKnown = measured.filter((e) => e.claimedCors !== 'Yes' && e.claimedCors !== 'No').length;
-  const usable = E.filter((e) => ['alive', 'moved', 'blocked'].includes(e.status) && e.auth === 'No' && e.verifiedCors === 'yes').length;
+  const usable = E.filter(isUsable).length;
 
   setStat('total', E.length);
   setStat('moved', moved);

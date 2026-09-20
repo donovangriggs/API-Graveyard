@@ -3,6 +3,7 @@
 // Separate from the nightly link check because it is far heavier, and because
 // a confirmed endpoint stays confirmed — the cache is the point.
 import { readFile, writeFile } from 'node:fs/promises';
+import { pathToFileURL } from 'node:url';
 import { specCandidateUrls, endpointsFromSpec, urlsFromCodeBlocks } from './extract.mjs';
 import { verifyEndpoint } from './discover.mjs';
 
@@ -49,10 +50,30 @@ export function pruneToEntries(cache, entries) {
   return cache;
 }
 
+// Bounded-concurrency map, preserving input order. Lives here beside the other
+// shared helpers because check.mjs already imports from this module; the other
+// direction would be a cycle.
+export async function pool(items, worker, limit) {
+  const results = new Array(items.length);
+  let next = 0;
+  await Promise.all(
+    Array.from({ length: Math.min(limit, items.length) }, async () => {
+      while (next < items.length) {
+        const i = next++;
+        results[i] = await worker(items[i]);
+      }
+    })
+  );
+  return results;
+}
+
 async function getText(url) {
   try {
     const res = await fetch(url, { headers: { 'user-agent': UA }, signal: AbortSignal.timeout(TIMEOUT_MS) });
-    return res.ok ? await res.text() : null;
+    if (res.ok) return await res.text();
+    // Same reason as check.mjs: an unread body holds its connection open.
+    await res.body?.cancel().catch(() => {});
+    return null;
   } catch { return null; }
 }
 
@@ -82,14 +103,9 @@ async function discoverOne(entry) {
 
 export async function enrich(entries, cache, today, { maxEntries = Infinity } = {}) {
   const due = entries.filter((e) => needsDiscovery(e, cache[e.url], today)).slice(0, maxEntries);
-
-  let next = 0;
-  await Promise.all(Array.from({ length: Math.min(CONCURRENCY, due.length) }, async () => {
-    while (next < due.length) {
-      const entry = due[next++];
-      cache[entry.url] = { ...(await discoverOne(entry)), url: entry.url, checkedAt: today };
-    }
-  }));
+  await pool(due, async (entry) => {
+    cache[entry.url] = { ...(await discoverOne(entry)), url: entry.url, checkedAt: today };
+  }, CONCURRENCY);
   return due.length;
 }
 
@@ -108,4 +124,4 @@ async function main() {
   console.log(`enrich: ${processed} entries discovered this run; ${confirmed.length}/${noAuth.length} no-auth entries have a confirmed endpoint`);
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) await main();
+if (import.meta.url === pathToFileURL(process.argv[1]).href) await main();

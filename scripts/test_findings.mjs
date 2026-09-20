@@ -7,6 +7,7 @@ import { readFile } from 'node:fs/promises';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import { existsSync } from 'node:fs';
+import { basename, extname } from 'node:path';
 
 const CHROMES = [
   process.env.CHROME_PATH,
@@ -50,16 +51,22 @@ if (!chrome) {
   process.exit(0);
 }
 
-const page = await readFile('docs/findings.html', 'utf8');
-const server = createServer((req, res) => {
-  if (req.url.startsWith('/results.json')) {
+// Real docs/ tree, correct MIME types — the page imports shared.mjs, and a
+// module served as text/html is refused. basename() bounds what is reachable.
+const TYPES = { '.html': 'text/html', '.mjs': 'text/javascript' };
+const server = createServer(async (req, res) => {
+  const path = req.url.split('?')[0];
+  if (path.startsWith('/results.json')) {
     res.writeHead(200, { 'content-type': 'application/json' });
     return res.end(JSON.stringify(FIXTURE));
   }
-  res.writeHead(200, { 'content-type': 'text/html' });
-  res.end(page);
+  const name = basename(path) || 'findings.html';
+  const body = await readFile(`docs/${name}`, 'utf8').catch(() => null);
+  if (body === null) { res.writeHead(404); return res.end(); }
+  res.writeHead(200, { 'content-type': TYPES[extname(name)] ?? 'text/plain' });
+  res.end(body);
 });
-await new Promise((r) => server.listen(0, '127.0.0.1', r));
+await new Promise((r) => { server.listen(0, '127.0.0.1', r); });
 const url = `http://127.0.0.1:${server.address().port}/findings.html`;
 
 try {
@@ -114,6 +121,13 @@ try {
   const bars = rotRows.length;
 
   assert.doesNotMatch(dom, /\b13%\b/, 'no hand-written statistic from the real dataset may appear');
+  // The same rule, applied to the one place it was being broken: the title
+  // said "What 1757 Public APIs Look Like" while the <h1> counted for itself.
+  assert.doesNotMatch(
+    rawDom.match(/<title>([^<]*)<\/title>/)?.[1] ?? '',
+    /\d/,
+    'the title must not hard-code a count — it cannot be recomputed at render time'
+  );
 
   console.log(`findings test: ${bars} category bars, all statistics derived from results.json`);
 } finally {

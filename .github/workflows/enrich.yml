@@ -25,7 +25,13 @@ jobs:
         with:
           node-version: '22'
 
-      - run: node --test scripts/test_enrich.mjs scripts/test_extract.mjs scripts/test_discover.mjs scripts/test_parse.mjs scripts/test_check.mjs
+      - run: npm ci
+      - run: npm run lint
+
+      # Same suite as the nightly job — one list, so neither can drift behind
+      # the modules it actually loads.
+      - run: node scripts/test_history.mjs
+      - run: node --test scripts/test_parse.mjs scripts/test_check.mjs scripts/test_badges.mjs scripts/test_enrich.mjs scripts/test_extract.mjs scripts/test_discover.mjs
       - run: node scripts/parse.mjs
       - run: node scripts/enrich.mjs
 
