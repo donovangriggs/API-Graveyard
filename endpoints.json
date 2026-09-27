@@ -7019,5 +7019,426 @@
     "latencyMs": null,
     "url": "https://meltema.com/docs",
     "checkedAt": "2026-09-19"
+  },
+  "https://greenlitbooks.com/developers": {
+    "status": "confirmed",
+    "endpoint": "https://greenlitbooks.com/api/v1/",
+    "cors": "yes",
+    "latencyMs": 156,
+    "confirmedBy": "success",
+    "url": "https://greenlitbooks.com/developers",
+    "checkedAt": "2026-09-27"
+  },
+  "https://breedhealthscore.com/developers/": {
+    "status": "confirmed",
+    "endpoint": "https://breedhealthscore.com/api/breeds.json",
+    "cors": "no",
+    "latencyMs": 251,
+    "confirmedBy": "success",
+    "url": "https://breedhealthscore.com/developers/",
+    "checkedAt": "2026-09-27"
+  },
+  "https://scanmalware.com": {
+    "status": "confirmed",
+    "endpoint": "https://scanmalware.com/api/v1/",
+    "cors": "yes",
+    "latencyMs": 190,
+    "confirmedBy": "success",
+    "url": "https://scanmalware.com",
+    "checkedAt": "2026-09-27"
+  },
+  "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem": {
+    "status": "undiscovered",
+    "endpoint": null,
+    "cors": null,
+    "latencyMs": null,
+    "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
+    "checkedAt": "2026-09-27"
+  },
+  "https://githubtrends.app/api/": {
+    "status": "undiscovered",
+    "endpoint": null,
+    "cors": null,
+    "latencyMs": null,
+    "url": "https://githubtrends.app/api/",
+    "checkedAt": "2026-09-27"
+  },
+  "https://formulae.brew.sh/api/": {
+    "status": "undiscovered",
+    "endpoint": null,
+    "cors": null,
+    "latencyMs": null,
+    "url": "https://formulae.brew.sh/api/",
+    "checkedAt": "2026-09-27"
+  },
+  "https://hostdealradar.com/ai/": {
+    "status": "confirmed",
+    "endpoint": "https://hostdealradar.com/api/agent/lookup",
+    "cors": "yes",
+    "latencyMs": 13,
+    "confirmedBy": "rejection",
+    "url": "https://hostdealradar.com/ai/",
+    "checkedAt": "2026-09-27"
+  },
+  "https://chartbytes.onrender.com": {
+    "status": "undiscovered",
+    "endpoint": null,
+    "cors": null,
+    "latencyMs": null,
+    "url": "https://chartbytes.onrender.com",
+    "checkedAt": "2026-09-27"
+  },
+  "https://go.dev/ref/mod#goproxy-protocol": {
+    "status": "undiscovered",
+    "endpoint": null,
+    "cors": null,
+    "latencyMs": null,
+    "url": "https://go.dev/ref/mod#goproxy-protocol",
+    "checkedAt": "2026-09-27"
+  },
+  "https://www.timezone.io/docs/worldtimeapi": {
+    "status": "confirmed",
+    "endpoint": "https://worldtime.timezone.io/api/timezone",
+    "cors": "yes",
+    "latencyMs": 52,
+    "confirmedBy": "success",
+    "url": "https://www.timezone.io/docs/worldtimeapi",
+    "checkedAt": "2026-09-27"
+  },
+  "https://fulusly.soft9.us/developers": {
+    "status": "confirmed",
+    "endpoint": "https://fulusly.soft9.us/api/rates?base=usd&symbols=eur,gbp,jod",
+    "cors": "yes",
+    "latencyMs": 202,
+    "confirmedBy": "success",
+    "url": "https://fulusly.soft9.us/developers",
+    "checkedAt": "2026-09-27"
+  },
+  "https://msgboard.dev": {
+    "status": "confirmed",
+    "endpoint": "https://msgboard.dev/threads",
+    "cors": "no",
+    "latencyMs": 103,
+    "confirmedBy": "success",
+    "url": "https://msgboard.dev",
+    "checkedAt": "2026-09-27"
+  },
+  "https://randomlexicon.com/api-reference": {
+    "status": "undiscovered",
+    "endpoint": null,
+    "cors": null,
+    "latencyMs": null,
+    "url": "https://randomlexicon.com/api-reference",
+    "checkedAt": "2026-09-27"
+  },
+  "https://claudecookie.com/api/": {
+    "status": "confirmed",
+    "endpoint": "https://claudecookie.com/api/v1/health",
+    "cors": "yes",
+    "latencyMs": 144,
+    "confirmedBy": "success",
+    "url": "https://claudecookie.com/api/",
+    "checkedAt": "2026-09-27"
+  },
+  "https://polymarket-kalshi.com/fee-schedule/": {
+    "status": "confirmed",
+    "endpoint": "https://polymarket-kalshi.com/data/fees.json",
+    "cors": "yes",
+    "latencyMs": 30,
+    "confirmedBy": "success",
+    "url": "https://polymarket-kalshi.com/fee-schedule/",
+    "checkedAt": "2026-09-27"
+  },
+  "https://exactcup.github.io/api/": {
+    "status": "confirmed",
+    "endpoint": "https://exactcup.github.io/api/v1/index.json",
+    "cors": "yes",
+    "latencyMs": 35,
+    "confirmedBy": "success",
+    "url": "https://exactcup.github.io/api/",
+    "checkedAt": "2026-09-27"
+  },
+  "https://api.lifestep.io": {
+    "status": "confirmed",
+    "endpoint": "https://api.lifestep.io/health",
+    "cors": "yes",
+    "latencyMs": 211,
+    "confirmedBy": "success",
+    "url": "https://api.lifestep.io",
+    "checkedAt": "2026-09-27"
+  },
+  "https://dailyfoodrecalls.com/api/": {
+    "status": "confirmed",
+    "endpoint": "https://dailyfoodrecalls.com/api/recalls-latest.json",
+    "cors": "yes",
+    "latencyMs": 81,
+    "confirmedBy": "success",
+    "url": "https://dailyfoodrecalls.com/api/",
+    "checkedAt": "2026-09-27"
+  },
+  "https://racion.app/developers": {
+    "status": "confirmed",
+    "endpoint": "https://racion.app/api/meta",
+    "cors": "yes",
+    "latencyMs": 198,
+    "confirmedBy": "success",
+    "url": "https://racion.app/developers",
+    "checkedAt": "2026-09-27"
+  },
+  "https://gzw-data.vercel.app/docs/": {
+    "status": "undiscovered",
+    "endpoint": null,
+    "cors": null,
+    "latencyMs": null,
+    "url": "https://gzw-data.vercel.app/docs/",
+    "checkedAt": "2026-09-27"
+  },
+  "https://financeclearly.com/tax-rates-api/": {
+    "status": "undiscovered",
+    "endpoint": null,
+    "cors": null,
+    "latencyMs": null,
+    "url": "https://financeclearly.com/tax-rates-api/",
+    "checkedAt": "2026-09-27"
+  },
+  "https://moradas.dev/docs": {
+    "status": "confirmed",
+    "endpoint": "https://moradas.dev/suggest",
+    "cors": "yes",
+    "latencyMs": 34,
+    "confirmedBy": "success",
+    "url": "https://moradas.dev/docs",
+    "checkedAt": "2026-09-27"
+  },
+  "https://l2calendar.com/api/servers": {
+    "status": "confirmed",
+    "endpoint": "https://l2calendar.com/api/servers",
+    "cors": "yes",
+    "latencyMs": 119,
+    "confirmedBy": "success",
+    "url": "https://l2calendar.com/api/servers",
+    "checkedAt": "2026-09-27"
+  },
+  "https://mineseedfinder.vercel.app/seedfinder": {
+    "status": "undiscovered",
+    "endpoint": null,
+    "cors": null,
+    "latencyMs": null,
+    "url": "https://mineseedfinder.vercel.app/seedfinder",
+    "checkedAt": "2026-09-27"
+  },
+  "https://www.bls.gov/developers/": {
+    "status": "undiscovered",
+    "endpoint": null,
+    "cors": null,
+    "latencyMs": null,
+    "url": "https://www.bls.gov/developers/",
+    "checkedAt": "2026-09-27"
+  },
+  "https://fraudcoins.com/data/": {
+    "status": "undiscovered",
+    "endpoint": null,
+    "cors": null,
+    "latencyMs": null,
+    "url": "https://fraudcoins.com/data/",
+    "checkedAt": "2026-09-27"
+  },
+  "https://joint-research-centre.ec.europa.eu/pvgis-photovoltaic-geographical-information-system/getting-started-pvgis/api-non-interactive-service": {
+    "status": "undiscovered",
+    "endpoint": null,
+    "cors": null,
+    "latencyMs": null,
+    "url": "https://joint-research-centre.ec.europa.eu/pvgis-photovoltaic-geographical-information-system/getting-started-pvgis/api-non-interactive-service",
+    "checkedAt": "2026-09-27"
+  },
+  "https://ipgeolocationapi.io/docs": {
+    "status": "confirmed",
+    "endpoint": "https://ipgeolocationapi.io/",
+    "cors": "yes",
+    "latencyMs": 141,
+    "confirmedBy": "success",
+    "url": "https://ipgeolocationapi.io/docs",
+    "checkedAt": "2026-09-27"
+  },
+  "https://deepdna.ai/docs/": {
+    "status": "confirmed",
+    "endpoint": "https://deepdna.ai/api/v1/",
+    "cors": "yes",
+    "latencyMs": 13,
+    "confirmedBy": "success",
+    "url": "https://deepdna.ai/docs/",
+    "checkedAt": "2026-09-27"
+  },
+  "https://api.spatialindia.com": {
+    "status": "confirmed",
+    "endpoint": "https://api.spatialindia.com/v1/indicators",
+    "cors": "yes",
+    "latencyMs": 210,
+    "confirmedBy": "success",
+    "url": "https://api.spatialindia.com",
+    "checkedAt": "2026-09-27"
+  },
+  "https://ayesandnoes.co.uk/developers": {
+    "status": "confirmed",
+    "endpoint": "https://ayesandnoes.co.uk/api/v1/mps",
+    "cors": "yes",
+    "latencyMs": 105,
+    "confirmedBy": "success",
+    "url": "https://ayesandnoes.co.uk/developers",
+    "checkedAt": "2026-09-27"
+  },
+  "https://votepredictor.com/developers": {
+    "status": "confirmed",
+    "endpoint": "https://votepredictor.com/api/v1",
+    "cors": "yes",
+    "latencyMs": 155,
+    "confirmedBy": "success",
+    "url": "https://votepredictor.com/developers",
+    "checkedAt": "2026-09-27"
+  },
+  "https://curatorsearch.com/developers": {
+    "status": "confirmed",
+    "endpoint": "https://curatorsearch.com/api/jobs",
+    "cors": "yes",
+    "latencyMs": 187,
+    "confirmedBy": "success",
+    "url": "https://curatorsearch.com/developers",
+    "checkedAt": "2026-09-27"
+  },
+  "https://remoteok.com/api": {
+    "status": "undiscovered",
+    "endpoint": null,
+    "cors": null,
+    "latencyMs": null,
+    "url": "https://remoteok.com/api",
+    "checkedAt": "2026-09-27"
+  },
+  "https://unpaywall.org/products/api": {
+    "status": "undiscovered",
+    "endpoint": null,
+    "cors": null,
+    "latencyMs": null,
+    "url": "https://unpaywall.org/products/api",
+    "checkedAt": "2026-09-27"
+  },
+  "https://www.nopunt.com/api/picks.json": {
+    "status": "undiscovered",
+    "endpoint": null,
+    "cors": null,
+    "latencyMs": null,
+    "url": "https://www.nopunt.com/api/picks.json",
+    "checkedAt": "2026-09-27"
+  },
+  "https://neuronto.com/api-docs": {
+    "status": "confirmed",
+    "endpoint": "https://neuronto.com/agents",
+    "cors": "yes",
+    "latencyMs": 463,
+    "confirmedBy": "success",
+    "url": "https://neuronto.com/api-docs",
+    "checkedAt": "2026-09-27"
+  },
+  "https://open-vsx.org/": {
+    "status": "confirmed",
+    "endpoint": "https://open-vsx.org/vscode/gallery/extensionquery",
+    "cors": "yes",
+    "latencyMs": 123,
+    "confirmedBy": "rejection",
+    "url": "https://open-vsx.org/",
+    "checkedAt": "2026-09-27"
+  },
+  "https://bikereliability.co.uk/developers": {
+    "status": "confirmed",
+    "endpoint": "https://bikereliability.co.uk/api/v1/makes",
+    "cors": "yes",
+    "latencyMs": 95,
+    "confirmedBy": "success",
+    "url": "https://bikereliability.co.uk/developers",
+    "checkedAt": "2026-09-27"
+  },
+  "https://video-to-markdown.com/api": {
+    "status": "undiscovered",
+    "endpoint": null,
+    "cors": null,
+    "latencyMs": null,
+    "url": "https://video-to-markdown.com/api",
+    "checkedAt": "2026-09-27"
+  },
+  "https://api.le-systeme-solaire.net": {
+    "status": "undiscovered",
+    "endpoint": null,
+    "cors": null,
+    "latencyMs": null,
+    "url": "https://api.le-systeme-solaire.net",
+    "checkedAt": "2026-09-27"
+  },
+  "https://support.datacite.org/docs/rest-api": {
+    "status": "undiscovered",
+    "endpoint": null,
+    "cors": null,
+    "latencyMs": null,
+    "url": "https://support.datacite.org/docs/rest-api",
+    "checkedAt": "2026-09-27"
+  },
+  "https://smklog.com/openapi.json": {
+    "status": "confirmed",
+    "endpoint": "https://quote-api.smklog.com/status",
+    "cors": "yes",
+    "latencyMs": 976,
+    "confirmedBy": "success",
+    "url": "https://smklog.com/openapi.json",
+    "checkedAt": "2026-09-27"
+  },
+  "https://railworks.paddez.com/docs": {
+    "status": "confirmed",
+    "endpoint": "https://railworks.paddez.com/v1/stations/WBROK/days",
+    "cors": "yes",
+    "latencyMs": 305,
+    "confirmedBy": "success",
+    "url": "https://railworks.paddez.com/docs",
+    "checkedAt": "2026-09-27"
+  },
+  "https://housingfeed.com/docs": {
+    "status": "confirmed",
+    "endpoint": "https://housingfeed.com/api/v1/sample",
+    "cors": "yes",
+    "latencyMs": 1355,
+    "confirmedBy": "success",
+    "url": "https://housingfeed.com/docs",
+    "checkedAt": "2026-09-27"
+  },
+  "https://power.larc.nasa.gov/docs/": {
+    "status": "undiscovered",
+    "endpoint": null,
+    "cors": null,
+    "latencyMs": null,
+    "url": "https://power.larc.nasa.gov/docs/",
+    "checkedAt": "2026-09-27"
+  },
+  "https://terrace.javiermateo.dev/swagger-ui.html": {
+    "status": "confirmed",
+    "endpoint": "https://terrace.javiermateo.dev/api/v1/terrace/window",
+    "cors": "yes",
+    "latencyMs": 110,
+    "confirmedBy": "rejection",
+    "url": "https://terrace.javiermateo.dev/swagger-ui.html",
+    "checkedAt": "2026-09-27"
+  },
+  "https://ipguardian.net/docs": {
+    "status": "confirmed",
+    "endpoint": "https://ipguardian.net/api/check",
+    "cors": "yes",
+    "latencyMs": 856,
+    "confirmedBy": "rejection",
+    "url": "https://ipguardian.net/docs",
+    "checkedAt": "2026-09-27"
+  },
+  "https://www.sudoku100.com/api": {
+    "status": "undiscovered",
+    "endpoint": null,
+    "cors": null,
+    "latencyMs": null,
+    "url": "https://www.sudoku100.com/api",
+    "checkedAt": "2026-09-27"
   }
 }
