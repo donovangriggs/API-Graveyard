@@ -5,7 +5,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://http.dog/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://catfact.ninja/": {
     "status": "confirmed",
@@ -22,7 +22,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://dog.ceo/dog-api/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://theaxolotlapi.netlify.app/": {
     "status": "undiscovered",
@@ -30,7 +30,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://theaxolotlapi.netlify.app/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://kinduff.github.io/dog-api/": {
     "status": "undiscovered",
@@ -38,7 +38,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://kinduff.github.io/dog-api/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://dukengn.github.io/Dog-facts-API/": {
     "status": "undiscovered",
@@ -46,7 +46,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://dukengn.github.io/Dog-facts-API/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.fishwatch.gov/developers": {
     "status": "undiscovered",
@@ -54,7 +54,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.fishwatch.gov/developers",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/movebank/movebank-api-doc": {
     "status": "undiscovered",
@@ -62,7 +62,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/movebank/movebank-api-doc",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://http.cat/": {
     "status": "undiscovered",
@@ -70,7 +70,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://http.cat/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://placebear.com/": {
     "status": "undiscovered",
@@ -78,7 +78,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://placebear.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/wh-iterabb-it/meowfacts": {
     "status": "confirmed",
@@ -95,7 +95,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://random-d.uk/api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://place.dog": {
     "status": "undiscovered",
@@ -103,7 +103,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://place.dog",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://random.dog/woof.json": {
     "status": "undiscovered",
@@ -111,15 +111,16 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://random.dog/woof.json",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/RocktimSaikia/anime-chan": {
-    "status": "undiscovered",
-    "endpoint": null,
-    "cors": null,
-    "latencyMs": null,
+    "status": "confirmed",
+    "endpoint": "https://api.animechan.io/v1/quotes/random",
+    "cors": "yes",
+    "latencyMs": 873,
+    "confirmedBy": "success",
     "url": "https://github.com/RocktimSaikia/anime-chan",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://chandan-02.github.io/anime-facts-rest-api/": {
     "status": "undiscovered",
@@ -127,7 +128,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://chandan-02.github.io/anime-facts-rest-api/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://randomfox.ca/floof/": {
     "status": "undiscovered",
@@ -135,7 +136,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://randomfox.ca/floof/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://shibe.online/": {
     "status": "undiscovered",
@@ -143,7 +144,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://shibe.online/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://jikan.moe": {
     "status": "undiscovered",
@@ -151,7 +152,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://jikan.moe",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://catboys.com/api": {
     "status": "undiscovered",
@@ -159,7 +160,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://catboys.com/api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://docs.nekos.best": {
     "status": "undiscovered",
@@ -167,7 +168,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://docs.nekos.best",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.animenewsnetwork.com/encyclopedia/api.php": {
     "status": "undiscovered",
@@ -175,7 +176,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.animenewsnetwork.com/encyclopedia/api.php",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://ghibliapi.vercel.app": {
     "status": "undiscovered",
@@ -183,7 +184,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://ghibliapi.vercel.app",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://soruly.github.io/trace.moe-api/#/": {
     "status": "undiscovered",
@@ -191,7 +192,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://soruly.github.io/trace.moe-api/#/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://userguide.rescuegroups.org/display/APIDG/API+Developers+Guide+Home": {
     "status": "undiscovered",
@@ -199,7 +200,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://userguide.rescuegroups.org/display/APIDG/API+Developers+Guide+Home",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://www.colourlovers.com/api": {
     "status": "undiscovered",
@@ -207,7 +208,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://www.colourlovers.com/api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://xeno-canto.org/explore/api": {
     "status": "undiscovered",
@@ -215,7 +216,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://xeno-canto.org/explore/api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://dummyimage.com/": {
     "status": "undiscovered",
@@ -223,7 +224,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://dummyimage.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://urlhaus-api.abuse.ch/": {
     "status": "undiscovered",
@@ -231,7 +232,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://urlhaus-api.abuse.ch/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/cheatsnake/emojihub": {
     "status": "confirmed",
@@ -248,7 +249,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://waifu.im/docs",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://myfaceshapechart.com/openapi.json": {
     "status": "confirmed",
@@ -265,7 +266,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://colormind.io/api-access/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://ipwhois.net/blacklist/docs": {
     "status": "confirmed",
@@ -282,7 +283,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://iconify.design/docs/api/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://metmuseum.github.io/": {
     "status": "undiscovered",
@@ -290,7 +291,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://metmuseum.github.io/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://lordicon.com/": {
     "status": "undiscovered",
@@ -298,7 +299,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://lordicon.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://api.artic.edu/docs/": {
     "status": "undiscovered",
@@ -306,7 +307,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://api.artic.edu/docs/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://php-noise.com/": {
     "status": "undiscovered",
@@ -314,7 +315,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://php-noise.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://img.icons8.com/": {
     "status": "undiscovered",
@@ -322,7 +323,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://img.icons8.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://icon.horse": {
     "status": "undiscovered",
@@ -330,7 +331,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://icon.horse",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://tierion.com/chainpoint/": {
     "status": "undiscovered",
@@ -338,7 +339,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://tierion.com/chainpoint/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://chain.link/developer-resources": {
     "status": "undiscovered",
@@ -346,7 +347,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://chain.link/developer-resources",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://docs.helium.com/api/blockchain/introduction/": {
     "status": "undiscovered",
@@ -354,7 +355,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://docs.helium.com/api/blockchain/introduction/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://cleartracedata.com/docs": {
     "status": "confirmed",
@@ -371,7 +372,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://walltime.info/api.html",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/beihaili/Get-Started-with-Web3/blob/main/docs/api.md": {
     "status": "confirmed",
@@ -406,7 +407,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/GurbaniNow/api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://pixelencounter.com/api": {
     "status": "undiscovered",
@@ -414,7 +415,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://pixelencounter.com/api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://bible-api.com/": {
     "status": "undiscovered",
@@ -422,7 +423,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://bible-api.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://kdp-intelligence-api.vercel.app/docs": {
     "status": "confirmed",
@@ -439,7 +440,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://developers.steem.io/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/CrossRef/rest-api-doc": {
     "status": "confirmed",
@@ -465,7 +466,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://quran.api-docs.io/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://runyankole-bible-api.vercel.app": {
     "status": "undiscovered",
@@ -473,7 +474,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://runyankole-bible-api.vercel.app",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/fawazahmed0/quran-api#readme": {
     "status": "undiscovered",
@@ -481,7 +482,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/fawazahmed0/quran-api#readme",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://www.penguinrandomhouse.biz/webservices/rest/": {
     "status": "undiscovered",
@@ -489,7 +490,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://www.penguinrandomhouse.biz/webservices/rest/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://alquran.cloud/api": {
     "status": "undiscovered",
@@ -497,7 +498,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://alquran.cloud/api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://api-thirukkural.web.app/": {
     "status": "undiscovered",
@@ -505,7 +506,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://api-thirukkural.web.app/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://wizard-world-api.herokuapp.com/swagger/index.html": {
     "status": "undiscovered",
@@ -513,7 +514,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://wizard-world-api.herokuapp.com/swagger/index.html",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://domainsdb.info/": {
     "status": "undiscovered",
@@ -521,7 +522,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://domainsdb.info/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://wolnelektury.pl/api/": {
     "status": "undiscovered",
@@ -529,7 +530,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://wolnelektury.pl/api/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://kontragentpro.ru/api/v2/docs": {
     "status": "confirmed",
@@ -546,7 +547,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://markerapi.com",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://urantia.dev": {
     "status": "confirmed",
@@ -572,7 +573,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://legal.ge/api/openapi.json",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://bnb.data.bl.uk/": {
     "status": "undiscovered",
@@ -580,7 +581,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://bnb.data.bl.uk/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://waifu.pics/docs": {
     "status": "undiscovered",
@@ -588,15 +589,16 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://waifu.pics/docs",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.tradedatahub.net": {
-    "status": "undiscovered",
-    "endpoint": null,
-    "cors": null,
-    "latencyMs": null,
+    "status": "confirmed",
+    "endpoint": "https://www.tradedatahub.net/api/v1/",
+    "cors": "yes",
+    "latencyMs": 2028,
+    "confirmedBy": "success",
     "url": "https://www.tradedatahub.net",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://caldays.com/api": {
     "status": "undiscovered",
@@ -604,7 +606,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://caldays.com/api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://calapi.inadiutorium.cz/": {
     "status": "undiscovered",
@@ -612,7 +614,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://calapi.inadiutorium.cz/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://svatky.adresa.info": {
     "status": "undiscovered",
@@ -620,7 +622,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://svatky.adresa.info",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://gutendex.com/": {
     "status": "undiscovered",
@@ -628,7 +630,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://gutendex.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://www.lectserve.com": {
     "status": "undiscovered",
@@ -636,7 +638,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://www.lectserve.com",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.hebcal.com/home/developer-apis": {
     "status": "undiscovered",
@@ -644,7 +646,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.hebcal.com/home/developer-apis",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://date.nager.at": {
     "status": "undiscovered",
@@ -652,7 +654,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://date.nager.at",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://nameday.abalin.net": {
     "status": "undiscovered",
@@ -660,7 +662,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://nameday.abalin.net",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/gadael/icsdb": {
     "status": "undiscovered",
@@ -668,7 +670,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/gadael/icsdb",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/egno/work-calendar": {
     "status": "undiscovered",
@@ -676,7 +678,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/egno/work-calendar",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://the-calendar.net/api/": {
     "status": "confirmed",
@@ -693,7 +695,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://isdayoff.ru",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://openlibrary.org/developers/api": {
     "status": "confirmed",
@@ -710,7 +712,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/RealSinaSnp/FileUp",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://0x.org/api": {
     "status": "undiscovered",
@@ -718,7 +720,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://0x.org/api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://nova.bitcambio.com.br/api/v3/docs#a-public": {
     "status": "undiscovered",
@@ -726,7 +728,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://nova.bitcambio.com.br/api/v3/docs#a-public",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.gov.uk/bank-holidays.json": {
     "status": "undiscovered",
@@ -734,7 +736,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.gov.uk/bank-holidays.json",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://why21million.com/halving-api/": {
     "status": "undiscovered",
@@ -742,7 +744,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://why21million.com/halving-api/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://blazephoenix.xyz/api": {
     "status": "confirmed",
@@ -759,7 +761,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://bitcoincharts.com/about/exchanges/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://blocklottos.com/openapi.json": {
     "status": "confirmed",
@@ -785,15 +787,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://tenders.guru/hu/api",
-    "checkedAt": "2026-09-19"
-  },
-  "https://old.coindesk.com/coindesk-api/": {
-    "status": "undiscovered",
-    "endpoint": null,
-    "cors": null,
-    "latencyMs": null,
-    "url": "https://old.coindesk.com/coindesk-api/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://tenders.guru/pl/api": {
     "status": "undiscovered",
@@ -801,7 +795,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://tenders.guru/pl/api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://tenders.guru/ro/api": {
     "status": "undiscovered",
@@ -809,7 +803,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://tenders.guru/ro/api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://btcnode.uk": {
     "status": "confirmed",
@@ -826,7 +820,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.coinlore.com/cryptocurrency-data-api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://btcglobe.live/join#makers": {
     "status": "undiscovered",
@@ -834,7 +828,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://btcglobe.live/join#makers",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://tenders.guru/es/api": {
     "status": "undiscovered",
@@ -842,7 +836,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://tenders.guru/es/api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://docs.coincap.io/": {
     "status": "undiscovered",
@@ -850,7 +844,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://docs.coincap.io/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://api.coinpaprika.com": {
     "status": "confirmed",
@@ -867,7 +861,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://www.coingecko.com/api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.cryptonator.com/api/": {
     "status": "undiscovered",
@@ -875,7 +869,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.cryptonator.com/api/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://docs.cryptapi.io/": {
     "status": "undiscovered",
@@ -883,7 +877,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://docs.cryptapi.io/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.cryptocompare.com/api#": {
     "status": "undiscovered",
@@ -891,7 +885,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.cryptocompare.com/api#",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://coinlobster.com/developers": {
     "status": "confirmed",
@@ -908,7 +902,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://documenter.getpostman.com/view/5734027/RzZ6Hzr3?version=latest",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.cryptingup.com/apidoc/#introduction": {
     "status": "undiscovered",
@@ -916,7 +910,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.cryptingup.com/apidoc/#introduction",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.mercadobitcoin.com.br/api-doc/": {
     "status": "undiscovered",
@@ -924,7 +918,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.mercadobitcoin.com.br/api-doc/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://defillama.com/docs/api": {
     "status": "undiscovered",
@@ -932,7 +926,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://defillama.com/docs/api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.corpstacking.com/feed.json": {
     "status": "undiscovered",
@@ -940,7 +934,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.corpstacking.com/feed.json",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://messari.io/api": {
     "status": "undiscovered",
@@ -948,7 +942,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://messari.io/api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://localbitcoins.com/api-docs/": {
     "status": "undiscovered",
@@ -956,7 +950,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://localbitcoins.com/api-docs/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://mempool.space/api": {
     "status": "undiscovered",
@@ -964,7 +958,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://mempool.space/api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://hostdefi.com/docs/api/": {
     "status": "confirmed",
@@ -990,7 +984,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://nexchange2.docs.apiary.io/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://zennet.cloud": {
     "status": "undiscovered",
@@ -998,7 +992,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://zennet.cloud",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://api-mint.hoiwan.workers.dev": {
     "status": "undiscovered",
@@ -1006,7 +1000,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://api-mint.hoiwan.workers.dev",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://tenders.guru/ua/api": {
     "status": "undiscovered",
@@ -1014,7 +1008,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://tenders.guru/ua/api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/fawazahmed0/currency-api#readme": {
     "status": "undiscovered",
@@ -1022,7 +1016,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/fawazahmed0/currency-api#readme",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://docs.solana.com/developing/clients/jsonrpc-api": {
     "status": "undiscovered",
@@ -1030,7 +1024,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://docs.solana.com/developing/clients/jsonrpc-api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://zmok.io": {
     "status": "undiscovered",
@@ -1038,7 +1032,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://zmok.io",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.cbr.ru/development/SXML/": {
     "status": "undiscovered",
@@ -1046,7 +1040,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.cbr.ru/development/SXML/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://exchangerate.host?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers": {
     "status": "undiscovered",
@@ -1054,7 +1048,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://exchangerate.host?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://exchangerate.dev/docs": {
     "status": "confirmed",
@@ -1080,7 +1074,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.cnb.cz/cs/financni_trhy/devizovy_trh/kurzy_devizoveho_trhu/denni_kurz.xml",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://docs.gemini.com/rest-api/": {
     "status": "undiscovered",
@@ -1088,7 +1082,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://docs.gemini.com/rest-api/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://sololuck.io/api": {
     "status": "confirmed",
@@ -1105,7 +1099,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.vatcomply.com/documentation",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://paralelo.bo/api": {
     "status": "confirmed",
@@ -1131,7 +1125,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://apigratis.com.br/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://api.nbp.pl/en.html": {
     "status": "confirmed",
@@ -1148,7 +1142,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.apicagent.com",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://agify.io": {
     "status": "undiscovered",
@@ -1156,7 +1150,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://agify.io",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://docs.awesomeapi.com.br/api-de-moedas": {
     "status": "confirmed",
@@ -1168,12 +1162,13 @@
     "checkedAt": "2026-09-19"
   },
   "https://apizone.io/api-docs": {
-    "status": "undiscovered",
-    "endpoint": null,
-    "cors": null,
-    "latencyMs": null,
+    "status": "confirmed",
+    "endpoint": "https://apizone.io/api/v1/status",
+    "cors": "yes",
+    "latencyMs": 198,
+    "confirmedBy": "success",
     "url": "https://apizone.io/api-docs",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://docs.aquanode.io/docs/api/marketplace": {
     "status": "confirmed",
@@ -1190,7 +1185,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://apis.guru/api-doc/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://beeceptor.com/": {
     "status": "undiscovered",
@@ -1198,7 +1193,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://beeceptor.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://api.cdnjs.com/libraries/jquery": {
     "status": "undiscovered",
@@ -1206,7 +1201,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://api.cdnjs.com/libraries/jquery",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://agentnexus.app/llms.txt": {
     "status": "confirmed",
@@ -1223,7 +1218,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/polarspetroll/ciprand",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/Jaagrav/CodeX": {
     "status": "undiscovered",
@@ -1231,7 +1226,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/Jaagrav/CodeX",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://bored-api.appbrewery.com/": {
     "status": "confirmed",
@@ -1248,7 +1243,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://countapi.xyz",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://24pullrequests.com/api": {
     "status": "confirmed",
@@ -1265,7 +1260,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/burhanuday/cors-proxy",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://api.domainsdb.info/": {
     "status": "undiscovered",
@@ -1273,7 +1268,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://api.domainsdb.info/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://status.digitalocean.com/api": {
     "status": "confirmed",
@@ -1299,7 +1294,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://isitdownstatus.com",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/fawazahmed0/cloudflare-trace-api": {
     "status": "undiscovered",
@@ -1307,7 +1302,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/fawazahmed0/cloudflare-trace-api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://crates.io/data-access": {
     "status": "undiscovered",
@@ -1315,7 +1310,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://crates.io/data-access",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://bettip.co.za/fair-draw/api/": {
     "status": "confirmed",
@@ -1341,15 +1336,16 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/hexpm/specifications",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://extendsclass.com/json-storage.html": {
-    "status": "undiscovered",
-    "endpoint": null,
-    "cors": null,
-    "latencyMs": null,
+    "status": "confirmed",
+    "endpoint": "https://json.extendsclass.com/bins",
+    "cors": "yes",
+    "latencyMs": 4062,
+    "confirmedBy": "rejection",
     "url": "https://extendsclass.com/json-storage.html",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://brewpage.app": {
     "status": "undiscovered",
@@ -1357,7 +1353,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://brewpage.app",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://genderize.io": {
     "status": "undiscovered",
@@ -1365,7 +1361,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://genderize.io",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://changelogs.md": {
     "status": "undiscovered",
@@ -1373,7 +1369,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://changelogs.md",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://host-t.com": {
     "status": "undiscovered",
@@ -1381,7 +1377,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://host-t.com",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://httpbin.org/": {
     "status": "confirmed",
@@ -1398,7 +1394,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://major.io/icanhazip-com-faq/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://cloudflare-quic.com/b/": {
     "status": "undiscovered",
@@ -1406,7 +1402,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://cloudflare-quic.com/b/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://icanhazepoch.com": {
     "status": "undiscovered",
@@ -1414,7 +1410,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://icanhazepoch.com",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://documentation.image-charts.com/": {
     "status": "undiscovered",
@@ -1422,7 +1418,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://documentation.image-charts.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://hipsum.co": {
     "status": "undiscovered",
@@ -1430,7 +1426,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://hipsum.co",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://ip-fast.com/docs/": {
     "status": "undiscovered",
@@ -1438,7 +1434,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://ip-fast.com/docs/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/jsdelivr/data.jsdelivr.com": {
     "status": "undiscovered",
@@ -1446,7 +1442,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/jsdelivr/data.jsdelivr.com",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://ipinfo.io/developers": {
     "status": "confirmed",
@@ -1467,12 +1463,13 @@
     "checkedAt": "2026-09-19"
   },
   "https://www.ipify.org/": {
-    "status": "undiscovered",
-    "endpoint": null,
-    "cors": null,
-    "latencyMs": null,
+    "status": "confirmed",
+    "endpoint": "https://api.ipify.org?format=json",
+    "cors": "yes",
+    "latencyMs": 324,
+    "confirmedBy": "success",
     "url": "https://www.ipify.org/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://downforjustmeoreveryone.com/api": {
     "status": "confirmed",
@@ -1489,7 +1486,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://json2jsonp.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://keyvalue.immanuel.co/": {
     "status": "confirmed",
@@ -1506,7 +1503,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://lua-decompiler.ferib.dev/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://jsonplaceholder.typicode.com": {
     "status": "confirmed",
@@ -1523,7 +1520,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://kroki.io",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://litport.net/docs/free-proxy-api": {
     "status": "confirmed",
@@ -1540,7 +1537,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://http2.pro/doc/api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://designer.mocky.io/": {
     "status": "undiscovered",
@@ -1548,7 +1545,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://designer.mocky.io/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://myiprightnow.com": {
     "status": "confirmed",
@@ -1565,7 +1562,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://microenv.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/cmccandless/license-api/blob/master/README.md": {
     "status": "undiscovered",
@@ -1573,7 +1570,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/cmccandless/license-api/blob/master/README.md",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/npm/registry/blob/master/docs/REGISTRY-API.md": {
     "status": "confirmed",
@@ -1599,7 +1596,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://freeforexapi.com/Home/Api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://nationalize.io": {
     "status": "undiscovered",
@@ -1607,7 +1604,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://nationalize.io",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://outagedeck.com/developers/api": {
     "status": "confirmed",
@@ -1624,7 +1621,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://networkcalc.com/api/docs",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://phone-specs-api-production.up.railway.app/docs": {
     "status": "undiscovered",
@@ -1632,7 +1629,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://phone-specs-api-production.up.railway.app/docs",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://proxyforge.dev": {
     "status": "undiscovered",
@@ -1640,7 +1637,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://proxyforge.dev",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://learn.microsoft.com/en-us/nuget/api/overview": {
     "status": "undiscovered",
@@ -1648,7 +1645,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://learn.microsoft.com/en-us/nuget/api/overview",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://orcascan.com/guides/free-barcode-image-api-0e4a4fa6": {
     "status": "undiscovered",
@@ -1656,7 +1653,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://orcascan.com/guides/free-barcode-image-api-0e4a4fa6",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://packagist.org/apidoc": {
     "status": "confirmed",
@@ -1668,12 +1665,13 @@
     "checkedAt": "2026-09-19"
   },
   "https://qrcodecrafter.com/qr-code-api": {
-    "status": "undiscovered",
-    "endpoint": null,
-    "cors": null,
-    "latencyMs": null,
+    "status": "confirmed",
+    "endpoint": "https://qrcodecrafter.com/.netlify/functions/generate-qr",
+    "cors": "yes",
+    "latencyMs": 686,
+    "confirmedBy": "rejection",
     "url": "https://qrcodecrafter.com/qr-code-api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://oyyi.xyz/docs/1.0": {
     "status": "confirmed",
@@ -1690,7 +1688,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://solsigs.com/qrapi/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://quickchart.io/": {
     "status": "confirmed",
@@ -1707,7 +1705,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://goqr.me/api/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://rss-to-json-serverless-api.vercel.app": {
     "status": "undiscovered",
@@ -1715,7 +1713,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://rss-to-json-serverless-api.vercel.app",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.qrcode-monkey.com/qr-code-api-with-logo/": {
     "status": "undiscovered",
@@ -1723,7 +1721,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.qrcode-monkey.com/qr-code-api-with-logo/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://reqres.in/": {
     "status": "confirmed",
@@ -1740,7 +1738,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/Cgboal/SonarSearch",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.myip.com/api-docs/": {
     "status": "undiscovered",
@@ -1748,7 +1746,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.myip.com/api-docs/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://color.serialif.com/": {
     "status": "undiscovered",
@@ -1756,7 +1754,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://color.serialif.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.qrtag.net/api/": {
     "status": "undiscovered",
@@ -1764,7 +1762,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.qrtag.net/api/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/melpon/wandbox/blob/master/kennel2/API.rst": {
     "status": "undiscovered",
@@ -1772,7 +1770,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/melpon/wandbox/blob/master/kennel2/API.rst",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://guides.rubygems.org/rubygems-org-api/": {
     "status": "confirmed",
@@ -1789,7 +1787,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://statically.io/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://shoutcloud.io/": {
     "status": "undiscovered",
@@ -1797,7 +1795,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://shoutcloud.io/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://tinymind.eu/api/": {
     "status": "undiscovered",
@@ -1805,7 +1803,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://tinymind.eu/api/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://ccdb.hemiola.com/": {
     "status": "undiscovered",
@@ -1813,7 +1811,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://ccdb.hemiola.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.thunderclient.com/": {
     "status": "undiscovered",
@@ -1821,7 +1819,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.thunderclient.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://vector.express": {
     "status": "undiscovered",
@@ -1829,7 +1827,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://vector.express",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://docstruct.pages.dev": {
     "status": "undiscovered",
@@ -1837,7 +1835,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://docstruct.pages.dev",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://wakatime.com/developers": {
     "status": "undiscovered",
@@ -1845,7 +1843,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://wakatime.com/developers",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://guild.tradeuniquecapital.com/api": {
     "status": "undiscovered",
@@ -1853,7 +1851,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://guild.tradeuniquecapital.com/api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://en.wiktionary.org/w/api.php": {
     "status": "undiscovered",
@@ -1861,7 +1859,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://en.wiktionary.org/w/api.php",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://dropmail.me/api/#live-demo": {
     "status": "confirmed",
@@ -1878,7 +1876,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://eva.pingutil.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://email-spam-tester.com/api-docs/": {
     "status": "confirmed",
@@ -1904,7 +1902,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://new-kbbi-api.herokuapp.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.disify.com/": {
     "status": "undiscovered",
@@ -1912,7 +1910,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.disify.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://docs.mail.gw": {
     "status": "undiscovered",
@@ -1920,7 +1918,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://docs.mail.gw",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.guerrillamail.com/GuerrillaMailAPI.html": {
     "status": "undiscovered",
@@ -1928,7 +1926,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.guerrillamail.com/GuerrillaMailAPI.html",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://email.lifestep.io": {
     "status": "confirmed",
@@ -1990,7 +1988,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.mailcheck.ai/#documentation",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://open.kickbox.com/": {
     "status": "undiscovered",
@@ -1998,7 +1996,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://open.kickbox.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://ctext.org/tools/api": {
     "status": "confirmed",
@@ -2010,12 +2008,13 @@
     "checkedAt": "2026-09-19"
   },
   "https://imgflip.com/api": {
-    "status": "undiscovered",
-    "endpoint": null,
-    "cors": null,
-    "latencyMs": null,
+    "status": "confirmed",
+    "endpoint": "https://api.imgflip.com/get_memes",
+    "cors": "yes",
+    "latencyMs": 131,
+    "confirmedBy": "success",
     "url": "https://imgflip.com/api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://justmeme.wtf/api-docs": {
     "status": "confirmed",
@@ -2032,7 +2031,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://mememaker.github.io/API/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/theIYD/NaMoMemes": {
     "status": "undiscovered",
@@ -2040,7 +2039,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/theIYD/NaMoMemes",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://api.aakhilv.me": {
     "status": "undiscovered",
@@ -2048,7 +2047,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://api.aakhilv.me",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://techy-api.vercel.app/": {
     "status": "undiscovered",
@@ -2056,7 +2055,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://techy-api.vercel.app/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/beanboi7/yomomma-apiv2": {
     "status": "undiscovered",
@@ -2064,7 +2063,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/beanboi7/yomomma-apiv2",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://excuser.herokuapp.com/": {
     "status": "undiscovered",
@@ -2072,7 +2071,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://excuser.herokuapp.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://uselessfacts.jsph.pl/": {
     "status": "undiscovered",
@@ -2080,7 +2079,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://uselessfacts.jsph.pl/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://memesio.com/developers/api": {
     "status": "confirmed",
@@ -2097,7 +2096,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://docs.potterdb.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://data.nationalgrideso.com/": {
     "status": "undiscovered",
@@ -2105,7 +2104,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://data.nationalgrideso.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.energidataservice.dk/": {
     "status": "undiscovered",
@@ -2113,7 +2112,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.energidataservice.dk/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://open-meteo.com/": {
     "status": "confirmed",
@@ -2130,7 +2129,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://co2offset.io/api.html",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://gruenstromindex.de/": {
     "status": "undiscovered",
@@ -2138,7 +2137,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://gruenstromindex.de/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://api.wattfigure.com/": {
     "status": "confirmed",
@@ -2164,7 +2163,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://carbon-intensity.github.io/api-definitions/#carbon-intensity-api-v1-0-0",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.globalsolo.global/data/banking-access-index": {
     "status": "undiscovered",
@@ -2172,7 +2171,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.globalsolo.global/data/banking-access-index",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.solematica.it/sviluppatori": {
     "status": "undiscovered",
@@ -2180,7 +2179,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.solematica.it/sviluppatori",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://dictionaryapi.dev/": {
     "status": "undiscovered",
@@ -2188,7 +2187,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://dictionaryapi.dev/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://pm25.lass-net.org/#apis": {
     "status": "undiscovered",
@@ -2196,7 +2195,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://pm25.lass-net.org/#apis",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://estimatetax.net/api/": {
     "status": "confirmed",
@@ -2213,7 +2212,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://api-docs.luchtmeetnet.nl/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://kanari.io/en/api": {
     "status": "confirmed",
@@ -2230,7 +2229,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/surhud004/Foodish#readme",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://liquilens.in/developers/": {
     "status": "confirmed",
@@ -2247,7 +2246,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.openbrewerydb.org",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://punkapi.com/": {
     "status": "undiscovered",
@@ -2255,7 +2254,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://punkapi.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.kmalservico.com/data": {
     "status": "confirmed",
@@ -2272,7 +2271,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://baconmockup.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.fruityvice.com": {
     "status": "undiscovered",
@@ -2280,7 +2279,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.fruityvice.com",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://coffee.alexflipnote.dev/": {
     "status": "undiscovered",
@@ -2288,7 +2287,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://coffee.alexflipnote.dev/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/evz/tacofancy-api": {
     "status": "undiscovered",
@@ -2296,7 +2295,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/evz/tacofancy-api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://world.openfoodfacts.org/data": {
     "status": "undiscovered",
@@ -2304,7 +2303,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://world.openfoodfacts.org/data",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/andyklimczak/TheReportOfTheWeek-API": {
     "status": "undiscovered",
@@ -2312,7 +2311,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/andyklimczak/TheReportOfTheWeek-API",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/bartervg/barter.vg/wiki": {
     "status": "undiscovered",
@@ -2320,7 +2319,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/bartervg/barter.vg/wiki",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/didadadida93/autochess-vng-api": {
     "status": "undiscovered",
@@ -2328,7 +2327,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/didadadida93/autochess-vng-api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.bugsnaxapi.com/": {
     "status": "undiscovered",
@@ -2336,7 +2335,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.bugsnaxapi.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://boardgamegeek.com/wiki/page/BGG_XML_API2": {
     "status": "undiscovered",
@@ -2344,7 +2343,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://boardgamegeek.com/wiki/page/BGG_XML_API2",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://api.astroworldmc.com": {
     "status": "confirmed",
@@ -2361,7 +2360,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://whiskyhunter.net/api/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://amiiboapi.com/": {
     "status": "undiscovered",
@@ -2369,7 +2368,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://amiiboapi.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://acnhapi.com/": {
     "status": "undiscovered",
@@ -2377,7 +2376,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://acnhapi.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://rustybeer.herokuapp.com/": {
     "status": "undiscovered",
@@ -2385,7 +2384,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://rustybeer.herokuapp.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://callofdutymobile.vercel.app/": {
     "status": "undiscovered",
@@ -2393,7 +2392,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://callofdutymobile.vercel.app/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.cheapshark.com/api": {
     "status": "undiscovered",
@@ -2401,7 +2400,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.cheapshark.com/api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.chess.com/news/view/published-data-api": {
     "status": "confirmed",
@@ -2418,7 +2417,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://comicvine.gamespot.com/api/documentation",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://crafatar.com": {
     "status": "undiscovered",
@@ -2426,7 +2425,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://crafatar.com",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://www.icndb.com/api/": {
     "status": "undiscovered",
@@ -2434,7 +2433,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://www.icndb.com/api/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://digimon-api.vercel.app/": {
     "status": "confirmed",
@@ -2451,7 +2450,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://disneyapi.dev",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://documenter.getpostman.com/view/14059948/TzecB4fH": {
     "status": "undiscovered",
@@ -2459,7 +2458,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://documenter.getpostman.com/view/14059948/TzecB4fH",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://deckofcardsapi.com/": {
     "status": "confirmed",
@@ -2476,7 +2475,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.dnd5eapi.co/docs/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://dotasense.com/cheat-sheet#timing-api": {
     "status": "confirmed",
@@ -2493,7 +2492,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://open5e.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://v2.jokeapi.dev/": {
     "status": "undiscovered",
@@ -2501,7 +2500,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://v2.jokeapi.dev/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://docs.forza-api.tk": {
     "status": "undiscovered",
@@ -2509,7 +2508,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://docs.forza-api.tk",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://api.funtranslations.com/": {
     "status": "undiscovered",
@@ -2517,7 +2516,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://api.funtranslations.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://gdbrowser.com/api": {
     "status": "undiscovered",
@@ -2525,7 +2524,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://gdbrowser.com/api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://ffxivcollect.com/": {
     "status": "undiscovered",
@@ -2533,7 +2532,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://ffxivcollect.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://xivapi.com/": {
     "status": "undiscovered",
@@ -2541,7 +2540,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://xivapi.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.easports.com/fifa/ultimate-team/api/fut/item": {
     "status": "undiscovered",
@@ -2549,7 +2548,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.easports.com/fifa/ultimate-team/api/fut/item",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/sameerkumar18/geek-joke-api": {
     "status": "confirmed",
@@ -2566,7 +2565,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://genshin.dev",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/rubensayshi/gw2spidy/wiki": {
     "status": "undiscovered",
@@ -2574,7 +2573,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/rubensayshi/gw2spidy/wiki",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/favware/graphql-pokemon": {
     "status": "confirmed",
@@ -2591,7 +2590,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://asli-fun-fact-api.herokuapp.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/gadhagod/Hyrule-Compendium-API": {
     "status": "confirmed",
@@ -2608,7 +2607,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://api.mcsrvstat.us",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://sv443.net/jokeapi/v2/": {
     "status": "undiscovered",
@@ -2616,7 +2615,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://sv443.net/jokeapi/v2/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.gamerpower.com/api-read": {
     "status": "confirmed",
@@ -2633,7 +2632,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://hytale-api.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://magicthegathering.io/": {
     "status": "undiscovered",
@@ -2641,7 +2640,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://magicthegathering.io/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://playerdb.co/": {
     "status": "undiscovered",
@@ -2649,7 +2648,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://playerdb.co/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://jservice.io": {
     "status": "undiscovered",
@@ -2657,7 +2656,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://jservice.io",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.mmobomb.com/api": {
     "status": "undiscovered",
@@ -2665,7 +2664,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.mmobomb.com/api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.freetogame.com/api-doc": {
     "status": "undiscovered",
@@ -2673,7 +2672,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.freetogame.com/api-doc",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://opentdb.com/api_config.php": {
     "status": "undiscovered",
@@ -2681,7 +2680,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://opentdb.com/api_config.php",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://psychonauts-api.netlify.app/": {
     "status": "undiscovered",
@@ -2689,7 +2688,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://psychonauts-api.netlify.app/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://msikma.github.io/pokesprite/": {
     "status": "undiscovered",
@@ -2697,7 +2696,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://msikma.github.io/pokesprite/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://pokeapi.co": {
     "status": "confirmed",
@@ -2709,12 +2708,13 @@
     "checkedAt": "2026-09-19"
   },
   "https://rblxdb.com/developers": {
-    "status": "undiscovered",
-    "endpoint": null,
-    "cors": null,
-    "latencyMs": null,
+    "status": "confirmed",
+    "endpoint": "https://rblxdb.com/api/v1/songs?q=phonk&limit=10",
+    "cors": "yes",
+    "latencyMs": 271,
+    "confirmedBy": "success",
     "url": "https://rblxdb.com/developers",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://docs.mhw-db.com/": {
     "status": "confirmed",
@@ -2740,7 +2740,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/deltadex7/puyodb-api-deno",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://pokemontcg.io": {
     "status": "undiscovered",
@@ -2748,7 +2748,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://pokemontcg.io",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://rickandmortyapi.com": {
     "status": "undiscovered",
@@ -2756,7 +2756,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://rickandmortyapi.com",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://runescape.wiki/w/Application_programming_interface": {
     "status": "undiscovered",
@@ -2764,7 +2764,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://runescape.wiki/w/Application_programming_interface",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/Revadike/InternalSteamWebAPI/wiki": {
     "status": "undiscovered",
@@ -2772,7 +2772,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/Revadike/InternalSteamWebAPI/wiki",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://steamgpt.net": {
     "status": "confirmed",
@@ -2789,7 +2789,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://rps101.pythonanywhere.com/api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/JessVel/sakura-card-captor-api": {
     "status": "undiscovered",
@@ -2797,7 +2797,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/JessVel/sakura-card-captor-api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.tcgdex.net/docs": {
     "status": "undiscovered",
@@ -2805,7 +2805,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.tcgdex.net/docs",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://api.wfstats.cf": {
     "status": "undiscovered",
@@ -2813,7 +2813,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://api.wfstats.cf",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://scryfall.com/docs/api": {
     "status": "confirmed",
@@ -2839,7 +2839,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://valorant-api.com",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://tetr.io/about/api/": {
     "status": "undiscovered",
@@ -2847,7 +2847,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://tetr.io/about/api/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://universalis.app/docs/index.html": {
     "status": "undiscovered",
@@ -2855,7 +2855,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://universalis.app/docs/index.html",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/DiljotSG/MCU-Countdown/blob/develop/docs/API.md": {
     "status": "undiscovered",
@@ -2863,7 +2863,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/DiljotSG/MCU-Countdown/blob/develop/docs/API.md",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/kamikazechaser/administrative-divisions-db": {
     "status": "confirmed",
@@ -2880,7 +2880,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://sys.airtel.lv/ip2country/1.1.1.1/?full=true",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://worththerip.com/api/": {
     "status": "confirmed",
@@ -2897,7 +2897,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://xkcd.com/json.html",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.tronalddump.io/": {
     "status": "undiscovered",
@@ -2905,7 +2905,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.tronalddump.io/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://adresse.data.gouv.fr": {
     "status": "undiscovered",
@@ -2913,7 +2913,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://adresse.data.gouv.fr",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.getthedata.com/bng2latlong": {
     "status": "confirmed",
@@ -2939,7 +2939,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/M-Media-Group/Cartes.io/wiki/API",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://db.ygoprodeck.com/api-guide/": {
     "status": "confirmed",
@@ -2965,7 +2965,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://geodata.gov.gr/en/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://crossuniverse.psychpsyo.com/apiDocs.html": {
     "status": "undiscovered",
@@ -2973,7 +2973,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://crossuniverse.psychpsyo.com/apiDocs.html",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://geographql.netlify.app": {
     "status": "undiscovered",
@@ -2981,7 +2981,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://geographql.netlify.app",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://www.citysdk.eu/citysdk-toolkit/": {
     "status": "undiscovered",
@@ -2989,7 +2989,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://www.citysdk.eu/citysdk-toolkit/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.geojs.io/": {
     "status": "undiscovered",
@@ -2997,7 +2997,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.geojs.io/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://gis.ducks.org/datasets/du-university-chapters/api": {
     "status": "undiscovered",
@@ -3005,7 +3005,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://gis.ducks.org/datasets/du-university-chapters/api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://cep.la/": {
     "status": "undiscovered",
@@ -3013,7 +3013,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://cep.la/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://hackmyip.com/api": {
     "status": "confirmed",
@@ -3030,7 +3030,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://geodata.gov.hk/gs/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://api.gouv.fr/api/geoapi.html": {
     "status": "undiscovered",
@@ -3038,7 +3038,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://api.gouv.fr/api/geoapi.html",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://www.geonames.org/export/web-services.html": {
     "status": "undiscovered",
@@ -3046,7 +3046,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://www.geonames.org/export/web-services.html",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/lennertVanSever/graphcountries": {
     "status": "undiscovered",
@@ -3054,7 +3054,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/lennertVanSever/graphcountries",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.geoplugin.com": {
     "status": "undiscovered",
@@ -3062,7 +3062,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.geoplugin.com",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://geokeo.com": {
     "status": "undiscovered",
@@ -3070,7 +3070,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://geokeo.com",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://ipinfo.io/": {
     "status": "undiscovered",
@@ -3078,7 +3078,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://ipinfo.io/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://ip2country.info": {
     "status": "undiscovered",
@@ -3086,7 +3086,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://ip2country.info",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://ip-api.com/docs": {
     "status": "undiscovered",
@@ -3094,7 +3094,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://ip-api.com/docs",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://ipwhois.io/documentation": {
     "status": "undiscovered",
@@ -3102,7 +3102,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://ipwhois.io/documentation",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://api.techniknews.net/ipgeo/": {
     "status": "undiscovered",
@@ -3110,7 +3110,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://api.techniknews.net/ipgeo/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://ip99.com/api": {
     "status": "confirmed",
@@ -3136,7 +3136,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://fourtonfish.com/project/hellosalut-api/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.latlng.work/docs": {
     "status": "confirmed",
@@ -3153,7 +3153,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.ipvigilante.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://nominatim.org/release-docs/latest/api/Overview/": {
     "status": "undiscovered",
@@ -3161,7 +3161,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://nominatim.org/release-docs/latest/api/Overview/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://pontofato.com/api/": {
     "status": "confirmed",
@@ -3196,7 +3196,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://onwater.io/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://api.postcodedata.nl/v1/postcode/?postcode=1211EP&streetnumber=60&ref=domeinnaam.nl&type=json": {
     "status": "undiscovered",
@@ -3204,7 +3204,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://api.postcodedata.nl/v1/postcode/?postcode=1211EP&streetnumber=60&ref=domeinnaam.nl&type=json",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://postcodes.io": {
     "status": "confirmed",
@@ -3221,7 +3221,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://pinballmap.com/api/v1/docs",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://ipapi.co/api/#introduction": {
     "status": "confirmed",
@@ -3265,7 +3265,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://rapidapi.com/victorkarangwa4/api/rwanda",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://www.zippopotam.us": {
     "status": "undiscovered",
@@ -3273,7 +3273,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://www.zippopotam.us",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://viacep.com.br": {
     "status": "undiscovered",
@@ -3281,7 +3281,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://viacep.com.br",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://ziptasticapi.com/": {
     "status": "undiscovered",
@@ -3289,7 +3289,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://ziptasticapi.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.unblockmaster.com/free-ip-api/": {
     "status": "confirmed",
@@ -3315,7 +3315,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://brasilapi.com.br/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://restcountries.com": {
     "status": "confirmed",
@@ -3332,7 +3332,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.receitaws.com.br/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.census.gov/data/developers/data-sets.html": {
     "status": "undiscovered",
@@ -3340,7 +3340,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.census.gov/data/developers/data-sets.html",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.bclaws.gov.bc.ca/civix/template/complete/api/index.html": {
     "status": "undiscovered",
@@ -3348,7 +3348,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.bclaws.gov.bc.ca/civix/template/complete/api/index.html",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://queimadas.dgi.inpe.br/queimadas/dados-abertos/": {
     "status": "undiscovered",
@@ -3356,7 +3356,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://queimadas.dgi.inpe.br/queimadas/dados-abertos/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://apikijangportal.bnm.gov.my/": {
     "status": "undiscovered",
@@ -3364,7 +3364,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://apikijangportal.bnm.gov.my/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://daten.berlin.de/": {
     "status": "undiscovered",
@@ -3372,7 +3372,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://daten.berlin.de/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://opendata.city-adm.lviv.ua/": {
     "status": "undiscovered",
@@ -3380,7 +3380,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://opendata.city-adm.lviv.ua/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://hri.fi/en_gb/": {
     "status": "undiscovered",
@@ -3388,7 +3388,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://hri.fi/en_gb/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://ckan.multimediagdansk.pl/en": {
     "status": "undiscovered",
@@ -3396,7 +3396,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://ckan.multimediagdansk.pl/en",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://dadosabertos.bcb.gov.br/": {
     "status": "undiscovered",
@@ -3404,7 +3404,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://dadosabertos.bcb.gov.br/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://opendata.praha.eu/en": {
     "status": "undiscovered",
@@ -3412,7 +3412,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://opendata.praha.eu/en",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://opendata.cityofnewyork.us/": {
     "status": "undiscovered",
@@ -3420,7 +3420,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://opendata.cityofnewyork.us/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://explore.data.parliament.uk/?learnmore=Members": {
     "status": "undiscovered",
@@ -3428,7 +3428,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://explore.data.parliament.uk/?learnmore=Members",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://editalmd.com/api/": {
     "status": "confirmed",
@@ -3445,7 +3445,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://open.toronto.ca/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://otwartedane.gdynia.pl/en/api_doc.html": {
     "status": "undiscovered",
@@ -3453,7 +3453,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://otwartedane.gdynia.pl/en/api_doc.html",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/humora2504/eu-vat-by-commodity-code": {
     "status": "confirmed",
@@ -3470,7 +3470,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://data.colorado.gov/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://servicodados.ibge.gov.br/api/docs/": {
     "status": "undiscovered",
@@ -3478,7 +3478,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://servicodados.ibge.gov.br/api/docs/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://datausa.io/about/api/": {
     "status": "confirmed",
@@ -3495,7 +3495,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://dadosabertos.camara.leg.br/swagger/api.html",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://indianpincode.com/": {
     "status": "undiscovered",
@@ -3503,7 +3503,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://indianpincode.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.epa.gov/developers/data-data-products#apis": {
     "status": "undiscovered",
@@ -3511,7 +3511,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.epa.gov/developers/data-data-products#apis",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://mandi-api.vercel.app/docs": {
     "status": "undiscovered",
@@ -3519,7 +3519,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://mandi-api.vercel.app/docs",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://opendata.dc.gov/pages/using-apis": {
     "status": "undiscovered",
@@ -3527,15 +3527,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://opendata.dc.gov/pages/using-apis",
-    "checkedAt": "2026-09-19"
-  },
-  "http://ratings.food.gov.uk/open-data/en-GB": {
-    "status": "undiscovered",
-    "endpoint": null,
-    "cors": null,
-    "latencyMs": null,
-    "url": "http://ratings.food.gov.uk/open-data/en-GB",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://localgov.jp/": {
     "status": "undiscovered",
@@ -3543,7 +3535,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://localgov.jp/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.fbi.gov/wanted/api": {
     "status": "undiscovered",
@@ -3551,7 +3543,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.fbi.gov/wanted/api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://interpol.api.bund.dev/": {
     "status": "undiscovered",
@@ -3559,7 +3551,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://interpol.api.bund.dev/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.federalregister.gov/reader-aids/developer-resources/rest-api": {
     "status": "undiscovered",
@@ -3567,7 +3559,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.federalregister.gov/reader-aids/developer-resources/rest-api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://data.ibb.gov.tr": {
     "status": "undiscovered",
@@ -3575,7 +3567,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://data.ibb.gov.tr",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.data.gv.at/": {
     "status": "undiscovered",
@@ -3583,7 +3575,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.data.gv.at/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://datos.gob.ar/": {
     "status": "undiscovered",
@@ -3591,7 +3583,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://datos.gob.ar/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://neotimo.com/annuaire-dgfip": {
     "status": "undiscovered",
@@ -3599,7 +3591,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://neotimo.com/annuaire-dgfip",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.data.act.gov.au/": {
     "status": "undiscovered",
@@ -3607,7 +3599,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.data.act.gov.au/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://data.gov.cz/english/": {
     "status": "undiscovered",
@@ -3615,7 +3607,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://data.gov.cz/english/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.data.gov.au/": {
     "status": "undiscovered",
@@ -3623,7 +3615,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.data.gov.au/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://data.gov.cy/?language=en": {
     "status": "undiscovered",
@@ -3631,7 +3623,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://data.gov.cy/?language=en",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://open.canada.ca/en": {
     "status": "undiscovered",
@@ -3639,7 +3631,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://open.canada.ca/en",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.avoindata.fi/en": {
     "status": "undiscovered",
@@ -3647,7 +3639,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.avoindata.fi/en",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.opendata.dk/": {
     "status": "undiscovered",
@@ -3655,7 +3647,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.opendata.dk/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.dane.gov.co/": {
     "status": "undiscovered",
@@ -3663,7 +3655,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.dane.gov.co/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://data.gov.be/": {
     "status": "undiscovered",
@@ -3671,7 +3663,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://data.gov.be/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://data.go.id/": {
     "status": "undiscovered",
@@ -3679,7 +3671,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://data.go.id/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://datos.gob.mx/": {
     "status": "undiscovered",
@@ -3687,7 +3679,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://datos.gob.mx/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://data.gov.ie/pages/developers": {
     "status": "undiscovered",
@@ -3695,7 +3687,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://data.gov.ie/pages/developers",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.dati.gov.it/": {
     "status": "undiscovered",
@@ -3703,7 +3695,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.dati.gov.it/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://data.gov.lt/public/api/1": {
     "status": "undiscovered",
@@ -3711,7 +3703,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://data.gov.lt/public/api/1",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.inegi.org.mx/datos/": {
     "status": "undiscovered",
@@ -3719,7 +3711,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.inegi.org.mx/datos/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://data.norge.no/dataservices": {
     "status": "undiscovered",
@@ -3727,7 +3719,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://data.norge.no/dataservices",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://data.overheid.nl/en/ondersteuning/data-publiceren/api": {
     "status": "undiscovered",
@@ -3735,7 +3727,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://data.overheid.nl/en/ondersteuning/data-publiceren/api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://dane.gov.pl/en": {
     "status": "undiscovered",
@@ -3743,15 +3735,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://dane.gov.pl/en",
-    "checkedAt": "2026-09-19"
-  },
-  "https://dados.gov.pt/en/docapi/": {
-    "status": "undiscovered",
-    "endpoint": null,
-    "cors": null,
-    "latencyMs": null,
-    "url": "https://dados.gov.pt/en/docapi/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://data.gov.sa": {
     "status": "undiscovered",
@@ -3759,7 +3743,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://data.gov.sa",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.data.govt.nz/": {
     "status": "undiscovered",
@@ -3767,7 +3751,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.data.govt.nz/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.datosabiertos.gob.pe/": {
     "status": "undiscovered",
@@ -3775,7 +3759,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.datosabiertos.gob.pe/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://data.gov.sk/en/": {
     "status": "undiscovered",
@@ -3783,7 +3767,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://data.gov.sk/en/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.data.qld.gov.au/": {
     "status": "undiscovered",
@@ -3791,7 +3775,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.data.qld.gov.au/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://data.gov.sg/developer": {
     "status": "undiscovered",
@@ -3799,7 +3783,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://data.gov.sg/developer",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://podatki.gov.si/": {
     "status": "undiscovered",
@@ -3807,7 +3791,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://podatki.gov.si/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://data.sa.gov.au/": {
     "status": "undiscovered",
@@ -3815,7 +3799,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://data.sa.gov.au/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.dataportal.se/en/dataservice/91_29789/api-for-the-statistical-database": {
     "status": "undiscovered",
@@ -3823,7 +3807,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.dataportal.se/en/dataservice/91_29789/api-for-the-statistical-database",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.data.gov/": {
     "status": "undiscovered",
@@ -3831,7 +3815,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.data.gov/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://data.gov.uk/": {
     "status": "undiscovered",
@@ -3839,7 +3823,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://data.gov.uk/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://datos.gob.es/en": {
     "status": "undiscovered",
@@ -3847,7 +3831,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://datos.gob.es/en",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://handbook.opendata.swiss/de/content/nutzen/api-nutzen.html": {
     "status": "undiscovered",
@@ -3855,7 +3839,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://handbook.opendata.swiss/de/content/nutzen/api-nutzen.html",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://api.whenisthenextboardexam.com/docs/": {
     "status": "undiscovered",
@@ -3863,7 +3847,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://api.whenisthenextboardexam.com/docs/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://radar-cnpj.com/api/": {
     "status": "confirmed",
@@ -3889,7 +3873,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://data.gov.tw/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://iinei.inei.gob.pe/microdatos/": {
     "status": "undiscovered",
@@ -3897,7 +3881,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://iinei.inei.gob.pe/microdatos/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://represent.opennorth.ca/": {
     "status": "undiscovered",
@@ -3905,7 +3889,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://represent.opennorth.ca/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://uk-legal-changes.pages.dev/docs": {
     "status": "confirmed",
@@ -3922,7 +3906,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://api.tollmint.com",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://data.wa.gov.au/": {
     "status": "undiscovered",
@@ -3930,7 +3914,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://data.wa.gov.au/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://righttodisconnect.jdries.nl/api/": {
     "status": "confirmed",
@@ -3947,7 +3931,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://wimberly.solutions/api/free-sanctions-check/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.data.vic.gov.au/": {
     "status": "undiscovered",
@@ -3955,7 +3939,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.data.vic.gov.au/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://api.usaspending.gov/": {
     "status": "undiscovered",
@@ -3963,7 +3947,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://api.usaspending.gov/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://government-data-api.onrender.com/docs": {
     "status": "undiscovered",
@@ -3971,7 +3955,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://government-data-api.onrender.com/docs",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://uselection.togatech.org/api/": {
     "status": "undiscovered",
@@ -3979,7 +3963,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://uselection.togatech.org/api/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://coronavirus.data.gov.uk/details/developers-guide": {
     "status": "undiscovered",
@@ -3987,7 +3971,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://coronavirus.data.gov.uk/details/developers-guide",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://covidtracking.com/data/api/version-2": {
     "status": "undiscovered",
@@ -3995,7 +3979,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://covidtracking.com/data/api/version-2",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://trials.starfile.org/api": {
     "status": "undiscovered",
@@ -4003,7 +3987,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://trials.starfile.org/api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/M-Media-Group/Covid-19-API": {
     "status": "undiscovered",
@@ -4011,7 +3995,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/M-Media-Group/Covid-19-API",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://pipedream.com/@pravin/http-api-for-latest-wuhan-coronavirus-data-2019-ncov-p_G6CLVM/readme": {
     "status": "undiscovered",
@@ -4019,7 +4003,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://pipedream.com/@pravin/http-api-for-latest-wuhan-coronavirus-data-2019-ncov-p_G6CLVM/readme",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://data.covid19india.org/": {
     "status": "undiscovered",
@@ -4027,7 +4011,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://data.covid19india.org/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://nuttaphat.com/covid19-api/": {
     "status": "undiscovered",
@@ -4035,7 +4019,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://nuttaphat.com/covid19-api/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/mathdroid/covid-19-api": {
     "status": "undiscovered",
@@ -4043,7 +4027,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/mathdroid/covid-19-api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/Simperfy/Covid-19-API-Philippines-DOH": {
     "status": "undiscovered",
@@ -4051,7 +4035,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/Simperfy/Covid-19-API-Philippines-DOH",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://npgeo-corona-npgeo-de.hub.arcgis.com": {
     "status": "undiscovered",
@@ -4059,7 +4043,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://npgeo-corona-npgeo-de.hub.arcgis.com",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://covidtracker.bsg.ox.ac.uk": {
     "status": "undiscovered",
@@ -4067,7 +4051,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://covidtracker.bsg.ox.ac.uk",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.govdata.de/daten/-/details/govdata-metadatenkatalog": {
     "status": "undiscovered",
@@ -4075,7 +4059,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.govdata.de/daten/-/details/govdata-metadatenkatalog",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://findsaunaplunge.com/api/": {
     "status": "undiscovered",
@@ -4083,7 +4067,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://findsaunaplunge.com/api/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://api.covid19tracker.ca/docs/1.0/overview": {
     "status": "undiscovered",
@@ -4091,7 +4075,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://api.covid19tracker.ca/docs/1.0/overview",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.hpb.health.gov.lk/en/api-documentation": {
     "status": "undiscovered",
@@ -4099,7 +4083,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.hpb.health.gov.lk/en/api-documentation",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://data.gov.ro/": {
     "status": "undiscovered",
@@ -4107,7 +4091,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://data.gov.ro/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://data.humdata.org/": {
     "status": "undiscovered",
@@ -4115,7 +4099,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://data.humdata.org/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.healthcare.gov/developers/": {
     "status": "undiscovered",
@@ -4123,7 +4107,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.healthcare.gov/developers/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://cov-spectrum.ethz.ch/public": {
     "status": "undiscovered",
@@ -4131,7 +4115,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://cov-spectrum.ethz.ch/public",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://documenter.getpostman.com/view/16605343/Tzm8GG7u": {
     "status": "undiscovered",
@@ -4139,7 +4123,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://documenter.getpostman.com/view/16605343/Tzm8GG7u",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://longevityworldcup.com/api/data/athletes": {
     "status": "undiscovered",
@@ -4147,7 +4131,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://longevityworldcup.com/api/data/athletes",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://covid-19.dataflowkit.com": {
     "status": "undiscovered",
@@ -4155,7 +4139,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://covid-19.dataflowkit.com",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://quarantine.country/coronavirus/api/": {
     "status": "undiscovered",
@@ -4163,7 +4147,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://quarantine.country/coronavirus/api/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://makeup-api.herokuapp.com/": {
     "status": "undiscovered",
@@ -4171,7 +4155,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://makeup-api.herokuapp.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://sante.handled.tools/api": {
     "status": "undiscovered",
@@ -4179,7 +4163,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://sante.handled.tools/api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://npiregistry.cms.hhs.gov/registry/help-api": {
     "status": "undiscovered",
@@ -4187,7 +4171,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://npiregistry.cms.hhs.gov/registry/help-api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://artificialintelligencejobs.co/developers": {
     "status": "confirmed",
@@ -4204,7 +4188,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://disease.sh/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.opendata.nhs.scot": {
     "status": "undiscovered",
@@ -4212,7 +4196,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.opendata.nhs.scot",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://graphql.jobs/docs/api/": {
     "status": "undiscovered",
@@ -4220,7 +4204,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://graphql.jobs/docs/api/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/workforce-data-initiative/skills-api/wiki/API-Overview": {
     "status": "undiscovered",
@@ -4228,7 +4212,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/workforce-data-initiative/skills-api/wiki/API-Overview",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://aidevboard.com/openapi.yaml": {
     "status": "undiscovered",
@@ -4236,7 +4220,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://aidevboard.com/openapi.yaml",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://medlineplus.gov/about/developers/geneticsdatafilesapi/": {
     "status": "undiscovered",
@@ -4244,7 +4228,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://medlineplus.gov/about/developers/geneticsdatafilesapi/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://devitjobs.uk/job_feed.xml": {
     "status": "undiscovered",
@@ -4252,7 +4236,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://devitjobs.uk/job_feed.xml",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://mydreamthreads.xyz/dream-interpretation-api": {
     "status": "undiscovered",
@@ -4260,7 +4244,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://mydreamthreads.xyz/dream-interpretation-api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://piszczek.pl/tools/api": {
     "status": "confirmed",
@@ -4277,7 +4261,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://uttesh.com/exude-api/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://freehire.dev/docs/api": {
     "status": "undiscovered",
@@ -4285,7 +4269,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://freehire.dev/docs/api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://bytebrujo.github.io/modelfax/": {
     "status": "undiscovered",
@@ -4293,7 +4277,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://bytebrujo.github.io/modelfax/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://statlyte.com/api": {
     "status": "confirmed",
@@ -4310,7 +4294,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://techrole.ru/open-data-daily",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://tensorfeed.ai/developers": {
     "status": "confirmed",
@@ -4327,7 +4311,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://documenter.getpostman.com/view/18545278/UVJbJdKh",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://openvisionapi.com": {
     "status": "undiscovered",
@@ -4335,7 +4319,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://openvisionapi.com",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/": {
     "status": "undiscovered",
@@ -4343,7 +4327,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://app.swaggerhub.com/apis/Bandsintown/PublicAPI/3.0.0": {
     "status": "undiscovered",
@@ -4351,7 +4335,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://app.swaggerhub.com/apis/Bandsintown/PublicAPI/3.0.0",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/cyberboysumanjay/GaanaAPI": {
     "status": "undiscovered",
@@ -4359,7 +4343,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/cyberboysumanjay/GaanaAPI",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://nothumansearch.ai/openapi.yaml": {
     "status": "undiscovered",
@@ -4367,7 +4351,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://nothumansearch.ai/openapi.yaml",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.deepcode.ai": {
     "status": "undiscovered",
@@ -4375,7 +4359,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.deepcode.ai",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://lyricsovh.docs.apiary.io": {
     "status": "undiscovered",
@@ -4383,7 +4367,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://lyricsovh.docs.apiary.io",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://openwhyd.github.io/openwhyd/API": {
     "status": "undiscovered",
@@ -4391,7 +4375,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://openwhyd.github.io/openwhyd/API",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://api.radio-browser.info/": {
     "status": "undiscovered",
@@ -4399,7 +4383,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://api.radio-browser.info/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://chroniclingamerica.loc.gov/about/api/": {
     "status": "undiscovered",
@@ -4407,7 +4391,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://chroniclingamerica.loc.gov/about/api/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/Kirazul/Verome-API": {
     "status": "undiscovered",
@@ -4415,7 +4399,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/Kirazul/Verome-API",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.datacubeai.space/en/tools/ai-news-api": {
     "status": "undiscovered",
@@ -4423,7 +4407,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.datacubeai.space/en/tools/ai-news-api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://corona.dnsforfamily.com/api.txt": {
     "status": "undiscovered",
@@ -4431,7 +4415,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://corona.dnsforfamily.com/api.txt",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.songsterr.com/a/wa/api/": {
     "status": "undiscovered",
@@ -4439,7 +4423,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.songsterr.com/a/wa/api/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/juliayxhuang/florida-man-api#readme": {
     "status": "confirmed",
@@ -4456,7 +4440,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://musicbrainz.org/doc/Development/XML_Web_Service/Version_2",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://spaceflightnewsapi.net": {
     "status": "undiscovered",
@@ -4464,7 +4448,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://spaceflightnewsapi.net",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://noozra.com/api": {
     "status": "confirmed",
@@ -4473,14 +4457,6 @@
     "latencyMs": 823,
     "confirmedBy": "success",
     "url": "https://noozra.com/api",
-    "checkedAt": "2026-09-19"
-  },
-  "http://18f.github.io/API-All-the-X/": {
-    "status": "undiscovered",
-    "endpoint": null,
-    "cors": null,
-    "latencyMs": null,
-    "url": "http://18f.github.io/API-All-the-X/",
     "checkedAt": "2026-09-19"
   },
   "https://binaryjazz.us/genrenator-api/": {
@@ -4498,7 +4474,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/cyberboysumanjay/Inshorts-News-API",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/cyberboysumanjay/JioSaavnAPI": {
     "status": "undiscovered",
@@ -4506,7 +4482,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/cyberboysumanjay/JioSaavnAPI",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://bigdataexplained.com/data": {
     "status": "confirmed",
@@ -4523,7 +4499,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://botsarchive.com/docs.html",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://api.181649.com/docs": {
     "status": "confirmed",
@@ -4549,7 +4525,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://callook.info",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://archive.readme.io/docs": {
     "status": "undiscovered",
@@ -4557,7 +4533,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://archive.readme.io/docs",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://covid19api.com/": {
     "status": "undiscovered",
@@ -4565,7 +4541,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://covid19api.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://eosl.ai/api/": {
     "status": "confirmed",
@@ -4582,7 +4558,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.apisetu.gov.in/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://cuttingtoolsai.eu/api": {
     "status": "confirmed",
@@ -4591,15 +4567,6 @@
     "latencyMs": 1467,
     "confirmedBy": "success",
     "url": "https://cuttingtoolsai.eu/api",
-    "checkedAt": "2026-09-19"
-  },
-  "https://coworkingview.com/openapi.json": {
-    "status": "confirmed",
-    "endpoint": "https://api.coworkingview.com/v1/config",
-    "cors": "no",
-    "latencyMs": 896,
-    "confirmedBy": "success",
-    "url": "https://coworkingview.com/openapi.json",
     "checkedAt": "2026-09-19"
   },
   "https://i6eal.de/en/tools/data/": {
@@ -4635,7 +4602,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://collegescorecard.ed.gov/data/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/0x0is1/lowy-index-api-docs": {
     "status": "undiscovered",
@@ -4643,7 +4610,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/0x0is1/lowy-index-api-docs",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://geo.api.gouv.fr/adresse": {
     "status": "undiscovered",
@@ -4651,7 +4618,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://geo.api.gouv.fr/adresse",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://africaopendata.org/": {
     "status": "undiscovered",
@@ -4659,7 +4626,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://africaopendata.org/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://mostexpensivewatches.net/api": {
     "status": "confirmed",
@@ -4676,7 +4643,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://data.covid19.go.id/public/api/prov.json",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.nobelprize.org/about/developer-zone-2/": {
     "status": "undiscovered",
@@ -4684,7 +4651,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.nobelprize.org/about/developer-zone-2/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://paycrunch.co/api.html": {
     "status": "confirmed",
@@ -4719,7 +4686,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://developers.teleport.org/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://opendata.minneapolismn.gov/": {
     "status": "undiscovered",
@@ -4727,7 +4694,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://opendata.minneapolismn.gov/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://slashyear.com/api": {
     "status": "confirmed",
@@ -4744,7 +4711,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://onyx-actions.onrender.com/bazaar",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://modelpartfinder.com/docs/api": {
     "status": "confirmed",
@@ -4806,7 +4773,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://urbanobservatory.ac.uk",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://data.uio.no/": {
     "status": "undiscovered",
@@ -4814,7 +4781,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://data.uio.no/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.tilth.uk/data": {
     "status": "confirmed",
@@ -4831,7 +4798,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github-contributions.vercel.app",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://api.count.ly/reference": {
     "status": "undiscovered",
@@ -4839,7 +4806,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://api.count.ly/reference",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/anuraghazra/github-readme-stats": {
     "status": "undiscovered",
@@ -4847,7 +4814,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/anuraghazra/github-readme-stats",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/Hipo/university-domains-list": {
     "status": "undiscovered",
@@ -4855,7 +4822,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/Hipo/university-domains-list",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.datamuse.com/api/": {
     "status": "undiscovered",
@@ -4863,7 +4830,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.datamuse.com/api/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://evilinsult.com/api": {
     "status": "confirmed",
@@ -4880,7 +4847,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://shields.io/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.metabase.com/": {
     "status": "undiscovered",
@@ -4888,7 +4855,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.metabase.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.mediawiki.org/wiki/API:Main_page": {
     "status": "undiscovered",
@@ -4896,7 +4863,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.mediawiki.org/wiki/API:Main_page",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/fisenkodv/dictum": {
     "status": "undiscovered",
@@ -4904,7 +4871,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/fisenkodv/dictum",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://biriyani.anoram.com/": {
     "status": "undiscovered",
@@ -4912,7 +4879,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://biriyani.anoram.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://inspiration.goprogram.ai/docs/": {
     "status": "undiscovered",
@@ -4920,7 +4887,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://inspiration.goprogram.ai/docs/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://www.foaas.com/": {
     "status": "undiscovered",
@@ -4928,7 +4895,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://www.foaas.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://api.adviceslip.com/": {
     "status": "undiscovered",
@@ -4936,7 +4903,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://api.adviceslip.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://kanye.rest": {
     "status": "undiscovered",
@@ -4944,7 +4911,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://kanye.rest",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.uspto.gov/learning-and-resources/open-data-and-mobility": {
     "status": "undiscovered",
@@ -4952,7 +4919,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.uspto.gov/learning-and-resources/open-data-and-mobility",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://icanhazdadjoke.com/api": {
     "status": "confirmed",
@@ -4978,7 +4945,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/skolakoda/programming-quotes-api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://quoteclear.web.app/": {
     "status": "undiscovered",
@@ -4986,7 +4953,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://quoteclear.web.app/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://pprathameshmore.github.io/QuoteGarden/": {
     "status": "undiscovered",
@@ -4994,7 +4961,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://pprathameshmore.github.io/QuoteGarden/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://patentsview.org/apis/purpose": {
     "status": "undiscovered",
@@ -5002,7 +4969,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://patentsview.org/apis/purpose",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://kimiquotes.herokuapp.com/doc": {
     "status": "undiscovered",
@@ -5010,7 +4977,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://kimiquotes.herokuapp.com/doc",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/lukePeavey/quotable": {
     "status": "undiscovered",
@@ -5018,7 +4985,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/lukePeavey/quotable",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://vadivelu.anoram.com/": {
     "status": "undiscovered",
@@ -5026,7 +4993,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://vadivelu.anoram.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/tlcheah2/stoic-quote-lambda-public-api": {
     "status": "confirmed",
@@ -5061,7 +5028,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/azharimm/phone-specs-api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://theysaidso.com/api/": {
     "status": "undiscovered",
@@ -5069,7 +5036,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://theysaidso.com/api/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://app.traitify.com/developer": {
     "status": "undiscovered",
@@ -5077,7 +5044,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://app.traitify.com/developer",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://kavel.readthedocs.io/": {
     "status": "undiscovered",
@@ -5085,7 +5052,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://kavel.readthedocs.io/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://imsea.herokuapp.com/": {
     "status": "undiscovered",
@@ -5093,7 +5060,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://imsea.herokuapp.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://screenshotlayer.com?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers": {
     "status": "undiscovered",
@@ -5101,7 +5068,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://screenshotlayer.com?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/DenverCoder1/readme-typing-svg": {
     "status": "undiscovered",
@@ -5109,7 +5076,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/DenverCoder1/readme-typing-svg",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://zenquotes.io/": {
     "status": "undiscovered",
@@ -5117,7 +5084,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://zenquotes.io/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.screenshot-studio.com/docs": {
     "status": "confirmed",
@@ -5134,7 +5101,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://placekeanu.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://resmush.it/api": {
     "status": "confirmed",
@@ -5151,7 +5118,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://api.arcsecond.io/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://picsum.photos/": {
     "status": "undiscovered",
@@ -5159,7 +5126,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://picsum.photos/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://europepmc.org/RestfulWebService": {
     "status": "undiscovered",
@@ -5167,7 +5134,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://europepmc.org/RestfulWebService",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.gbif.org/developer/summary": {
     "status": "undiscovered",
@@ -5175,15 +5142,16 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.gbif.org/developer/summary",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.cyclecalcs.com/api.html": {
-    "status": "undiscovered",
-    "endpoint": null,
-    "cors": null,
-    "latencyMs": null,
+    "status": "confirmed",
+    "endpoint": "https://www.cyclecalcs.com/v2",
+    "cors": "yes",
+    "latencyMs": 1005,
+    "confirmedBy": "success",
     "url": "https://www.cyclecalcs.com/api.html",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/idigbio/idigbio-search-api/wiki": {
     "status": "undiscovered",
@@ -5191,7 +5159,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/idigbio/idigbio-search-api/wiki",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://arxiv.org/help/api/user-manual": {
     "status": "undiscovered",
@@ -5199,7 +5167,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://arxiv.org/help/api/user-manual",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://isro.vercel.app": {
     "status": "undiscovered",
@@ -5207,15 +5175,16 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://isro.vercel.app",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://editor.codecogs.com/docs/4-LaTeX_rendering.php": {
-    "status": "undiscovered",
-    "endpoint": null,
-    "cors": null,
-    "latencyMs": null,
+    "status": "confirmed",
+    "endpoint": "https://latex.codecogs.com/png.json?1+sin^2(x",
+    "cors": "yes",
+    "latencyMs": 62,
+    "confirmedBy": "success",
     "url": "https://editor.codecogs.com/docs/4-LaTeX_rendering.php",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/inspirehep/rest-api-doc": {
     "status": "confirmed",
@@ -5232,7 +5201,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.itis.gov/ws_description.html",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://isevenapi.xyz/": {
     "status": "confirmed",
@@ -5249,7 +5218,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://thespacedevs.com/llapi",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://www.asterank.com/mpc": {
     "status": "undiscovered",
@@ -5257,7 +5226,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://www.asterank.com/mpc",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://newton.vercel.app": {
     "status": "undiscovered",
@@ -5265,7 +5234,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://newton.vercel.app",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://api.nasa.gov": {
     "status": "undiscovered",
@@ -5273,7 +5242,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://api.nasa.gov",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://docs.mygene.info/": {
     "status": "confirmed",
@@ -5282,14 +5251,6 @@
     "latencyMs": 1143,
     "confirmedBy": "success",
     "url": "https://docs.mygene.info/",
-    "checkedAt": "2026-09-19"
-  },
-  "http://numbersapi.com": {
-    "status": "undiscovered",
-    "endpoint": null,
-    "cors": null,
-    "latencyMs": null,
-    "url": "http://numbersapi.com",
     "checkedAt": "2026-09-19"
   },
   "https://api.noctuasky.com/api/v1/swaggerdoc/": {
@@ -5302,12 +5263,13 @@
     "checkedAt": "2026-09-19"
   },
   "https://docs.openalex.org/": {
-    "status": "undiscovered",
-    "endpoint": null,
-    "cors": null,
-    "latencyMs": null,
+    "status": "confirmed",
+    "endpoint": "https://api.openalex.org/works",
+    "cors": "yes",
+    "latencyMs": 720,
+    "confirmedBy": "success",
     "url": "https://docs.openalex.org/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://oceanfacts.herokuapp.com/": {
     "status": "undiscovered",
@@ -5315,7 +5277,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://oceanfacts.herokuapp.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://developer.osf.io": {
     "status": "confirmed",
@@ -5332,7 +5294,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/elizabethadegbaju/remotecalc",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www2.purpleair.com/": {
     "status": "undiscovered",
@@ -5340,7 +5302,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www2.purpleair.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://data.rcsb.org/": {
     "status": "confirmed",
@@ -5357,7 +5319,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://forismatic.com/en/api/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://share.osf.io/api/v2/": {
     "status": "undiscovered",
@@ -5365,7 +5327,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://share.osf.io/api/v2/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://open-notify.org/Open-Notify-API/": {
     "status": "undiscovered",
@@ -5373,7 +5335,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://open-notify.org/Open-Notify-API/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://tallytopia.com/api-docs": {
     "status": "confirmed",
@@ -5390,7 +5352,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/FranP-code/API-Times-Adder",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://api.semanticscholar.org/": {
     "status": "undiscovered",
@@ -5398,7 +5360,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://api.semanticscholar.org/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.drupal.org/drupalorg/docs/api": {
     "status": "confirmed",
@@ -5415,7 +5377,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/r-spacex/SpaceX-API",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://sunrise-sunset.org/api": {
     "status": "confirmed",
@@ -5432,7 +5394,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://api.spacex.land/graphql/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://earthquake.usgs.gov/fdsnws/event/1/": {
     "status": "undiscovered",
@@ -5440,7 +5402,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://earthquake.usgs.gov/fdsnws/event/1/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://tle.ivanstanojevic.me/#/docs": {
     "status": "undiscovered",
@@ -5448,7 +5410,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://tle.ivanstanojevic.me/#/docs",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://api.dead-drop.xyz/api/v1/docs": {
     "status": "confirmed",
@@ -5465,7 +5427,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/Dehash-lt/api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://datahelpdesk.worldbank.org/knowledgebase/topics/125589": {
     "status": "undiscovered",
@@ -5473,7 +5435,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://datahelpdesk.worldbank.org/knowledgebase/topics/125589",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/polarspetroll/EscapeAPI": {
     "status": "undiscovered",
@@ -5481,7 +5443,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/polarspetroll/EscapeAPI",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://waterservices.usgs.gov/": {
     "status": "undiscovered",
@@ -5489,7 +5451,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://waterservices.usgs.gov/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://docs.emailrep.io/": {
     "status": "undiscovered",
@@ -5497,7 +5459,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://docs.emailrep.io/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://filterlists.com": {
     "status": "undiscovered",
@@ -5505,7 +5467,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://filterlists.com",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://x-math.herokuapp.com/": {
     "status": "undiscovered",
@@ -5513,7 +5475,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://x-math.herokuapp.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://iplogs.com/docs": {
     "status": "undiscovered",
@@ -5521,7 +5483,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://iplogs.com/docs",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://classify-web.herokuapp.com/#/api": {
     "status": "undiscovered",
@@ -5529,7 +5491,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://classify-web.herokuapp.com/#/api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://hashable.space/pages/api/": {
     "status": "undiscovered",
@@ -5537,7 +5499,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://hashable.space/pages/api/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://msrc.microsoft.com/report/developer": {
     "status": "undiscovered",
@@ -5545,7 +5507,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://msrc.microsoft.com/report/developer",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/fawazsullia/password-generator/": {
     "status": "undiscovered",
@@ -5553,7 +5515,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/fawazsullia/password-generator/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://phishstats.info/": {
     "status": "undiscovered",
@@ -5561,7 +5523,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://phishstats.info/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://csr.plus/docs/api": {
     "status": "confirmed",
@@ -5587,7 +5549,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://nvd.nist.gov/vuln/Data-Feeds/JSON-feed-changelog",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://api.virushee.com/": {
     "status": "undiscovered",
@@ -5595,7 +5557,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://api.virushee.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.sellerscalc.com/data": {
     "status": "undiscovered",
@@ -5603,7 +5565,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.sellerscalc.com/data",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/4chan/4chan-API": {
     "status": "undiscovered",
@@ -5611,7 +5573,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/4chan/4chan-API",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://urlhaus.abuse.ch/api/": {
     "status": "undiscovered",
@@ -5619,7 +5581,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://urlhaus.abuse.ch/api/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://api.doge-meme.lol/docs": {
     "status": "undiscovered",
@@ -5627,7 +5589,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://api.doge-meme.lol/docs",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://data.police.uk/docs/": {
     "status": "undiscovered",
@@ -5635,7 +5597,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://data.police.uk/docs/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/ssllabs/ssllabs-scan/blob/master/ssllabs-api-docs-v3.md": {
     "status": "undiscovered",
@@ -5643,7 +5605,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/ssllabs/ssllabs-scan/blob/master/ssllabs-api-docs-v3.md",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.foaas.com": {
     "status": "undiscovered",
@@ -5651,7 +5613,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.foaas.com",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://kontests.net/api": {
     "status": "undiscovered",
@@ -5659,7 +5621,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://kontests.net/api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/mozilla/http-observatory/blob/master/httpobs/docs/api.md": {
     "status": "undiscovered",
@@ -5667,7 +5629,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/mozilla/http-observatory/blob/master/httpobs/docs/api.md",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://aztro.sameerkumar.website/": {
     "status": "undiscovered",
@@ -5675,7 +5637,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://aztro.sameerkumar.website/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://hashnode.com": {
     "status": "undiscovered",
@@ -5683,7 +5645,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://hashnode.com",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://swarmmemo.com/protocol.md": {
     "status": "confirmed",
@@ -5700,7 +5662,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://docs.bsky.app/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/Phineas/lanyard": {
     "status": "confirmed",
@@ -5717,7 +5679,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/mozilla/tls-observatory#api-endpoints",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://ergast.com/mrd/": {
     "status": "undiscovered",
@@ -5725,7 +5687,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://ergast.com/mrd/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.balldontlie.io": {
     "status": "undiscovered",
@@ -5733,7 +5695,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.balldontlie.io",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://fanlinewire.com/docs": {
     "status": "confirmed",
@@ -5750,7 +5712,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/azharimm/football-standings-api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://api.citybik.es/v2/": {
     "status": "confirmed",
@@ -5776,7 +5738,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://appac.github.io/mlb-data-api-docs/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.scorebat.com/video-api/": {
     "status": "undiscovered",
@@ -5784,7 +5746,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.scorebat.com/video-api/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://oddsbench.xyz/api/": {
     "status": "confirmed",
@@ -5810,7 +5772,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://openf1.org/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.openligadb.de": {
     "status": "undiscovered",
@@ -5818,7 +5780,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.openligadb.de",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://gitlab.com/dword4/nhlapi": {
     "status": "undiscovered",
@@ -5826,7 +5788,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://gitlab.com/dword4/nhlapi",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://developers.decathlon.com/products/sports": {
     "status": "undiscovered",
@@ -5834,7 +5796,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://developers.decathlon.com/products/sports",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://developers.decathlon.com/products/sport-places": {
     "status": "undiscovered",
@@ -5842,7 +5804,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://developers.decathlon.com/products/sport-places",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://data.oddsmagnet.com": {
     "status": "undiscovered",
@@ -5850,7 +5812,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://data.oddsmagnet.com",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://racinghub.net/api/v1/docs#/": {
     "status": "confirmed",
@@ -5867,15 +5829,16 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://any-api.com/nba_com/nba_com/docs/API_Description",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.qiuxiaoce.com/data-docs/": {
-    "status": "undiscovered",
-    "endpoint": null,
-    "cors": null,
-    "latencyMs": null,
+    "status": "confirmed",
+    "endpoint": "https://www.qiuxiaoce.com/wp-json/abv2-creator/v1/docs",
+    "cors": "yes",
+    "latencyMs": 469,
+    "confirmedBy": "success",
     "url": "https://www.qiuxiaoce.com/data-docs/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://api.squiggle.com.au": {
     "status": "undiscovered",
@@ -5883,7 +5846,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://api.squiggle.com.au",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://sportscore.com/developers/": {
     "status": "confirmed",
@@ -5918,7 +5881,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/HackerNews/API",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://avatars.dicebear.com/": {
     "status": "undiscovered",
@@ -5926,7 +5889,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://avatars.dicebear.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://baconipsum.com/json-api/": {
     "status": "confirmed",
@@ -5943,7 +5906,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://random-words-api.vercel.app/word",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://dummyjson.com/": {
     "status": "undiscovered",
@@ -5951,7 +5914,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://dummyjson.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://fakerapi.it/en": {
     "status": "undiscovered",
@@ -5959,7 +5922,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://fakerapi.it/en",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://loripsum.net/": {
     "status": "undiscovered",
@@ -5967,7 +5930,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://loripsum.net/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://flakyapi.dev": {
     "status": "confirmed",
@@ -5984,7 +5947,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://quickmocker.com",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://itsthisforthat.com/api.php": {
     "status": "undiscovered",
@@ -5992,7 +5955,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://itsthisforthat.com/api.php",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://fakestoreapi.com/": {
     "status": "undiscovered",
@@ -6000,7 +5963,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://fakestoreapi.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://docs.opencollective.com/help/developers/api": {
     "status": "undiscovered",
@@ -6008,7 +5971,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://docs.opencollective.com/help/developers/api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://metaphorpsum.com/": {
     "status": "undiscovered",
@@ -6016,7 +5979,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://metaphorpsum.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://jsonplaceholder.typicode.com/": {
     "status": "confirmed",
@@ -6042,7 +6005,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://robohash.org/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://padelsnipe.com/fr/world/api": {
     "status": "confirmed",
@@ -6059,7 +6022,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://testimonialapi.toolcarton.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://restful-api.dev": {
     "status": "confirmed",
@@ -6085,7 +6048,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://thispersondoesnotexist.com",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://demo.totalshiftleft.ai/": {
     "status": "confirmed",
@@ -6102,7 +6065,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://random-names-api.herokuapp.com/public",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.uuidtools.com/docs": {
     "status": "confirmed",
@@ -6119,7 +6082,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://random-data-api.com",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://yesno.wtf/api": {
     "status": "undiscovered",
@@ -6127,7 +6090,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://yesno.wtf/api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://palabras-aleatorias-public-api.herokuapp.com": {
     "status": "undiscovered",
@@ -6135,7 +6098,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://palabras-aleatorias-public-api.herokuapp.com",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://libretranslate.com/docs": {
     "status": "undiscovered",
@@ -6143,7 +6106,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://libretranslate.com/docs",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://whatthecommit.com/index.txt": {
     "status": "undiscovered",
@@ -6151,7 +6114,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://whatthecommit.com/index.txt",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://developer.whatpulse.org/#web-api": {
     "status": "undiscovered",
@@ -6159,7 +6122,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://developer.whatpulse.org/#web-api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://avatar.waldrand.dev": {
     "status": "undiscovered",
@@ -6167,7 +6130,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://avatar.waldrand.dev",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://airport-web.appspot.com/api/docs/": {
     "status": "undiscovered",
@@ -6175,7 +6138,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://airport-web.appspot.com/api/docs/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://docs.aviationapi.com": {
     "status": "undiscovered",
@@ -6183,7 +6146,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://docs.aviationapi.com",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://himaxym.com/developers": {
     "status": "confirmed",
@@ -6200,7 +6163,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://postmon.com.br",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://arcnautical.com/developers/": {
     "status": "confirmed",
@@ -6226,7 +6189,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://apimetro.dev/swagger/index.html",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://canienter.com": {
     "status": "confirmed",
@@ -6243,7 +6206,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/transitland/transitland-datastore/blob/master/README.md#api-endpoints",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://bzsasson.github.io/traffic-camera-sources/api.html": {
     "status": "undiscovered",
@@ -6251,7 +6214,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://bzsasson.github.io/traffic-camera-sources/api.html",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/ChelseaKR/gtfs-scorecard/blob/main/docs/api.md": {
     "status": "confirmed",
@@ -6268,7 +6231,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://app.metrolisboa.pt/status/getLinhas.php",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://n-number.starfile.org/api": {
     "status": "undiscovered",
@@ -6276,7 +6239,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://n-number.starfile.org/api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://opensky-network.org/apidoc/index.html": {
     "status": "undiscovered",
@@ -6284,7 +6247,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://opensky-network.org/apidoc/index.html",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.bcferriesapi.ca": {
     "status": "undiscovered",
@@ -6292,7 +6255,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.bcferriesapi.ca",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.adsbexchange.com/data/": {
     "status": "undiscovered",
@@ -6300,7 +6263,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.adsbexchange.com/data/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.transit.land/documentation/datastore/api-endpoints.html": {
     "status": "undiscovered",
@@ -6308,7 +6271,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.transit.land/documentation/datastore/api-endpoints.html",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.refugerestrooms.org/api/docs/#!/restrooms": {
     "status": "undiscovered",
@@ -6316,7 +6279,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.refugerestrooms.org/api/docs/#!/restrooms",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://hormuz.data-tracking.net/llms.txt": {
     "status": "undiscovered",
@@ -6324,7 +6287,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://hormuz.data-tracking.net/llms.txt",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://docs.irail.be/": {
     "status": "undiscovered",
@@ -6332,7 +6295,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://docs.irail.be/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://docs.apis.is/": {
     "status": "undiscovered",
@@ -6340,7 +6303,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://docs.apis.is/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/derhuerst/vbb-rest/blob/3/docs/index.md": {
     "status": "undiscovered",
@@ -6348,7 +6311,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/derhuerst/vbb-rest/blob/3/docs/index.md",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://openvan.camp/docs": {
     "status": "confirmed",
@@ -6365,7 +6328,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://www.rtd-denver.com/gtfs-developer-guide.shtml",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://bkkfutar.docs.apiary.io": {
     "status": "undiscovered",
@@ -6373,7 +6336,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://bkkfutar.docs.apiary.io",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://www.itsmarta.com/app-developer-resources.aspx": {
     "status": "undiscovered",
@@ -6381,7 +6344,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://www.itsmarta.com/app-developer-resources.aspx",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://developer.entur.org/": {
     "status": "undiscovered",
@@ -6389,7 +6352,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://developer.entur.org/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://suredbits.com/api/": {
     "status": "undiscovered",
@@ -6397,7 +6360,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://suredbits.com/api/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.mobilites-m.fr/pages/opendata/OpenDataApi.html": {
     "status": "undiscovered",
@@ -6405,7 +6368,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.mobilites-m.fr/pages/opendata/OpenDataApi.html",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://dev-portal.at.govt.nz/": {
     "status": "undiscovered",
@@ -6413,7 +6376,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://dev-portal.at.govt.nz/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://digitransit.fi/en/developers/": {
     "status": "undiscovered",
@@ -6421,7 +6384,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://digitransit.fi/en/developers/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://opendata.rmv.de/site/start.html": {
     "status": "undiscovered",
@@ -6429,7 +6392,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://opendata.rmv.de/site/start.html",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://www3.septa.org/hackathon/": {
     "status": "undiscovered",
@@ -6437,7 +6400,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://www3.septa.org/hackathon/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://data.renfe.com/api/1/util/snippet/api_info.html?resource_id=a2368cff-1562-4dde-8466-9635ea3a572a": {
     "status": "confirmed",
@@ -6454,7 +6417,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/skywave/KV78Turbo-OVAPI/wiki",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://data.ratp.fr/api/v1/console/datasets/1.0/search/": {
     "status": "confirmed",
@@ -6480,7 +6443,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://developer.metro.net/api/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.velib-metropole.fr/donnees-open-data-gbfs-du-service-velib-metropole": {
     "status": "undiscovered",
@@ -6488,7 +6451,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.velib-metropole.fr/donnees-open-data-gbfs-du-service-velib-metropole",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://transport.rest": {
     "status": "undiscovered",
@@ -6496,7 +6459,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://transport.rest",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/1pt-co/api/blob/main/README.md": {
     "status": "undiscovered",
@@ -6504,7 +6467,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/1pt-co/api/blob/main/README.md",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://cleanuri.com/docs": {
     "status": "undiscovered",
@@ -6512,16 +6475,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://cleanuri.com/docs",
-    "checkedAt": "2026-09-19"
-  },
-  "https://wanderatlasguides.com/api/": {
-    "status": "confirmed",
-    "endpoint": "https://wanderatlasguides.com/api/crowd.json",
-    "cors": "yes",
-    "latencyMs": 693,
-    "confirmedBy": "success",
-    "url": "https://wanderatlasguides.com/api/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://myttc.ca/developers": {
     "status": "undiscovered",
@@ -6529,7 +6483,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://myttc.ca/developers",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://retro.umoiq.com/xmlFeedDocs/NextBusXMLFeed.pdf": {
     "status": "undiscovered",
@@ -6537,7 +6491,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://retro.umoiq.com/xmlFeedDocs/NextBusXMLFeed.pdf",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://wiki.drivet.xyz/en/url-shortener/add-links": {
     "status": "undiscovered",
@@ -6545,7 +6499,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://wiki.drivet.xyz/en/url-shortener/add-links",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://ulvis.net/developer.html": {
     "status": "confirmed",
@@ -6562,7 +6516,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/FayasNoushad/Short-Link-API",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/robvanbakel/gotiny-api": {
     "status": "undiscovered",
@@ -6570,7 +6524,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/robvanbakel/gotiny-api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://shrtco.de/docs": {
     "status": "undiscovered",
@@ -6578,7 +6532,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://shrtco.de/docs",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://deividfortuna.github.io/fipe/": {
     "status": "undiscovered",
@@ -6586,7 +6540,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://deividfortuna.github.io/fipe/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://problemsbyvin.com/data/": {
     "status": "undiscovered",
@@ -6594,7 +6548,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://problemsbyvin.com/data/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.blog/2011-11-10-git-io-github-url-shortener/": {
     "status": "undiscovered",
@@ -6602,7 +6556,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.blog/2011-11-10-git-io-github-url-shortener/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://autobodyshopnear.com/developers/body-shop-api": {
     "status": "confirmed",
@@ -6619,7 +6573,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://owo.vc/api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://breakingbadapi.com/documentation": {
     "status": "undiscovered",
@@ -6627,7 +6581,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://breakingbadapi.com/documentation",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/shevabam/breaking-bad-quotes": {
     "status": "undiscovered",
@@ -6635,7 +6589,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/shevabam/breaking-bad-quotes",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://api.catalogopolis.xyz/docs/": {
     "status": "undiscovered",
@@ -6643,7 +6597,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://api.catalogopolis.xyz/docs/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://mgnet.me/api.html": {
     "status": "undiscovered",
@@ -6651,7 +6605,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://mgnet.me/api.html",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://bobs-burgers-api-ui.herokuapp.com": {
     "status": "undiscovered",
@@ -6659,7 +6613,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://bobs-burgers-api-ui.herokuapp.com",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://anapioficeandfire.com/": {
     "status": "confirmed",
@@ -6685,7 +6639,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/ywalia01/dune-api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://finalspaceapi.com/docs/": {
     "status": "confirmed",
@@ -6702,7 +6656,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://gameofthronesquotes.xyz/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://vpic.nhtsa.dot.gov/api/": {
     "status": "undiscovered",
@@ -6710,7 +6664,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://vpic.nhtsa.dot.gov/api/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://catchtheshow.herokuapp.com/api/documentation": {
     "status": "undiscovered",
@@ -6718,7 +6672,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://catchtheshow.herokuapp.com/api/documentation",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/shadowoff09/lucifer-quotes": {
     "status": "undiscovered",
@@ -6726,7 +6680,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/shadowoff09/lucifer-quotes",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://www.ceskatelevize.cz/xml/tv-program/": {
     "status": "undiscovered",
@@ -6734,7 +6688,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://www.ceskatelevize.cz/xml/tv-program/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/SpEcHiDe/IMDbOT": {
     "status": "undiscovered",
@@ -6742,7 +6696,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/SpEcHiDe/IMDbOT",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/DiljotSG/MCU-Countdown": {
     "status": "confirmed",
@@ -6759,7 +6713,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/F4R4N/movie-quote/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/jamesseanwright/ron-swanson-quotes#ron-swanson-quotes-api": {
     "status": "undiscovered",
@@ -6767,7 +6721,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/jamesseanwright/ron-swanson-quotes#ron-swanson-quotes-api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://cars.limoja.ai/api/search?q=BMW&limit=1": {
     "status": "undiscovered",
@@ -6775,7 +6729,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://cars.limoja.ai/api/search?q=BMW&limit=1",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/shadowoff09/strangerthings-quotes": {
     "status": "undiscovered",
@@ -6783,7 +6737,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/shadowoff09/strangerthings-quotes",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://hp-api.herokuapp.com/": {
     "status": "undiscovered",
@@ -6791,7 +6745,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://hp-api.herokuapp.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://stapi.co": {
     "status": "undiscovered",
@@ -6799,7 +6753,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://stapi.co",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://api.stream.cz/graphiql": {
     "status": "undiscovered",
@@ -6807,7 +6761,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://api.stream.cz/graphiql",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://nodejs-quoteapp.herokuapp.com/": {
     "status": "undiscovered",
@@ -6815,7 +6769,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://nodejs-quoteapp.herokuapp.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://swapi.dev/": {
     "status": "confirmed",
@@ -6832,7 +6786,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://graphql.org/swapi-graphql",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.stromberg-api.de/": {
     "status": "undiscovered",
@@ -6840,7 +6794,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.stromberg-api.de/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.swapi.tech": {
     "status": "undiscovered",
@@ -6848,7 +6802,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.swapi.tech",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://github.com/yogeshwaran01/web-series-quotes": {
     "status": "undiscovered",
@@ -6856,7 +6810,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/yogeshwaran01/web-series-quotes",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://thronesapi.com/": {
     "status": "undiscovered",
@@ -6864,7 +6818,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://thronesapi.com/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://owen-wilson-wow-api.herokuapp.com": {
     "status": "undiscovered",
@@ -6872,7 +6826,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://owen-wilson-wow-api.herokuapp.com",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://www.7timer.info/doc.php?lang=en": {
     "status": "undiscovered",
@@ -6880,7 +6834,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://www.7timer.info/doc.php?lang=en",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://www.tvmaze.com/api": {
     "status": "undiscovered",
@@ -6888,15 +6842,16 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://www.tvmaze.com/api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://hail-history-noaa.netlify.app/api-docs.html": {
-    "status": "undiscovered",
-    "endpoint": null,
-    "cors": null,
-    "latencyMs": null,
+    "status": "confirmed",
+    "endpoint": "https://whathitmyhouse.com/hail-history",
+    "cors": "yes",
+    "latencyMs": 576,
+    "confirmedBy": "rejection",
     "url": "https://hail-history-noaa.netlify.app/api-docs.html",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://open-meteo.com/en/docs/ensemble-api": {
     "status": "undiscovered",
@@ -6904,7 +6859,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://open-meteo.com/en/docs/ensemble-api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.aviationweather.gov/dataserver": {
     "status": "undiscovered",
@@ -6912,7 +6867,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.aviationweather.gov/dataserver",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://api.ipma.pt/open-data/": {
     "status": "undiscovered",
@@ -6920,7 +6875,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://api.ipma.pt/open-data/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://pirateweather.net/en/latest/": {
     "status": "undiscovered",
@@ -6928,7 +6883,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://pirateweather.net/en/latest/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://api.opensensemap.org/": {
     "status": "undiscovered",
@@ -6936,7 +6891,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://api.opensensemap.org/",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.rainviewer.com/api.html": {
     "status": "undiscovered",
@@ -6944,7 +6899,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.rainviewer.com/api.html",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.hko.gov.hk/en/abouthko/opendata_intro.htm": {
     "status": "undiscovered",
@@ -6952,7 +6907,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.hko.gov.hk/en/abouthko/opendata_intro.htm",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "http://api.oceandrivers.com/static/docs.html": {
     "status": "undiscovered",
@@ -6960,7 +6915,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "http://api.oceandrivers.com/static/docs.html",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.chaps.cz/eng/products/idos-internet": {
     "status": "undiscovered",
@@ -6968,7 +6923,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://www.chaps.cz/eng/products/idos-internet",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://www.weather.gov/documentation/services-web-api": {
     "status": "confirmed",
@@ -6985,7 +6940,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://wttr.in/:help",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://worldtimeweather.com/api.html": {
     "status": "confirmed",
@@ -7002,7 +6957,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://github.com/robertoduessmann/weather-api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://weathertotals.com/api": {
     "status": "undiscovered",
@@ -7010,7 +6965,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://weathertotals.com/api",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://meltema.com/docs": {
     "status": "undiscovered",
@@ -7018,7 +6973,7 @@
     "cors": null,
     "latencyMs": null,
     "url": "https://meltema.com/docs",
-    "checkedAt": "2026-09-19"
+    "checkedAt": "2026-10-04"
   },
   "https://greenlitbooks.com/developers": {
     "status": "confirmed",
@@ -7078,14 +7033,6 @@
     "latencyMs": 13,
     "confirmedBy": "rejection",
     "url": "https://hostdealradar.com/ai/",
-    "checkedAt": "2026-09-27"
-  },
-  "https://chartbytes.onrender.com": {
-    "status": "undiscovered",
-    "endpoint": null,
-    "cors": null,
-    "latencyMs": null,
-    "url": "https://chartbytes.onrender.com",
     "checkedAt": "2026-09-27"
   },
   "https://go.dev/ref/mod#goproxy-protocol": {
@@ -7440,5 +7387,422 @@
     "latencyMs": null,
     "url": "https://www.sudoku100.com/api",
     "checkedAt": "2026-09-27"
+  },
+  "https://alexwohlbruck.github.io/cat-facts/": {
+    "status": "undiscovered",
+    "endpoint": null,
+    "cors": null,
+    "latencyMs": null,
+    "url": "https://alexwohlbruck.github.io/cat-facts/",
+    "checkedAt": "2026-10-04"
+  },
+  "https://regsentry.com/mcp-guide": {
+    "status": "confirmed",
+    "endpoint": "https://regsentry.com/mcp",
+    "cors": "no",
+    "latencyMs": 134,
+    "confirmedBy": "rejection",
+    "url": "https://regsentry.com/mcp-guide",
+    "checkedAt": "2026-10-04"
+  },
+  "https://cloud.trycorpus.ai/docs#quick-start-for-agents": {
+    "status": "confirmed",
+    "endpoint": "https://cloud.trycorpus.ai/v1/health",
+    "cors": "yes",
+    "latencyMs": 83,
+    "confirmedBy": "success",
+    "url": "https://cloud.trycorpus.ai/docs#quick-start-for-agents",
+    "checkedAt": "2026-10-04"
+  },
+  "https://github.com/cammac-creator/openswissdata/tree/main/sdks/mcp-server": {
+    "status": "confirmed",
+    "endpoint": "https://mcp.openswissdata.com/jsonrpc",
+    "cors": "yes",
+    "latencyMs": 1021,
+    "confirmedBy": "rejection",
+    "url": "https://github.com/cammac-creator/openswissdata/tree/main/sdks/mcp-server",
+    "checkedAt": "2026-10-04"
+  },
+  "https://www.thecolorapi.com": {
+    "status": "undiscovered",
+    "endpoint": null,
+    "cors": null,
+    "latencyMs": null,
+    "url": "https://www.thecolorapi.com",
+    "checkedAt": "2026-10-04"
+  },
+  "https://rafont.com/api-docs": {
+    "status": "undiscovered",
+    "endpoint": null,
+    "cors": null,
+    "latencyMs": null,
+    "url": "https://rafont.com/api-docs",
+    "checkedAt": "2026-10-04"
+  },
+  "https://github.com/RAAAAAGEEEEE/vuntum-mcp": {
+    "status": "undiscovered",
+    "endpoint": null,
+    "cors": null,
+    "latencyMs": null,
+    "url": "https://github.com/RAAAAAGEEEEE/vuntum-mcp",
+    "checkedAt": "2026-10-04"
+  },
+  "https://ugc-vz.de/developers": {
+    "status": "confirmed",
+    "endpoint": "https://ugc-vz.de/api/v1/vocab",
+    "cors": "no",
+    "latencyMs": 743,
+    "confirmedBy": "success",
+    "url": "https://ugc-vz.de/developers",
+    "checkedAt": "2026-10-04"
+  },
+  "https://calendar-api-web.vercel.app/docs": {
+    "status": "undiscovered",
+    "endpoint": null,
+    "cors": null,
+    "latencyMs": null,
+    "url": "https://calendar-api-web.vercel.app/docs",
+    "checkedAt": "2026-10-04"
+  },
+  "https://bitcoinyield.co/docs": {
+    "status": "confirmed",
+    "endpoint": "https://bitcoinyield.co/api/v1/yields",
+    "cors": "yes",
+    "latencyMs": 539,
+    "confirmedBy": "success",
+    "url": "https://bitcoinyield.co/docs",
+    "checkedAt": "2026-10-04"
+  },
+  "https://api.bilbop.org": {
+    "status": "undiscovered",
+    "endpoint": null,
+    "cors": null,
+    "latencyMs": null,
+    "url": "https://api.bilbop.org",
+    "checkedAt": "2026-10-04"
+  },
+  "https://dudelytics.com/en/dpmi/data/": {
+    "status": "undiscovered",
+    "endpoint": null,
+    "cors": null,
+    "latencyMs": null,
+    "url": "https://dudelytics.com/en/dpmi/data/",
+    "checkedAt": "2026-10-04"
+  },
+  "https://agentpay-lookup.agentpay-apis.workers.dev": {
+    "status": "confirmed",
+    "endpoint": "https://agentpay-lookup.agentpay-apis.workers.dev/lookup/v1/dns",
+    "cors": "yes",
+    "latencyMs": 37,
+    "confirmedBy": "rejection",
+    "url": "https://agentpay-lookup.agentpay-apis.workers.dev",
+    "checkedAt": "2026-10-04"
+  },
+  "https://getdaleelak.com/en/api": {
+    "status": "confirmed",
+    "endpoint": "https://getdaleelak.com/api/v1/feed.json",
+    "cors": "yes",
+    "latencyMs": 511,
+    "confirmedBy": "success",
+    "url": "https://getdaleelak.com/en/api",
+    "checkedAt": "2026-10-04"
+  },
+  "https://apitoolcalls.com/api/": {
+    "status": "confirmed",
+    "endpoint": "https://apitoolcalls.com/api/basement-water",
+    "cors": "no",
+    "latencyMs": 244,
+    "confirmedBy": "rejection",
+    "url": "https://apitoolcalls.com/api/",
+    "checkedAt": "2026-10-04"
+  },
+  "https://bountycheck.vercel.app": {
+    "status": "confirmed",
+    "endpoint": "https://bountycheck.vercel.app/health",
+    "cors": "yes",
+    "latencyMs": 136,
+    "confirmedBy": "success",
+    "url": "https://bountycheck.vercel.app",
+    "checkedAt": "2026-10-04"
+  },
+  "https://chartbytes.meridian-digital.pro": {
+    "status": "undiscovered",
+    "endpoint": null,
+    "cors": null,
+    "latencyMs": null,
+    "url": "https://chartbytes.meridian-digital.pro",
+    "checkedAt": "2026-10-04"
+  },
+  "https://indexagentica.com/agents/": {
+    "status": "confirmed",
+    "endpoint": "https://indexagentica.com/api/index.json",
+    "cors": "yes",
+    "latencyMs": 126,
+    "confirmedBy": "success",
+    "url": "https://indexagentica.com/agents/",
+    "checkedAt": "2026-10-04"
+  },
+  "https://tools.yukai.uk/llms.txt": {
+    "status": "confirmed",
+    "endpoint": "https://webcapture-api.yukailin.workers.dev/api/v1/markdown",
+    "cors": "no",
+    "latencyMs": 260,
+    "confirmedBy": "rejection",
+    "url": "https://tools.yukai.uk/llms.txt",
+    "checkedAt": "2026-10-04"
+  },
+  "https://replynodes.com/markdown-api/": {
+    "status": "confirmed",
+    "endpoint": "https://md.replynodes.com/{domain}[/path",
+    "cors": "no",
+    "latencyMs": 150,
+    "confirmedBy": "rejection",
+    "url": "https://replynodes.com/markdown-api/",
+    "checkedAt": "2026-10-04"
+  },
+  "https://vornamencheck.de/#api": {
+    "status": "confirmed",
+    "endpoint": "https://vornamencheck.de/api/v1/admin/usage",
+    "cors": "yes",
+    "latencyMs": 140,
+    "confirmedBy": "rejection",
+    "url": "https://vornamencheck.de/#api",
+    "checkedAt": "2026-10-04"
+  },
+  "https://agentpay-tools.agentpay-apis.workers.dev": {
+    "status": "confirmed",
+    "endpoint": "https://agentpay-tools.agentpay-apis.workers.dev/tools/v1/pdf-text",
+    "cors": "yes",
+    "latencyMs": 16,
+    "confirmedBy": "rejection",
+    "url": "https://agentpay-tools.agentpay-apis.workers.dev",
+    "checkedAt": "2026-10-04"
+  },
+  "https://wordsohard.com/api": {
+    "status": "confirmed",
+    "endpoint": "https://wordsohard.com/api/v1/define/{word}",
+    "cors": "yes",
+    "latencyMs": 206,
+    "confirmedBy": "success",
+    "url": "https://wordsohard.com/api",
+    "checkedAt": "2026-10-04"
+  },
+  "https://contix.es/api/#herramientas": {
+    "status": "confirmed",
+    "endpoint": "https://api.contix.es/api/v1/invoices",
+    "cors": "no",
+    "latencyMs": 137,
+    "confirmedBy": "rejection",
+    "url": "https://contix.es/api/#herramientas",
+    "checkedAt": "2026-10-04"
+  },
+  "https://tickermint.cards/developers": {
+    "status": "confirmed",
+    "endpoint": "https://api.tickermint.cards/games",
+    "cors": "no",
+    "latencyMs": 75,
+    "confirmedBy": "success",
+    "url": "https://tickermint.cards/developers",
+    "checkedAt": "2026-10-04"
+  },
+  "https://dados.gov.pt/en/recursos/desenvolvimento/referencia-api": {
+    "status": "undiscovered",
+    "endpoint": null,
+    "cors": null,
+    "latencyMs": null,
+    "url": "https://dados.gov.pt/en/recursos/desenvolvimento/referencia-api",
+    "checkedAt": "2026-10-04"
+  },
+  "https://www.veridionmarkets.com/data-api/docs": {
+    "status": "confirmed",
+    "endpoint": "https://www.veridionmarkets.com/api/v1/disclosures",
+    "cors": "yes",
+    "latencyMs": 398,
+    "confirmedBy": "success",
+    "url": "https://www.veridionmarkets.com/data-api/docs",
+    "checkedAt": "2026-10-04"
+  },
+  "https://www.nonobench.com/how-it-works": {
+    "status": "confirmed",
+    "endpoint": "https://www.nonobench.com/api/v1/leaderboard",
+    "cors": "yes",
+    "latencyMs": 27,
+    "confirmedBy": "success",
+    "url": "https://www.nonobench.com/how-it-works",
+    "checkedAt": "2026-10-04"
+  },
+  "https://collegecalcai.com/developers": {
+    "status": "confirmed",
+    "endpoint": "https://collegecalcai.com/api/v1/college-list",
+    "cors": "yes",
+    "latencyMs": 244,
+    "confirmedBy": "rejection",
+    "url": "https://collegecalcai.com/developers",
+    "checkedAt": "2026-10-04"
+  },
+  "https://www.edgechat.ai/developers": {
+    "status": "confirmed",
+    "endpoint": "https://www.edgechat.ai/api/v1/search",
+    "cors": "yes",
+    "latencyMs": 108,
+    "confirmedBy": "rejection",
+    "url": "https://www.edgechat.ai/developers",
+    "checkedAt": "2026-10-04"
+  },
+  "https://devlifecheck.com/developers": {
+    "status": "undiscovered",
+    "endpoint": null,
+    "cors": null,
+    "latencyMs": null,
+    "url": "https://devlifecheck.com/developers",
+    "checkedAt": "2026-10-04"
+  },
+  "https://coworkingview.com/en/api": {
+    "status": "confirmed",
+    "endpoint": "https://api.coworkingview.com/v1/config",
+    "cors": "no",
+    "latencyMs": 654,
+    "confirmedBy": "success",
+    "url": "https://coworkingview.com/en/api",
+    "checkedAt": "2026-10-04"
+  },
+  "https://statorigin.org/docs/api": {
+    "status": "confirmed",
+    "endpoint": "https://statorigin.org/api/v1/statistics",
+    "cors": "yes",
+    "latencyMs": 876,
+    "confirmedBy": "success",
+    "url": "https://statorigin.org/docs/api",
+    "checkedAt": "2026-10-04"
+  },
+  "https://github.com/dotcomjack/the-deploy-log": {
+    "status": "undiscovered",
+    "endpoint": null,
+    "cors": null,
+    "latencyMs": null,
+    "url": "https://github.com/dotcomjack/the-deploy-log",
+    "checkedAt": "2026-10-04"
+  },
+  "https://astro-agent.dev/llms.txt": {
+    "status": "confirmed",
+    "endpoint": "https://astro-agent.dev/v1/catalog",
+    "cors": "yes",
+    "latencyMs": 131,
+    "confirmedBy": "success",
+    "url": "https://astro-agent.dev/llms.txt",
+    "checkedAt": "2026-10-04"
+  },
+  "https://botlero.com/api/robots": {
+    "status": "undiscovered",
+    "endpoint": null,
+    "cors": null,
+    "latencyMs": null,
+    "url": "https://botlero.com/api/robots",
+    "checkedAt": "2026-10-04"
+  },
+  "https://packet.guru/agents/reference": {
+    "status": "confirmed",
+    "endpoint": "https://fp.packet.guru/api/v1/connection",
+    "cors": "no",
+    "latencyMs": 626,
+    "confirmedBy": "success",
+    "url": "https://packet.guru/agents/reference",
+    "checkedAt": "2026-10-04"
+  },
+  "https://birkinbagstock.com/.well-known/openapi.json": {
+    "status": "confirmed",
+    "endpoint": "https://birkinbagstock.com/.well-known/source-index.json",
+    "cors": "no",
+    "latencyMs": 369,
+    "confirmedBy": "success",
+    "url": "https://birkinbagstock.com/.well-known/openapi.json",
+    "checkedAt": "2026-10-04"
+  },
+  "https://onefindme.com/mcp": {
+    "status": "confirmed",
+    "endpoint": "https://onefindme.com/api/search",
+    "cors": "yes",
+    "latencyMs": 20,
+    "confirmedBy": "rejection",
+    "url": "https://onefindme.com/mcp",
+    "checkedAt": "2026-10-04"
+  },
+  "https://docs.vpndetection.io/api": {
+    "status": "confirmed",
+    "endpoint": "https://api.vpndetection.io/myip",
+    "cors": "yes",
+    "latencyMs": 810,
+    "confirmedBy": "success",
+    "url": "https://docs.vpndetection.io/api",
+    "checkedAt": "2026-10-04"
+  },
+  "https://moviodds.com/doc": {
+    "status": "confirmed",
+    "endpoint": "https://moviodds.com/odds",
+    "cors": "yes",
+    "latencyMs": 942,
+    "confirmedBy": "success",
+    "url": "https://moviodds.com/doc",
+    "checkedAt": "2026-10-04"
+  },
+  "https://whenstherace.com/f1-schedule-json/": {
+    "status": "confirmed",
+    "endpoint": "https://whenstherace.com/schedule.json",
+    "cors": "yes",
+    "latencyMs": 173,
+    "confirmedBy": "success",
+    "url": "https://whenstherace.com/f1-schedule-json/",
+    "checkedAt": "2026-10-04"
+  },
+  "https://vuntum.com/en/api-mcp": {
+    "status": "undiscovered",
+    "endpoint": null,
+    "cors": null,
+    "latencyMs": null,
+    "url": "https://vuntum.com/en/api-mcp",
+    "checkedAt": "2026-10-04"
+  },
+  "https://loremfile.dev/docs/manifest": {
+    "status": "confirmed",
+    "endpoint": "https://loremfile.dev/manifest.json",
+    "cors": "yes",
+    "latencyMs": 647,
+    "confirmedBy": "success",
+    "url": "https://loremfile.dev/docs/manifest",
+    "checkedAt": "2026-10-04"
+  },
+  "https://supercrontab.com/mock": {
+    "status": "undiscovered",
+    "endpoint": null,
+    "cors": null,
+    "latencyMs": null,
+    "url": "https://supercrontab.com/mock",
+    "checkedAt": "2026-10-04"
+  },
+  "https://chargealong.io/docs/": {
+    "status": "confirmed",
+    "endpoint": "https://api.chargealong.io/v1/countries",
+    "cors": "yes",
+    "latencyMs": 484,
+    "confirmedBy": "success",
+    "url": "https://chargealong.io/docs/",
+    "checkedAt": "2026-10-04"
+  },
+  "https://www.connectmeguru.com/api/mcp": {
+    "status": "undiscovered",
+    "endpoint": null,
+    "cors": null,
+    "latencyMs": null,
+    "url": "https://www.connectmeguru.com/api/mcp",
+    "checkedAt": "2026-10-04"
+  },
+  "https://ugcdrop.com/api": {
+    "status": "confirmed",
+    "endpoint": "https://api.ugcdrop.com/tags",
+    "cors": "yes",
+    "latencyMs": 1025,
+    "confirmedBy": "success",
+    "url": "https://ugcdrop.com/api",
+    "checkedAt": "2026-10-04"
   }
 }
